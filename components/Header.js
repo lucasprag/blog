@@ -1,4 +1,14 @@
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+
 function Header() {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="flex justify-between my-8 items-center">
       <h1 className="font-medium text-xl">Next.js Blog</h1>
@@ -18,6 +28,16 @@ function Header() {
         >
           Github
         </a>
+
+        {mounted && (
+          <button
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
+          >
+            toggle ({resolvedTheme})
+          </button>
+        )}
       </div>
     </div>
   );
