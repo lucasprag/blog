@@ -80,7 +80,7 @@ function Header() {
 
         {mounted && (
           <button
-            className="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+            className="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
@@ -88,16 +88,16 @@ function Header() {
             {resolvedTheme === "dark" && (
               <DarkIcon
                 className="align-middle"
-                height={20}
-                width={20}
+                height={23}
+                width={23}
                 alt="click to enable dark mode"
               />
             )}
             {resolvedTheme === "light" && (
               <LightIcon
                 className="align-middle"
-                height={20}
-                width={20}
+                height={23}
+                width={23}
                 alt="click to enable light mode"
               />
             )}
