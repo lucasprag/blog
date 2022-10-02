@@ -7,10 +7,6 @@ import Image from "next/image";
 import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
 
-import TwitterIcon from "../icons/twitter.svg";
-import DevToIcon from "../icons/dev-to.svg";
-import GithubIcon from "../icons/github.svg";
-
 function Header() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -20,9 +16,9 @@ function Header() {
   }, []);
 
   return (
-    <div className="flex justify-between my-8 items-center">
+    <div className="flex justify-between my-8">
       <Link href="/">
-        <a className="hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-3 rounded">
+        <a className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
           <h1 className="font-medium text-xl">
             <Image
               src="/favicon.ico"
@@ -35,49 +31,7 @@ function Header() {
         </a>
       </Link>
 
-      <div className="flex">
-        <Link href="https://dew.to/lucasprag">
-          <a
-            className="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-            target="_blank"
-          >
-            <DevToIcon
-              className="align-middle"
-              height={25}
-              width={25}
-              alt="my dev.to profile"
-            />
-          </a>
-        </Link>
-
-        <Link href="https://github.com/lucasprag">
-          <a
-            className="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-            target="_blank"
-          >
-            <GithubIcon
-              className="align-middle"
-              height={25}
-              width={25}
-              alt="my twitter profile"
-            />
-          </a>
-        </Link>
-
-        <Link href="https://twitter.com/lucasprag">
-          <a
-            className="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-            target="_blank"
-          >
-            <TwitterIcon
-              className="align-middle"
-              height={25}
-              width={25}
-              alt="my twitter profile"
-            />
-          </a>
-        </Link>
-
+      <div className="flex justify-end">
         {mounted && (
           <button
             className="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
