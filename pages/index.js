@@ -1,10 +1,17 @@
+import Head from "next/head";
+
 import PostCard from "../components/PostCard";
 import getPosts from "../helpers/getPosts";
 
 export default function Home({ posts }) {
   return (
     <div>
-      <h1 className="py-4 mb-3 font-semibold text-3xl border-b-2 border-gray-200 dark:border-gray-700">Posts</h1>
+      <Head>
+        <title>@lucasprag</title>
+      </Head>
+      <h1 className="py-4 mb-3 font-semibold text-3xl border-b-2 border-gray-200 dark:border-gray-700">
+        Posts
+      </h1>
       {posts.map((post) => (
         <PostCard
           key={post.slug}

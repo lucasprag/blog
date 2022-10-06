@@ -1,27 +1,38 @@
-import { unified } from 'unified'
-import markdown from 'remark-parse'
-import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
-import rehypeRaw from 'rehype-raw'
-import hrehypeStringify from 'rehype-stringify'
-import highlight from 'rehype-highlight'
-import langElixir from 'highlight.js/lib/languages/elixir'
+import { unified } from "unified";
+import markdown from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import hrehypeStringify from "rehype-stringify";
+import highlight from "rehype-highlight";
+import langElixir from "highlight.js/lib/languages/elixir";
+import Head from "next/head";
+
+import "highlight.js/styles/github-dark.css";
+// import "highlight.js/styles/github.css";
 
 const languages = {
   elixir: langElixir,
-}
+};
 
 import getPost from "../helpers/getPost";
 import getPosts from "../helpers/getPosts";
 
-
 function Post({ data, content }) {
   return (
     <div>
+      <Head>
+        <title>{data.title} - @lucasprag</title>
+      </Head>
+
       <h1 className="font-semibold text-3xl">{data.title}</h1>
-      <time className="font-medium text-sm py-3 text-gray-400">{data.date}</time>
-      <div className="post-content prose mt-5" dangerouslySetInnerHTML={{__html: content}}>
-      </div>
+      <time className="font-medium text-sm py-3 text-gray-400">
+        {data.date}
+      </time>
+      <div
+        className="post-content prose mt-5"
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></div>
     </div>
   );
 }
@@ -46,7 +57,7 @@ export const getStaticProps = async ({ params }) => {
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(highlight, { languages: languages })
-    .use(hrehypeStringify)
+    .use(hrehypeStringify);
 
   return {
     props: {

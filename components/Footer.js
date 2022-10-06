@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="mt-8">
       <div className="flex justify-center">
-        <Link href="https://dew.to/lucasprag">
+        <Link href="https://dev.to/lucasprag">
           <a
             className="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
             target="_blank"

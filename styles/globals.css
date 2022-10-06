@@ -15,7 +15,7 @@ p {
 }
 
 pre code {
-  @apply my-3 px-6 !important; /* TODO: remove !important */
+  @apply rounded-lg my-3 px-6 !important; /* TODO: remove !important */
 }
 
 p code {
