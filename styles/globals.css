@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* a {
-  @apply
-} */
+body {
+  @apply text-zinc-800 dark:text-zinc-100;
+}
+
+.post-content a {
+  @apply text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-500 underline
+}
+
+p {
+  @apply py-3;
+}
+
+pre code {
+  @apply my-3 px-6 !important; /* TODO: remove !important */
+}
+
+p code {
+  @apply bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded; /* TODO: remove !important */
+}
+
+.post-content h1 { @apply text-4xl mt-8 font-medium }
+.post-content h2 { @apply text-3xl mt-7 font-medium }
+.post-content h3 { @apply text-2xl mt-6 font-medium }
+.post-content h4 { @apply text-2xl mt-5 font-medium }

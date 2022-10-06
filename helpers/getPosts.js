@@ -17,7 +17,10 @@ const getPosts = () => {
     };
   });
 
-  return allPostsData;
+  return allPostsData.sort((a, b) => {
+    console.log(a);
+    a.data.date > b.data.date;
+  });
 };
 
 export default getPosts;
