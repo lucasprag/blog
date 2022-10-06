@@ -6,7 +6,7 @@ import GithubIcon from "../icons/github.svg";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="mt-8">
       <div className="flex justify-center">
         <Link href="https://dew.to/lucasprag">
           <a
