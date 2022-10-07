@@ -22,7 +22,7 @@ function Post({ data, content }) {
   return (
     <div>
       <Head>
-        <title>{data.title} - @lucasprag</title>
+        <title>{data.title} - lucasprag</title>
       </Head>
 
       <h1 className="font-semibold text-3xl">{data.title}</h1>

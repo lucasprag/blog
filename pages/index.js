@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <div>
       <Head>
-        <title>@lucasprag</title>
+        <title>lucasprag</title>
       </Head>
       <h1 className="py-4 mb-3 font-semibold text-3xl border-b-2 border-gray-200 dark:border-gray-700">
         Posts
