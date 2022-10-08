@@ -5,7 +5,7 @@ import blog from "./blog";
 import processMarkdown from "../helpers/processMarkdown";
 
 export default async function generateRssFeed(passedPosts) {
-  const siteURL = process.env.VERCEL_URL || "https://lucasprag.com";
+  const siteURL = blog.url;
   const date = new Date();
   const author = {
     name: "lucasprag3",
