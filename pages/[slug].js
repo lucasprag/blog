@@ -18,7 +18,7 @@ function Post({ data, content }) {
         <time className="font-medium text-sm py-3 text-gray-400">
           {data.date}
         </time>
-        <span className="mx-2">-</span>
+        <span className="mx-2 text-gray-700 dark:text-gray-400">-</span>
         <div className="text-xs mt-1 inline">
           {(data.tags || []).map((tag) => {
             return (
