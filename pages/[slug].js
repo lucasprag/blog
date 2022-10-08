@@ -1,24 +1,10 @@
-import { unified } from "unified";
-import markdown from "remark-parse";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import hrehypeStringify from "rehype-stringify";
-import highlight from "rehype-highlight";
-import langElixir from "highlight.js/lib/languages/elixir";
-import langVim from "highlight.js/lib/languages/vim";
 import Head from "next/head";
-
 import "highlight.js/styles/github-dark.css";
 // import "highlight.js/styles/github.css";
 
-const languages = {
-  elixir: langElixir,
-  vim: langVim,
-};
-
 import getPost from "../helpers/getPost";
 import getPosts from "../helpers/getPosts";
+import processMarkdown from "../helpers/processMarkdown";
 
 function Post({ data, content }) {
   return (
@@ -66,18 +52,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug);
 
-  const processor = await unified()
-    .use(markdown)
-    .use(remarkGfm)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(highlight, { languages: languages })
-    .use(hrehypeStringify);
-
   return {
     props: {
       data: post.data,
-      content: String(await processor.process(post.content)),
+      content: await processMarkdown(post.content),
     },
   };
 };

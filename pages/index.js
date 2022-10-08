@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import PostCard from "../components/PostCard";
 import getPosts from "../helpers/getPosts";
+import generateRSS from "../helpers/generateRssFeed";
 
 export default function Home({ posts }) {
   return (
@@ -27,6 +28,8 @@ export default function Home({ posts }) {
 
 export const getStaticProps = () => {
   const posts = getPosts();
+
+  generateRSS(posts);
 
   return {
     props: {

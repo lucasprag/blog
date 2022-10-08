@@ -10,10 +10,11 @@ const getPosts = () => {
       path.join(`posts/${slug}.mdx`),
       "utf8"
     );
-    const { data } = matter(fileContents);
+    const { data, content } = matter(fileContents);
     return {
       slug,
       data,
+      content
     };
   });
 
