@@ -2,9 +2,9 @@ import fs from "fs";
 import { Feed } from "feed";
 import getPosts from "./getPosts";
 import blog from "./blog";
+import processMarkdown from "../helpers/processMarkdown";
 
-export default function generateRssFeed(passedPosts) {
-  const posts = passedPosts || getPosts();
+export default async function generateRssFeed(passedPosts) {
   const siteURL = process.env.VERCEL_URL || "https://lucasprag.com";
   const date = new Date();
   const author = {
@@ -28,10 +28,17 @@ export default function generateRssFeed(passedPosts) {
     author,
   });
 
-  posts.forEach((post) => {
-    // TODO: add content
+  const posts = passedPosts || getPosts();
+  const renderedPosts = await Promise.all(
+    posts.map(async (post) => {
+      return { slug: post.slug, content: await processMarkdown(post.content) };
+    })
+  );
 
+  posts.forEach((post) => {
     const url = `${siteURL}/${post.slug}`;
+    const content = renderedPosts.find((p) => p.slug == post.slug).content;
+
     feed.addItem({
       title: post.data.title,
       id: url,
@@ -40,6 +47,7 @@ export default function generateRssFeed(passedPosts) {
       author: [author],
       contributor: [author],
       date: new Date(post.data.date),
+      content: content,
     });
   });
 

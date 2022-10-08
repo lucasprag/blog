@@ -26,10 +26,10 @@ export default function Home({ posts }) {
   );
 }
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
   const posts = getPosts();
 
-  generateRSS(posts);
+  await generateRSS(posts);
 
   return {
     props: {
