@@ -22,6 +22,10 @@ p code {
   @apply bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded; /* TODO: remove !important */
 }
 
+.tag {
+  @apply bg-slate-100 dark:bg-slate-700 py-0.5 px-1 rounded
+}
+
 .post-content h1 { @apply text-4xl mt-8 font-medium }
 .post-content h2 { @apply text-3xl mt-7 font-medium }
 .post-content h3 { @apply text-2xl mt-6 font-medium }

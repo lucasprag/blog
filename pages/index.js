@@ -18,6 +18,7 @@ export default function Home({ posts }) {
           title={post.data.title}
           date={post.data.date}
           slug={post.slug}
+          tags={post.data.tags}
         />
       ))}
     </div>

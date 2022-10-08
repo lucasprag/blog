@@ -24,13 +24,26 @@ function Post({ data, content }) {
   return (
     <div>
       <Head>
-        <title>{data.title} - lucasprag</title>
+        <title>{data.title}</title>
       </Head>
 
       <h1 className="font-semibold text-3xl">{data.title}</h1>
-      <time className="font-medium text-sm py-3 text-gray-400">
-        {data.date}
-      </time>
+      <div>
+        <time className="font-medium text-sm py-3 text-gray-400">
+          {data.date}
+        </time>
+        <span className="mx-2">-</span>
+        <div className="text-xs mt-1 inline">
+          {(data.tags || []).map((tag) => {
+            return (
+              <span key={`${data.slug}-${tag}`} className="tag mr-1">
+                {tag}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+
       <div
         className="post-content prose mt-5"
         dangerouslySetInnerHTML={{ __html: content }}
