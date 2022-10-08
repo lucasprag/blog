@@ -5,7 +5,7 @@ const blog = {
   url:
     process.env.NODE_ENV == "development"
       ? "http://localhost:3000"
-      : "https://next.lucasprag.com",
+      : "https://lucasprag.com",
 };
 
 export default blog;
