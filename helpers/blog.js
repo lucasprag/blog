@@ -5,7 +5,7 @@ const blog = {
   url:
     process.env.NODE_ENV == "development"
       ? "http://localhost:3000"
-      : process.env.VERCEL_URL || "https://lucasprag.com",
+      : "https://next.lucasprag.com",
 };
 
 export default blog;
