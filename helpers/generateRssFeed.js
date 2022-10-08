@@ -47,6 +47,7 @@ export default async function generateRssFeed(passedPosts) {
       author: [author],
       contributor: [author],
       date: new Date(post.data.date),
+      description: post.data.description,
       content: content,
     });
   });
