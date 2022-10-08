@@ -6,6 +6,7 @@ import rehypeRaw from "rehype-raw";
 import hrehypeStringify from "rehype-stringify";
 import highlight from "rehype-highlight";
 import langElixir from "highlight.js/lib/languages/elixir";
+import langVim from "highlight.js/lib/languages/vim";
 import Head from "next/head";
 
 import "highlight.js/styles/github-dark.css";
@@ -13,6 +14,7 @@ import "highlight.js/styles/github-dark.css";
 
 const languages = {
   elixir: langElixir,
+  vim: langVim,
 };
 
 import getPost from "../helpers/getPost";
