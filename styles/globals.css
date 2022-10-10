@@ -14,12 +14,16 @@ p {
   @apply py-3;
 }
 
+li {
+  @apply list-disc ml-5 py-0.5
+}
+
 pre code {
   @apply rounded-lg my-3 px-6 !important; /* TODO: remove !important */
 }
 
-p code {
-  @apply bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded; /* TODO: remove !important */
+li code, p code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  @apply bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded my-0.5;
 }
 
 .tag {

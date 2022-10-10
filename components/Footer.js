@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import TwitterIcon from "../icons/twitter.svg";
 import DevToIcon from "../icons/dev-to.svg";
@@ -69,7 +70,9 @@ function Footer() {
       </div>
 
       <div className="text-center my-4 text-gray-500 text-sm">
-        © 2022 lucasprag
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <Image alt="Creative Commons License" src="/creativecommons-88x31.png" width="88" height="31" />
+        </a>
       </div>
     </footer>
   );
