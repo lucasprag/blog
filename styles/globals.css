@@ -6,7 +6,7 @@ body {
   @apply text-zinc-700 dark:text-zinc-200;
 }
 
-.post-content a {
+.post-content a, .intro a {
   @apply text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-500 underline
 }
 
@@ -14,7 +14,7 @@ p {
   @apply py-3;
 }
 
-li {
+.post-content li {
   @apply list-disc ml-5 py-0.5
 }
 

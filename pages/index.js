@@ -3,6 +3,7 @@ import Head from "next/head";
 import PostCard from "../components/PostCard";
 import getPosts from "../helpers/getPosts";
 import generateRSS from "../helpers/generateRssFeed";
+import Intro from "../components/Intro";
 
 export default function Home({ posts }) {
   return (
@@ -10,6 +11,9 @@ export default function Home({ posts }) {
       <Head>
         <title>lucasprag</title>
       </Head>
+
+      <Intro/>
+
       <h1 className="py-4 mb-3 font-semibold text-3xl border-b-2 border-gray-200 dark:border-gray-700">
         Posts
       </h1>
