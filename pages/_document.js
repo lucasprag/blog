@@ -11,6 +11,7 @@ export default function Document() {
           content={blog.description}
           key="desc"
         />
+        <link rel="alternate" type="application/rss+xml" href={blog.feed_url} title="RSS 2.0"/>
       </Head>
       <body className="dark:bg-gray-900">
         <Main />

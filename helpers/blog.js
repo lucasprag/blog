@@ -8,4 +8,6 @@ const blog = {
       : "https://lucasprag.com",
 };
 
+blog.feed_url = `${blog.url}/feed.xml`;
+
 export default blog;
