@@ -8,7 +8,7 @@ export default async function generateRssFeed(passedPosts) {
   const siteURL = blog.url;
   const date = new Date();
   const author = {
-    name: "lucasprag3",
+    name: "lucasprag",
     link: "https://twitter.com/lucasprag",
   };
 
@@ -19,7 +19,7 @@ export default async function generateRssFeed(passedPosts) {
     link: siteURL,
     image: `${siteURL}/favicon.ico`,
     favicon: `${siteURL}/favicon.ico`,
-    copyright: `All rights reserved ${date.getFullYear()} lucasprag`,
+    copyright: `Blog under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a>`,
     updated: date,
     feedLinks: {
       rss2: `${siteURL}/feed.xml`,
