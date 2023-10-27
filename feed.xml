@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2023-10-27T03:44:22+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, etc.</subtitle><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2023-10-27T03:48:45+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, etc.</subtitle><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
 
 <p>It can be quite overwhelming having too many things to do. It causes stress and anxiety making us freeze on the spot unable to do anything. I get that.</p>
 
@@ -167,62 +167,7 @@
 
 <h2 id="wrapping-up">Wrapping up</h2>
 
-<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>]]></content><author><name></name></author><category term="terminal" /><category term="productivity" /><summary type="html"><![CDATA[As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.]]></summary></entry><entry><title type="html">How to provide configs to React on Phoenix and esbuild</title><link href="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/" rel="alternate" type="text/html" title="How to provide configs to React on Phoenix and esbuild" /><published>2022-02-18T00:00:00+00:00</published><updated>2022-02-18T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/"><![CDATA[<p>I’ve seen a few blog posts about using environment variables on React/Vue/etc when they’re part of a Phoenix app using webpack, but I didn’t find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.</p>
-
-<h2 id="where-to-save-configs">Where to save configs</h2>
-
-<p>On <code class="language-plaintext highlighter-rouge">config/dev.ex</code> you can set arbitrary configs to make them available to your application. You can also import other configs from other files that might not get committed like this:</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.ex</span>
-
-<span class="n">import_config</span> <span class="s2">"dev.secret.exs"</span>
-</code></pre></div></div>
-
-<p>Then you can add <code class="language-plaintext highlighter-rouge">dev.secrets.exs</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> and write down your configs there.</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.secret.exs</span>
-
-<span class="n">config</span> <span class="ss">:my_app</span><span class="p">,</span>
-  <span class="ss">public_key:</span> <span class="s2">"you can write your key here"</span><span class="p">,</span>
-  <span class="ss">secret_key:</span> <span class="s2">"you can write your key here"</span>
-</code></pre></div></div>
-
-<p>Note: You can also get these keys from the environment using <code class="language-plaintext highlighter-rouge">System.fetch_env!("NAME_OF_YOUR_ENV_VAR")</code> if you prefer, but it sounds like this is not the Elixir way of doing these things because it doesn’t work well with all configuration scenarios (dev/prod/runtime/etc). More details on <a href="https://groups.google.com/g/elixir-lang-core/c/SLlJxiMa-7Q/m/Un1bTb2XLzsJ?pli=1">this thread</a>.</p>
-
-<h2 id="providing-configs-to-your-front-end">Providing configs to your front-end</h2>
-
-<p>You don’t need to change your esbuild configuration to provide keys to your front-end. The trick here is to create a JavaScript object on your <code class="language-plaintext highlighter-rouge">root.html.heex</code> to make <strong>public keys</strong> available before the the front-end loads.</p>
-
-<p>NOTE: Don’t provide your <strong>private/secret keys</strong> to your front-end.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="kd">var</span> <span class="nx">PUBLIC_CONFIGS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="na">public_key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;%= Application.fetch_env!(:my_app, :public_key) %&gt;</span><span class="dl">"</span><span class="p">,</span>
-      <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<h2 id="using-it-in-your-front-end">Using it in your front-end</h2>
-
-<p>With that you have a <code class="language-plaintext highlighter-rouge">PUBLIC_CONFIGS</code> object available to use anywhere in your front-end. Here is an example using a component from the <a href="https://www.npmjs.com/package/react-google-invisible-recaptcha">react-google-invisible-recaptcha</a> package:</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Recaptcha</span>
-  <span class="na">onResolved</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="p">}</span><span class="si">}</span>
-  <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">refRecaptcha</span><span class="si">}</span>
-  <span class="na">sitekey</span><span class="p">=</span><span class="si">{</span><span class="nx">PUBLIC_CONFIGS</span><span class="p">.</span><span class="nx">public_key</span><span class="si">}</span> <span class="c1">// here is your key</span>
-<span class="p">/&gt;</span>
-</code></pre></div></div>
-
-<p>This approach is something I had to figure out by myself for a project, do you have a better idea about how to do the same? Please ping on twitter. Thanks.</p>]]></content><author><name></name></author><category term="elixir" /><category term="phoenix" /><summary type="html"><![CDATA[I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.]]></summary></entry><entry><title type="html">Expanding Rails’ STI to your architecture</title><link href="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/" rel="alternate" type="text/html" title="Expanding Rails’ STI to your architecture" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture</id><content type="html" xml:base="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/"><![CDATA[<p>Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.</p>
+<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>]]></content><author><name></name></author><category term="terminal" /><category term="productivity" /><summary type="html"><![CDATA[As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.]]></summary></entry><entry><title type="html">Expanding Rails’ STI to your architecture</title><link href="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/" rel="alternate" type="text/html" title="Expanding Rails’ STI to your architecture" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture</id><content type="html" xml:base="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/"><![CDATA[<p>Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.</p>
 
 <p>We don’t need to stop there, we could make our software architecture understand when it’s talking to an entity from platform <code class="language-plaintext highlighter-rouge">x</code> versus platform <code class="language-plaintext highlighter-rouge">y</code> and, with that, only implement the nuances of new platforms when adding them. Let me show you one idea.</p>
 
