@@ -1083,6 +1083,9 @@ code.highlighter-rouge {
 }
 
 @media (min-width: 768px) {
+  .md\:inline {
+    display: inline;
+  }
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
