@@ -1,6 +1,7 @@
 url: "https://lucasprag.com"
 baseurl: ""
 title: "Lucas Arantes"
+description: "Blog about Ruby, Elixir, command line, text editors, developer productivity, etc."
 
 collections:
   posts:
