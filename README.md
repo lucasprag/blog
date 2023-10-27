@@ -13,5 +13,5 @@ npm install
 ## Serve
 
 ```
-bundle exec jekyll serve --livereloa
+bundle exec jekyll serve --livereload
 ```
