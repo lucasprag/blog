@@ -1,0 +1,14 @@
+url: ""
+baseurl: ""
+title: "Lucas Arantes"
+
+collections:
+  posts:
+    permalink: '/posts/:title/'
+
+plugins:
+  - jekyll-postcss
+  - jekyll-feed
+
+postcss:
+  cache: false

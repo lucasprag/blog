@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1 class="font-semibold text-3xl">
+  {{ page.title }}
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3 text-gray-400">
+    Last updated: {{ page.date | date: '%B %e, %Y' }}
+  </time>
+  <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
+
+  <div class="text-xs mt-1 inline">
+    {% for tag in page.tags %}
+    <span class="tag mr-1">
+      {{ tag }}
+    </span>{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  {{ content }}
+</div>
