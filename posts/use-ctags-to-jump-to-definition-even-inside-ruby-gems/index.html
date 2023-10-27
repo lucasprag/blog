@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    Use ctags to jump to definition even inside ruby gems -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS 2.0"/>
+  <script src="/assets/js/main.js"></script>
+</head>
+
+<body class="dark:bg-gray-900"></body>
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <div class="flex justify-between my-8">
+  <a href="/" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
+    <h1 class="font-medium text-xl">
+      <img src="/assets/images/favicon.ico" height="15" width="15" alt="lucasprag emoji" class="inline" />
+      <span class="ml-2">lucasprag</span>
+    </h1>
+  </a>
+
+  <div class="flex justify-end">
+    <button class="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" onclick="switchTheme()">
+      <!-- Dark Icon  -->
+      <svg
+        class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="currentColor" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+
+      <!-- Light Icon -->
+      <svg
+        class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="currentColorr"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+    </button>
+  </div>
+</div>
+
+    <main class="flex-1">
+      <h1 class="font-semibold text-3xl">
+  Use ctags to jump to definition even inside ruby gems
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3 text-gray-400">
+    Last updated: November  6, 2019
+  </time>
+  <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
+
+  <div class="text-xs mt-1 inline">
+    
+    <span class="tag mr-1">
+      vim
+    </span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>If you don’t know what ctags is:</p>
+
+<blockquote>
+  <p>Ctags is a programming tool that generates an index file of names found in source and header files of various programming languages. Depending on the language, functions, variables, class members, macros and so on may be indexed. – Wikipedia</p>
+</blockquote>
+
+<p>In the case of Ruby you can jump to a method definition, class, etc using  <a href="http://ctags.sourceforge.net/">ctags</a> which doesn’t work 100% of the time but it helps a lot.</p>
+
+<h2 id="vim">vim</h2>
+
+<p>Vim has a native functionality where you can <code class="language-plaintext highlighter-rouge">:tag MyClass</code> and it opens your class based on the index created by <a href="http://ctags.sourceforge.net/">ctags</a>.</p>
+
+<p>You can extend this functionality as much as you like</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" open tag of the word under the cursor, requires to run "ctargs -R ." before</span>
+command<span class="p">!</span> JumpToTag <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+command<span class="p">!</span> JumpToTagOnVsplit <span class="p">:</span><span class="k">vsplit</span>
+<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+command<span class="p">!</span> JumpToTagOnSplit <span class="p">:</span><span class="k">split</span>
+<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>but there is one limitation when using Rails and other gems; you can’t jump inside them, like <code class="language-plaintext highlighter-rouge">:tag ApplicationRecord</code>.</p>
+
+<h2 id="the-catch">The catch</h2>
+
+<p>You can run bundle install and set the path to install gems inside your project so when you run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the gems get indexed.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span><span class="o">=</span>vendor/bundle
+</code></pre></div></div>
+
+<p>But remember to git ignore them</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.gitignore_global
+vendor/bundle
+</code></pre></div></div>
+
+<h2 id="gutentags">Gutentags</h2>
+
+<p>If you don’t like to run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the time, there is a plugin for vim that runs ctags in the background while you are coding. It’s called <a href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a>. All you need to do is install it.</p>
+
+<p>I hope you’ve enjoyed this little trick to make our lives a bit easier when coding Rails on vim. 👍</p>
+
+<p><em><a href="https://dev.to/lucasprag/little-trick-to-use-ctags-to-jump-to-definition-even-inside-gems-like-rails-on-vim-244j">This post is also available on DEV.</a></em></p>
+
+
+</div>
+    </main>
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my twitter profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+</body>
+
+</html>

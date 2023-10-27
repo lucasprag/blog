@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    How to reload your vim configs without exiting vim -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS 2.0"/>
+  <script src="/assets/js/main.js"></script>
+</head>
+
+<body class="dark:bg-gray-900"></body>
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <div class="flex justify-between my-8">
+  <a href="/" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
+    <h1 class="font-medium text-xl">
+      <img src="/assets/images/favicon.ico" height="15" width="15" alt="lucasprag emoji" class="inline" />
+      <span class="ml-2">lucasprag</span>
+    </h1>
+  </a>
+
+  <div class="flex justify-end">
+    <button class="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" onclick="switchTheme()">
+      <!-- Dark Icon  -->
+      <svg
+        class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="currentColor" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+
+      <!-- Light Icon -->
+      <svg
+        class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="currentColorr"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+    </button>
+  </div>
+</div>
+
+    <main class="flex-1">
+      <h1 class="font-semibold text-3xl">
+  How to reload your vim configs without exiting vim
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3 text-gray-400">
+    Last updated: July 26, 2019
+  </time>
+  <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
+
+  <div class="text-xs mt-1 inline">
+    
+    <span class="tag mr-1">
+      vim
+    </span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>This can be very useful, I’m going to show how to reload your vim configs anytime you save them or using a command and a map.</p>
+
+<p><img src="/assets/images/posts/reloaded.png" alt="neovim showing reloaded" class="image" /></p>
+
+<h3 id="make-your-configs-reloadable">Make your configs reloadable</h3>
+
+<p>Add <code class="language-plaintext highlighter-rouge">!</code> on your commands and functions like this:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="p">!</span> ToggleLineNumbers<span class="p">()</span>
+  <span class="k">if</span> &amp;<span class="k">number</span> <span class="p">==</span> <span class="m">1</span>
+    <span class="k">set</span> <span class="nb">nonumber</span>
+  <span class="k">else</span>
+    <span class="k">set</span> <span class="k">number</span>
+  <span class="k">endif</span>
+<span class="k">endfunction</span>
+
+command<span class="p">!</span> GoToDefinitionUsingCTags <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">!</code> means that you are overwriting the function/commands if it is already loaded.</p>
+
+<h3 id="option-1-auto-command">Option #1: Auto command</h3>
+
+<p>When using an auto command, vim is going to source – or reload – your vim configs every time you save them.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" the BufWritePost event gets triggered after writing buffers to files</span>
+autocmd<span class="p">!</span> <span class="nb">BufWritePost</span> *<span class="p">.</span><span class="k">vim</span>* <span class="k">so</span> $MYVIMRC
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">$MYVIMRC</code> is the path to your <code class="language-plaintext highlighter-rouge">vimrc</code> file.</p>
+
+<p>More on auto commands: <a href="/vim/2019/07/26/introduction-on-viml-for-vimmers.html">Introduction to vimL for vimmers</a></p>
+
+<h3 id="option-2-command-and-map">Option #2: Command and map</h3>
+
+<p>When using a command, vim is also going to source your configs, but only when you call the command.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command<span class="p">!</span> ReloadVimConfigs <span class="k">so</span> $MYVIMRC
+<span class="se">  \</span><span class="p">|</span> echo <span class="s1">'configs reloaded!'</span>
+</code></pre></div></div>
+
+<p>After adding it to your vimrc, you need to type <code class="language-plaintext highlighter-rouge">:ReloadVimConfigs</code>.</p>
+
+<p>I prefer this option because I have more control over <strong>when</strong> my configs are reloaded.</p>
+
+<p>You can create a map for that:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">map</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;</span> <span class="p">:</span>ReloadVimConfig<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>That’s all, hope you enjoyed. Any problems or questions? Please reach out on twitter and I can help you out.</p>
+
+</div>
+    </main>
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my twitter profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+</body>
+
+</html>

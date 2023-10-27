@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2023-10-27T02:54:57+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
+
+<p>It can be quite overwhelming having too many things to do. It causes stress and anxiety making us freeze on the spot unable to do anything. I get that.</p>
+
+<p>This is a post mostly to remind myself of some tools or ways of thinking that I’ve seen working for me to get me unstuck so I can do the things I need to do to. If this can help any other person out there, great! If not, at least this is still useful for me.</p>
+
+<h2 id="progress-is-progress">Progress is progress</h2>
+
+<p>Sometimes some tasks seem to be impossible or extremelly difficult. This means that your first try is certainly going to fail.</p>
+
+<p>Example: getting a document from a government institution where you don’t speak the language and where their website doesn’t explain the requirements very well. In addition to have to get there by 6am otherwise you might not even get your turn. In the first visit, you will certainly spend hours there and still go home without the document or any real progress whatsoever. The thinking here is that going there is not real progress, but <strong>it’s still progress</strong>.</p>
+
+<p>The way I think about this sort of task is that failure – and repeat failurate – is still progress.</p>
+
+<h2 id="do-chores">Do chores</h2>
+
+<p>Sometimes when I can’t focus on anything work-related and I keep seeing the mess my place find itself in, I just go and do the chores. I put some laundry in the washing machine, clean the cats’ litter box, put dishes in the dishwasher, organize my desk or anything else that is bothering me. Of couse, is better if you do that in your time off, but life is hard.</p>
+
+<p>These are mostly WFH examples, but the same applies to an office. There is usually a dishwasher there or some mess that someone left behind.</p>
+
+<p>Spending 10 minutes doing these things won’t be noticed at work, can be easily compensated at the end of day, and have the benefit of unblocking myself getting productivity back on track. Just do it.</p>
+
+<h2 id="do-you-have-long-term-plans-remind-yourself-of-them">Do you have long-term plans? Remind yourself of them</h2>
+
+<p>Work might not the most exciting thing ever, but it’s still a step towards your long-term goals, right? Taking a step back and looking at the big picture might actually show that today’s strugle is not so big after all.</p>
+
+<h2 id="write-stuff-down">Write stuff down</h2>
+
+<p>Sometimes I find that writting anything down unblocks my mind to actually do what needs to be done.</p>
+
+<p>I know some people journal, some people write TODOs, but I find that blogging does the trick for me. Even if I don’t publish it – and I usually don’t. This post is one I decided to actually finish it and publish it.</p>
+
+<h2 id="let-it-burn-mindset">Let it burn mindset</h2>
+
+<p>Sometimes when I feel overwhelmed about the amount or difficult of tasks I need to do. When that happens, I pick one of them – anyone of them, maybe giving some preferences if there are concerning negative consequences – and just let the rest burn.</p>
+
+<p>Freeing my mind from the burden of worrying for all those <em>other</em> tasks is what I’m looking for here. I might still do them or maybe I don’t. It doesn’t matter. This is the mindset.</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>These are some things I’ve picked up during my life as a developer that helped me get unstuck. If you have any more tips, let me know on twitter! 💪</p>]]></content><author><name></name></author><category term="productivity" /><summary type="html"><![CDATA[Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can't be done without doing the boring first? I know the feeling.]]></summary></entry><entry><title type="html">“I like to write”</title><link href="https://lucasprag.com/posts/i-like-to-write/" rel="alternate" type="text/html" title="“I like to write”" /><published>2023-07-23T00:00:00+00:00</published><updated>2023-07-23T00:00:00+00:00</updated><id>https://lucasprag.com/posts/i-like-to-write</id><content type="html" xml:base="https://lucasprag.com/posts/i-like-to-write/"><![CDATA[<blockquote>
+  <p>I like to write</p>
+</blockquote>
+
+<p>That’s the biggest lie I ever told myself – and I tell myself a bunch of lies! – I never really liked to write.</p>
+
+<p>Whenever I wanted to create a blog – which I don’t know why I would want such a thing – I would do exactly that, create a blog from the ground up.</p>
+
+<p>That would mean:</p>
+
+<ol>
+  <li>testing a number of blogging technologies – Jekyll, Ghost, Hugo, etc</li>
+  <li>spending some time choosing a CSS framework like Tailwind and making it work with the above</li>
+  <li>choosing where to host the blog, then setup https</li>
+  <li>finding a way to add syntax highlighting – of course, because I would write about code!</li>
+  <li>designing a nice looking layout</li>
+  <li>adding light &amp; dark themes based on system preferences in addition to a manual toggle</li>
+  <li>figuring out RSS</li>
+</ol>
+
+<p>and the list goes on and on, but it never really gets to actually writing blog posts.</p>
+
+<p><strong>This changes now.</strong></p>
+
+<h2 id="why">Why?</h2>
+
+<ul>
+  <li>Practice my writting skills. The ability to communicate effectively via <em>text</em> is highly important for working remotely, which is my case.</li>
+  <li>I can just share a link instead of repeating myself when sharing knowledge with friends and collegues.</li>
+  <li>I always learn something new when writting a blog post and it adds to my career.</li>
+  <li>It reinforces my understanding of the things I blogging about.</li>
+  <li>I can go back and remember my thinking behind subjects.</li>
+</ul>
+
+<p>… because I <strong>want</strong> to write.</p>]]></content><author><name></name></author><category term="meta" /><summary type="html"><![CDATA[The biggest lie I ever told myself.]]></summary></entry><entry><title type="html">The secret behind my productivity using the command line</title><link href="https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line/" rel="alternate" type="text/html" title="The secret behind my productivity using the command line" /><published>2022-08-10T00:00:00+00:00</published><updated>2022-08-10T00:00:00+00:00</updated><id>https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line</id><content type="html" xml:base="https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line/"><![CDATA[<p>As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I’ve picked up that go along the way to help me get work done and that might help you as well.</p>
+
+<h2 id="combine-commands-with-pipe-">Combine commands with pipe <code class="language-plaintext highlighter-rouge">|</code></h2>
+
+<p>Here are some commands from my own history:</p>
+
+<h4 id="pbcopy">pbcopy</h4>
+
+<p>I can copy the results of commands using <code class="language-plaintext highlighter-rouge">pbcopy</code> on Mac, but there is a similar command on other systems.</p>
+
+<p>No need to switch to the mouse to copy any output from a command.</p>
+
+<p>Examples:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git diff | pbcopy</code> to share a quick idea with a colleague at work</li>
+  <li><code class="language-plaintext highlighter-rouge">cat ~/.ssh/id_rsa.pub | pbcopy</code> to copy a key and add it to Github</li>
+  <li><code class="language-plaintext highlighter-rouge">ruby weekly_report.rb -p7d | pbcopy</code> to run a script, generate a weekly report and copy the output</li>
+</ul>
+
+<p>I can also use <code class="language-plaintext highlighter-rouge">pbpaste</code>, but I don’t find that as useful as <code class="language-plaintext highlighter-rouge">pbcopy</code> because I’m usually pasting the content on Slack, Jira, Github, etc, not the other way around.</p>
+
+<h4 id="grep">grep</h4>
+
+<p><code class="language-plaintext highlighter-rouge">grep</code> is useful for filtering the output of the previous command and searching the content of files</p>
+
+<p>Examples:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">gem list | grep rubocop</code> to see the version of the rubocop gem I have installed on my machine</li>
+  <li><code class="language-plaintext highlighter-rouge">cat Gemfile.lock | grep rubocop</code> to see the version of the rubocop gem I have installed on a Rails project</li>
+</ul>
+
+<h4 id="xargs">xargs</h4>
+
+<p><code class="language-plaintext highlighter-rouge">xargs</code> executes a command for each line of the previous output.</p>
+
+<p>For example, sometimes I have too many branches locally on my git repository so I delete them in steps to make sure I don’t delete a branch I’m currently working on.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch | grep fix | xargs git branch -D
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">git branch</code> lists all branches, <code class="language-plaintext highlighter-rouge">grep fix</code> filters them using the term “fix”, finally, <code class="language-plaintext highlighter-rouge">xargs</code> deletes all these branches in one go.</p>
+
+<h4 id="awk">awk</h4>
+
+<p>I find <code class="language-plaintext highlighter-rouge">awk</code> helpful for extracting data from more complex outputs. This means I can extract only one column of the previous output to continue working with my pipes.</p>
+
+<p>For example, when I need to delete files in my git repository, I simply do this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status -s | grep '??' | awk '{ print $2 }' | xargs rm -rf
+</code></pre></div></div>
+
+<p>There might be a nice git command to do the same, but I don’t need that because at some point I wrote the command above so it made to my history and now it’s a quick <code class="language-plaintext highlighter-rouge">ctrl+r</code> away which brings me to the next topic.</p>
+
+<h2 id="history-search">History search</h2>
+
+<p>All the commands I type on my terminal are saved into a history file. Then I search on said file using <code class="language-plaintext highlighter-rouge">ctrl+r</code> and it brings up the commands I used before to my current terminal.</p>
+
+<p>This means that the command above is just a few keystrokes away. Try it yourself!</p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">ctrl+r</code> is available by default on shells like <code class="language-plaintext highlighter-rouge">bash</code> or <code class="language-plaintext highlighter-rouge">zsh</code>, but it needs to be added when using <code class="language-plaintext highlighter-rouge">fish</code>.</p>
+
+<h2 id="gpu-accelerated-terminal-emulator">GPU-accelerated terminal emulator</h2>
+
+<p>After I started using a GPU-accelerated terminal, I couldn’t look back to <a href="https://iterm2.com/index.html">iTerm</a> and others.</p>
+
+<p>As a developer, the terminal is my second most used tool – the code editor being the first – and I need it to be really fast. Not just fast, <em>really</em> fast.</p>
+
+<p>I currently use <a href="https://github.com/alacritty/alacritty">Alacritty</a> and it gets the job done, but there are a few features I miss from it like splits, tabs, search, etc. For all of that, I need to use <a href="https://github.com/tmux/tmux">tmux</a> which I was already using before so I’m ok with it for now.</p>
+
+<p>However, another option that caught my eye as a GPU-accelerated terminal and that implements all these features I mentioned – and much more! – is <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a> 🤩</p>
+
+<p>I’m considering moving away from Alacritty+tmux and going all in into Kitty because it could be a <em>much easier</em> way to allow me to:</p>
+
+<ul>
+  <li>organize and name all my terminals</li>
+  <li>predefine them on list and open them all in one go</li>
+  <li>move around within tabs, splits, etc using shortcuts – this is gold 🏆</li>
+</ul>
+
+<p>Sometimes the apps at work can use multiple terminals and even more when I have to work on multiple apps at the same time (e.g. API + front-end + admin + backoffice app + ???). In addition to that, they also output a lot of content and a GPU-accelerated terminal emulator comes in handy for that.</p>
+
+<h2 id="bonus-1-turn-off-all-animations">Bonus #1: Turn off all animations</h2>
+
+<p>I turn off all animations I can or simply avoid Mac features that have them. I know they look great, but the way I see them, they just take time out of me. They are also not fun for my computer to render, <strong>especially</strong> when I’m sharing my screen over the internet with my colleagues. 😕</p>
+
+<h2 id="bonus-2-automate-moving-windows-around">Bonus #2: Automate moving windows around</h2>
+
+<p>This is not terminal-related, but one tool that heavily improves my productivity is <a href="https://www.hammerspoon.org/">Hammerspoon</a>.</p>
+
+<p>The app itself is a bridge between the operating system and a Lua scripting engine, which can be used to manage, move, and resize windows around.</p>
+
+<p>This is my script (<a href="https://github.com/lucasprag/dotfiles/blob/main/hammerspoon/init.lua">link</a>) as an example. I have shortcuts to move windows to predefined spots on my screen, in addition, to resizing them to occupy 50%, 75% or 100% of the space. Multi-monitor support is also available. ✨</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>]]></content><author><name></name></author><category term="terminal" /><category term="productivity" /><summary type="html"><![CDATA[As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.]]></summary></entry><entry><title type="html">How to provide configs to React on Phoenix and esbuild</title><link href="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/" rel="alternate" type="text/html" title="How to provide configs to React on Phoenix and esbuild" /><published>2022-02-18T00:00:00+00:00</published><updated>2022-02-18T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/"><![CDATA[<p>I’ve seen a few blog posts about using environment variables on React/Vue/etc when they’re part of a Phoenix app using webpack, but I didn’t find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.</p>
+
+<h2 id="where-to-save-configs">Where to save configs</h2>
+
+<p>On <code class="language-plaintext highlighter-rouge">config/dev.ex</code> you can set arbitrary configs to make them available to your application. You can also import other configs from other files that might not get committed like this:</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.ex</span>
+
+<span class="n">import_config</span> <span class="s2">"dev.secret.exs"</span>
+</code></pre></div></div>
+
+<p>Then you can add <code class="language-plaintext highlighter-rouge">dev.secrets.exs</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> and write down your configs there.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.secret.exs</span>
+
+<span class="n">config</span> <span class="ss">:my_app</span><span class="p">,</span>
+  <span class="ss">public_key:</span> <span class="s2">"you can write your key here"</span><span class="p">,</span>
+  <span class="ss">secret_key:</span> <span class="s2">"you can write your key here"</span>
+</code></pre></div></div>
+
+<p>Note: You can also get these keys from the environment using <code class="language-plaintext highlighter-rouge">System.fetch_env!("NAME_OF_YOUR_ENV_VAR")</code> if you prefer, but it sounds like this is not the Elixir way of doing these things because it doesn’t work well with all configuration scenarios (dev/prod/runtime/etc). More details on <a href="https://groups.google.com/g/elixir-lang-core/c/SLlJxiMa-7Q/m/Un1bTb2XLzsJ?pli=1">this thread</a>.</p>
+
+<h2 id="providing-configs-to-your-front-end">Providing configs to your front-end</h2>
+
+<p>You don’t need to change your esbuild configuration to provide keys to your front-end. The trick here is to create a JavaScript object on your <code class="language-plaintext highlighter-rouge">root.html.heex</code> to make <strong>public keys</strong> available before the the front-end loads.</p>
+
+<p>NOTE: Don’t provide your <strong>private/secret keys</strong> to your front-end.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="kd">var</span> <span class="nx">PUBLIC_CONFIGS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">public_key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;%= Application.fetch_env!(:my_app, :public_key) %&gt;</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="using-it-in-your-front-end">Using it in your front-end</h2>
+
+<p>With that you have a <code class="language-plaintext highlighter-rouge">PUBLIC_CONFIGS</code> object available to use anywhere in your front-end. Here is an example using a component from the <a href="https://www.npmjs.com/package/react-google-invisible-recaptcha">react-google-invisible-recaptcha</a> package:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Recaptcha</span>
+  <span class="na">onResolved</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="p">}</span><span class="si">}</span>
+  <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">refRecaptcha</span><span class="si">}</span>
+  <span class="na">sitekey</span><span class="p">=</span><span class="si">{</span><span class="nx">PUBLIC_CONFIGS</span><span class="p">.</span><span class="nx">public_key</span><span class="si">}</span> <span class="c1">// here is your key</span>
+<span class="p">/&gt;</span>
+</code></pre></div></div>
+
+<p>This approach is something I had to figure out by myself for a project, do you have a better idea about how to do the same? Please ping on twitter. Thanks.</p>]]></content><author><name></name></author><category term="elixir" /><category term="phoenix" /><summary type="html"><![CDATA[I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.]]></summary></entry><entry><title type="html">Expanding Rails’ STI to your architecture</title><link href="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/" rel="alternate" type="text/html" title="Expanding Rails’ STI to your architecture" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture</id><content type="html" xml:base="https://lucasprag.com/posts/expanding-rails-sti-to-your-architecture/"><![CDATA[<p>Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.</p>
+
+<p>We don’t need to stop there, we could make our software architecture understand when it’s talking to an entity from platform <code class="language-plaintext highlighter-rouge">x</code> versus platform <code class="language-plaintext highlighter-rouge">y</code> and, with that, only implement the nuances of new platforms when adding them. Let me show you one idea.</p>
+
+<h2 id="how-rails-sti-works">How Rails STI works</h2>
+
+<blockquote>
+  <p>STI or Single Table Inheritance is a way to simulate object-oriented inheritance in a relational database. - <a href="https://en.wikipedia.org/wiki/Single_Table_Inheritance">Wikipedia</a>.</p>
+</blockquote>
+
+<p>What it means is that we can have multiple models inheriting from one model with common methods and attributes and that is linked to a single database table through active record. Let me show you how.</p>
+
+<p>To achieve that, imagine a model called <code class="language-plaintext highlighter-rouge">Store</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/models/store.rb</span>
+<span class="k">class</span> <span class="nc">Store</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="k">def</span> <span class="nf">admin_url</span>
+    <span class="kp">nil</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>This model has these database columns:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># rails g model Store name url external_id:string:uniq</span>
+
+<span class="k">class</span> <span class="nc">CreateStores</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="p">[</span><span class="mf">6.0</span><span class="p">]</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">create_table</span> <span class="ss">:stores</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:name</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:url</span>
+      <span class="n">t</span><span class="p">.</span><span class="nf">string</span> <span class="ss">:external_id</span> <span class="c1"># the ID on its platform</span>
+
+      <span class="n">t</span><span class="p">.</span><span class="nf">timestamps</span>
+    <span class="k">end</span>
+    <span class="n">add_index</span> <span class="ss">:stores</span><span class="p">,</span> <span class="ss">:external_id</span><span class="p">,</span> <span class="ss">unique: </span><span class="kp">true</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>In order to use STI on this model, we simply need to add a column type to its table.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># rails g migration AddTypeToStores type data_json:jsonb</span>
+<span class="k">class</span> <span class="nc">AddTypeToStores</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="p">[</span><span class="mf">6.0</span><span class="p">]</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_column</span> <span class="ss">:stores</span><span class="p">,</span> <span class="ss">:type</span><span class="p">,</span> <span class="ss">:string</span>
+    <span class="n">add_column</span> <span class="ss">:stores</span><span class="p">,</span> <span class="ss">:data_json</span><span class="p">,</span> <span class="ss">:jsonb</span><span class="p">,</span> <span class="ss">default: </span><span class="s2">"{}"</span> <span class="c1"># more on this later</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>The sub-models:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/models/store/shopify.rb</span>
+<span class="k">class</span> <span class="nc">Store::Shopify</span> <span class="o">&lt;</span> <span class="no">Store</span>
+  <span class="k">def</span> <span class="nf">admin_url</span>
+    <span class="s2">"</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">/admin"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/models/store/bigcommerce.rb</span>
+<span class="k">class</span> <span class="nc">Store::Bigcommerce</span> <span class="o">&lt;</span> <span class="no">Store</span>
+  <span class="k">def</span> <span class="nf">admin_url</span>
+    <span class="s2">"</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">/manage/dashboard"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>For some of these platforms we could have totally unique attributes, thanks to <a href="https://api.rubyonrails.org/classes/ActiveRecord/Store.html"><code class="language-plaintext highlighter-rouge">store_accessor</code></a>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Store::Bigcommerce</span> <span class="o">&lt;</span> <span class="no">Store</span>
+  <span class="n">store_accessor</span> <span class="ss">:data_json</span><span class="p">,</span> <span class="ss">:webdav_url</span>
+
+  <span class="k">def</span> <span class="nf">admin_url</span>
+    <span class="s2">"</span><span class="si">#{</span><span class="n">url</span><span class="si">}</span><span class="s2">/manage/dashboard"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>The result:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">shopify_store</span> <span class="o">=</span> <span class="no">Store</span><span class="o">::</span><span class="no">Shopify</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"My Store"</span><span class="p">,</span> <span class="ss">url: </span><span class="s2">"https://mystore.myshopify.com"</span><span class="p">)</span>
+<span class="n">shopify_store</span><span class="p">.</span><span class="nf">name</span>
+<span class="n">shopify_store</span><span class="p">.</span><span class="nf">admin_url</span>
+<span class="c1"># =&gt; "https://mystore.myshopify.com/admin"</span>
+
+<span class="n">bigcommerce_store</span> <span class="o">=</span> <span class="no">Store</span><span class="o">::</span><span class="no">Bigcommerce</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"My Store"</span><span class="p">,</span> <span class="ss">url: </span><span class="s2">"https://mystore.mybigcommerce.com"</span><span class="p">)</span>
+<span class="n">bigcommerce_store</span><span class="p">.</span><span class="nf">name</span>
+<span class="n">bigcommerce_store</span><span class="p">.</span><span class="nf">admin_url</span>
+<span class="c1"># =&gt; https://mystore.mybigcommerce.com/manage/dashboard</span>
+
+<span class="n">bigcommerce_store</span><span class="p">.</span><span class="nf">webdav_url</span> <span class="o">=</span> <span class="s2">"https://store-570ec032.mybigcommerce.com/dav"</span>
+<span class="c1"># =&gt; https://store-570ec032.mybigcommerce.com/dav</span>
+</code></pre></div></div>
+
+<p>Note that we don’t have the <code class="language-plaintext highlighter-rouge">webdav_url</code> attribute for Shopify store models:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">shopify_store</span><span class="p">.</span><span class="nf">webdav_url</span>
+<span class="c1"># NoMethodError (undefined method `webdav_url' for #&lt;Store::Shopify:0x00007fc6a7b848c0&gt;)</span>
+</code></pre></div></div>
+
+<p>Lastly, to query the STI model we don’t need to only query it using the specific STI model, the parent model also works.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Store</span><span class="o">::</span><span class="no">Shopify</span><span class="p">.</span><span class="nf">create!</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"My Store"</span><span class="p">,</span> <span class="ss">url: </span><span class="s2">"https://mystore.myshopify.com"</span><span class="p">)</span>
+<span class="no">Store</span><span class="p">.</span><span class="nf">last</span>
+<span class="c1">#&lt;Store::Shopify id: 1, name: "My Store", [...], type: "Store::Shopify", data_json: {}&gt;</span>
+</code></pre></div></div>
+
+<p>All this ☝️ helps us use similar models that share most of their methods and data but still are able to have some custom methods and attributes based on type.</p>
+
+<h1 id="expanding-to-the-architecture">Expanding to the architecture</h1>
+
+<p>I’m going to use as example a simple architecture based on small classes that respond to <code class="language-plaintext highlighter-rouge">#run</code> and for the sake of this post, I’m only considering the store itself instead of all its possible entities like orders, customers, products, etc.</p>
+
+<p>Use case: fetch and save store data from multiple platform APIs</p>
+
+<p>Usage:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">SyncStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>There is no mention of any platform in the code above. Our goal is to not need to worry about platform specific behaviour until we really need. 💪</p>
+
+<p>This is simple, we just need to use some common OOP concepts like inheritance with one catch that I’m going to show you later.</p>
+
+<p>First, we need a parent class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/sync_store.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore</span>
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">).</span><span class="nf">run</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:store</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">store</span><span class="p">:)</span>
+    <span class="vi">@store</span> <span class="o">=</span> <span class="n">store</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="k">raise</span> <span class="no">NotImplementedError</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Second, we need child classes that are going to implement platform specific behaviour:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/sync_store/shopify.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore::Shopify</span> <span class="o">&lt;</span> <span class="no">SyncStore</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># get store data from API</span>
+    <span class="c1"># normalize the return</span>
+    <span class="c1"># create or update the store</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/sync_store/bigcommerce.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore::Bigcommerce</span> <span class="o">&lt;</span> <span class="no">SyncStore</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># get store data from API</span>
+    <span class="c1"># normalize the return</span>
+    <span class="c1"># create or update the store</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>In order to use the code above we would have to explicitly know about the type in our controllers, background jobs, etc.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">SyncStore</span><span class="o">::</span><span class="no">Shopify</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="o">::</span><span class="no">Shopify</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+<span class="no">SyncStore</span><span class="o">::</span><span class="no">Bigcommerce</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="o">::</span><span class="no">Bigcommerce</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is not what we want, but it’s close.</p>
+
+<p>We can change our parent class to automatically detect what is the type of the first argument and initialize the STI child class for that type.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/sync_store.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore</span>
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="n">build</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">).</span><span class="nf">run</span> <span class="c1"># changed from calling .new to .build</span>
+    <span class="k">end</span>
+
+    <span class="c1"># detect the STI type and initialize the child class</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="c1"># let devs use platform specific classes directly</span>
+      <span class="k">if</span> <span class="nb">name</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">'::'</span><span class="p">).</span><span class="nf">size</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="k">else</span>
+        <span class="c1"># gets the STI type of the object in the first keyword argument</span>
+        <span class="c1"># Ex. "Shopify", "Bigcommerce"</span>
+        <span class="n">sti_type</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">last</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">demodulize</span>
+
+        <span class="c1"># try to find STI sub class, if not found return itself</span>
+        <span class="n">operation</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">::</span><span class="si">#{</span><span class="n">sti_type</span><span class="si">}</span><span class="s2">"</span><span class="p">.</span><span class="nf">safe_constantize</span> <span class="o">||</span> <span class="nb">self</span>
+
+        <span class="n">operation</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:store</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">store</span><span class="p">:)</span>
+    <span class="vi">@store</span> <span class="o">=</span> <span class="n">store</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="k">raise</span> <span class="no">NotImplementedError</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>All we need it to call the parent class and we don’t even need to know the STI type of the model:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">SyncStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Why stop there? We can make most of our other classes understand it and only implement the nuances of each platform when adding a new one.</p>
+
+<p>For that to happen we need to move this logic of choosing the STI child class out to something shared. It could be a common parent class or a shared module between these classes. I’m going with a shared module.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/lib/operation.rb</span>
+
+<span class="k">module</span> <span class="nn">Operation</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">included</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+    <span class="n">klass</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="no">ClassMethods</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">module</span> <span class="nn">ClassMethods</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="n">build</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">).</span><span class="nf">run</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="c1"># let devs use platform specific classes dirrectly</span>
+      <span class="k">if</span> <span class="nb">name</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">'::'</span><span class="p">).</span><span class="nf">size</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="k">else</span>
+        <span class="c1"># gets the STI type of the object in the first keyword argument</span>
+        <span class="c1"># Ex. "Shopify", "Bigcommerce"</span>
+        <span class="n">sti_type</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">last</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">demodulize</span>
+
+        <span class="c1"># try to find STI sub class, if not found return itself</span>
+        <span class="n">operation</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">::</span><span class="si">#{</span><span class="n">sti_type</span><span class="si">}</span><span class="s2">"</span><span class="p">.</span><span class="nf">safe_constantize</span> <span class="o">||</span> <span class="nb">self</span>
+
+        <span class="n">operation</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Then include this module to all parent classes that we want to do have this behaviour of choosing a child class based on the given STI model.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/sync_store.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore</span>
+  <span class="kp">include</span> <span class="o">::</span><span class="no">Operation</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:store</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">store</span><span class="p">:)</span>
+    <span class="vi">@store</span> <span class="o">=</span> <span class="n">store</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="n">normalized_store</span> <span class="o">=</span> <span class="no">NormalizeStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="n">store</span><span class="p">,</span> <span class="ss">store_hash: </span><span class="n">get_store_from_api</span><span class="p">)</span>
+
+    <span class="no">SaveStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="n">store</span><span class="p">,</span> <span class="ss">normalized_store: </span><span class="n">normalized_store</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">get_store_from_api</span>
+    <span class="k">raise</span> <span class="no">NotImplementedError</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">get_store_from_api</code> method should be implemented on every STI child class.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/sync_store/shopify.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore::Shopify</span> <span class="o">&lt;</span> <span class="no">SyncStore</span>
+  <span class="k">def</span> <span class="nf">get_store_from_api</span>
+    <span class="c1"># call API and get this result</span>
+    <span class="p">{</span> <span class="ss">store_name: </span><span class="s2">"My Shopify Store"</span><span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/sync_store/bigcommerce.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore::Bigcommerce</span> <span class="o">&lt;</span> <span class="no">SyncStore</span>
+  <span class="k">def</span> <span class="nf">get_store_from_api</span>
+    <span class="c1"># call API and get this result</span>
+    <span class="p">{</span> <span class="ss">display_name: </span><span class="s2">"My BigCommerce Store"</span><span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Note the difference between the returned payloads. (Having <code class="language-plaintext highlighter-rouge">store_name</code> and <code class="language-plaintext highlighter-rouge">display_name</code> for name)</p>
+
+<p>We can do the same thing with <code class="language-plaintext highlighter-rouge">NormalizeStore</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/normalize_store.rb</span>
+<span class="k">class</span> <span class="nc">NormalizeStore</span>
+  <span class="kp">include</span> <span class="o">::</span><span class="no">Operation</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:store</span><span class="p">,</span> <span class="ss">:store_hash</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">store</span><span class="p">:,</span> <span class="n">store_hash</span><span class="p">:)</span>
+    <span class="vi">@store</span> <span class="o">=</span> <span class="n">store</span>
+    <span class="vi">@store_hash</span> <span class="o">=</span> <span class="n">store_hash</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="k">raise</span> <span class="no">NotImplementedError</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/normalize_store/shopify.rb</span>
+<span class="k">class</span> <span class="nc">NormalizeStore::Shopify</span> <span class="o">&lt;</span> <span class="no">NormalizeStore</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># converts Shopify's store_hash to a common hash to assign to the model</span>
+    <span class="p">{</span> <span class="ss">name:  </span><span class="n">store_hash</span><span class="p">[</span><span class="ss">:store_name</span><span class="p">]</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/normalize_store/bigcommerce.rb</span>
+<span class="k">class</span> <span class="nc">NormalizeStore::Bigcommerce</span> <span class="o">&lt;</span> <span class="no">NormalizeStore</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># converts BigCommerce's store_hash to a common hash to assign to the model</span>
+    <span class="p">{</span> <span class="ss">name: </span><span class="n">store_hash</span><span class="p">[</span><span class="ss">:display_name</span><span class="p">]</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>But on <code class="language-plaintext highlighter-rouge">SaveStore</code> we don’t have any specific platform behaviour to cover since we have a common hash representing the store, we can just assign what we want and save.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/operations/save_store.rb</span>
+<span class="k">class</span> <span class="nc">SaveStore</span>
+  <span class="kp">include</span> <span class="o">::</span><span class="no">Operation</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:store</span><span class="p">,</span> <span class="ss">:normalized_store</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">store</span><span class="p">:,</span> <span class="n">normalized_store</span><span class="p">:)</span>
+    <span class="vi">@store</span> <span class="o">=</span> <span class="n">store</span>
+    <span class="vi">@normalized_store</span> <span class="o">=</span> <span class="n">normalized_store</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="n">store</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">normalized_store</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>If you’re following these instructions on your own, don’t forget to add these new directories to your <code class="language-plaintext highlighter-rouge">config/application.rb</code>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">eager_load_paths</span> <span class="o">+=</span> <span class="sx">%W(</span><span class="si">#{</span><span class="n">config</span><span class="p">.</span><span class="nf">root</span><span class="si">}</span><span class="sx">/operations/**/*.rb)</span>
+<span class="n">config</span><span class="p">.</span><span class="nf">eager_load_paths</span> <span class="o">+=</span> <span class="sx">%W(</span><span class="si">#{</span><span class="n">config</span><span class="p">.</span><span class="nf">root</span><span class="si">}</span><span class="sx">/lib/*.rb)</span>
+</code></pre></div></div>
+
+<p>It’s done, we can test in the Rails console.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create some data</span>
+<span class="no">Store</span><span class="o">::</span><span class="no">Shopify</span><span class="p">.</span><span class="nf">create!</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"To be updated"</span><span class="p">,</span> <span class="ss">url: </span><span class="s2">"https://mystore.myshopify.com"</span><span class="p">)</span>
+
+<span class="c1"># run the parent class</span>
+<span class="no">SyncStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+
+<span class="no">Store</span><span class="p">.</span><span class="nf">last</span>
+<span class="c1"># =&gt; #&lt;Store::Shopify id: 1, name: "My Shopify Store", type: "Store::Shopify", ...&gt;</span>
+</code></pre></div></div>
+
+<h1 id="validating-the-architecture">Validating the architecture</h1>
+
+<p>The goal for this architecture is to be able to only implement the nuances of new platforms as we add them. Let’s validate that by adding a new platform: <strong>Wix</strong>.</p>
+
+<p>There are three classes we need to implement to be able to sync a Wix store: <code class="language-plaintext highlighter-rouge">Store::Wix</code>, <code class="language-plaintext highlighter-rouge">SyncStore::Wix</code> and <code class="language-plaintext highlighter-rouge">NormalizeStore::Wix</code></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/models/store/wix.rb</span>
+<span class="k">class</span> <span class="nc">Store::Wix</span> <span class="o">&lt;</span> <span class="no">Store</span>
+  <span class="k">def</span> <span class="nf">admin_url</span>
+    <span class="s2">"https://www.wix.com/dashboard/</span><span class="si">#{</span><span class="n">external_id</span><span class="si">}</span><span class="s2">/home"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/sync_store/wix.rb</span>
+<span class="k">class</span> <span class="nc">SyncStore::Wix</span> <span class="o">&lt;</span> <span class="no">SyncStore</span>
+  <span class="k">def</span> <span class="nf">get_store_from_api</span>
+    <span class="p">{</span> <span class="ss">site: </span><span class="p">{</span> <span class="ss">displayName: </span><span class="s2">"My Wix Store"</span> <span class="p">}</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># app/operations/normalize_store/wix.rb</span>
+<span class="k">class</span> <span class="nc">NormalizeStore::Wix</span> <span class="o">&lt;</span> <span class="no">NormalizeStore</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># converts Wix's store_hash to a common hash to assign to the model</span>
+    <span class="p">{</span> <span class="ss">name: </span><span class="n">store_hash</span><span class="p">.</span><span class="nf">dig</span><span class="p">(</span><span class="ss">:site</span><span class="p">,</span> <span class="ss">:displayName</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Trying it out:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create some data</span>
+<span class="no">Store</span><span class="o">::</span><span class="no">Wix</span><span class="p">.</span><span class="nf">create!</span><span class="p">(</span><span class="ss">name: </span><span class="s2">"To be updated"</span><span class="p">,</span> <span class="ss">url: </span><span class="s2">"https://store.lucasprag.com/"</span><span class="p">)</span>
+
+<span class="c1"># run the parent class</span>
+<span class="no">SyncStore</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="ss">store: </span><span class="no">Store</span><span class="p">.</span><span class="nf">last</span><span class="p">)</span>
+
+<span class="no">Store</span><span class="p">.</span><span class="nf">last</span>
+<span class="c1"># =&gt; #&lt;Store::Wix id: 3, name: "My Wix Store", type: "Store::Wix", ...&gt;</span>
+</code></pre></div></div>
+
+<p>We reached our goal of only implementing the nuances of this new platform. ✅</p>
+
+<h1 id="the-end-result">The end result</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree app/models/
+
+app/models
+├── application_record.rb
+├── concerns
+├── store
+│   ├── bigcommerce.rb
+│   ├── shopify.rb
+│   └── wix.rb
+└── store.rb
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree app/operations/
+
+app/operations/
+├── normalize_store     # converts platform specific data to common data
+│   ├── bigcommerce.rb
+│   ├── shopify.rb
+│   └── wix.rb
+├── normalize_store.rb
+├── save_store.rb       # updates store based on common data
+├── sync_store          # implements method to call the platform's specific API
+│   ├── bigcommerce.rb
+│   ├── shopify.rb
+│   └── wix.rb
+└── sync_store.rb       # calls method to call API, calls NormalizeStore and SaveStore
+</code></pre></div></div>
+
+<p>You can find the complete code from this post <a href="https://github.com/lucasprag/expanding-sti">here</a>.</p>
+
+<p>I hope you enjoyed this post, please ping on twitter if you have any question, suggestion or just say hi. 👋</p>
+
+<p><small>
+  “What about validations?” you may ask, well, I can write a blog post about it, ping on twitter if you want to see my approach for that 👍
+</small></p>]]></content><author><name></name></author><category term="architecture" /><category term="rails" /><summary type="html"><![CDATA[Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.]]></summary></entry><entry><title type="html">🐠 Fish, the shell</title><link href="https://lucasprag.com/posts/fish-the-shell/" rel="alternate" type="text/html" title="🐠 Fish, the shell" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/fish-the-shell</id><content type="html" xml:base="https://lucasprag.com/posts/fish-the-shell/"><![CDATA[<p>One of the greatest changes I’ve made to my set of programming tools was changing from zsh to <a href="https://fishshell.com/">fish</a> and these are the reasons that drove me to this change:</p>
+
+<h3 id="1-abbreviations">1. Abbreviations</h3>
+
+<p>Abbreviations behave like aliases on bash and zsh but instead of only running their respective commands, they also expand and show the full command.</p>
+
+<p>This is useful to let others know what you are doing when pair programming, to give some sense to your history of commands and to not let you forget how to use other shells when you’re using other people’s computers. This last one is special to me because I used to have lots of aliases on zsh, but when I had to help a colleague, I’d be lost because I wouldn’t remember what <code class="language-plaintext highlighter-rouge">gcam</code> or <code class="language-plaintext highlighter-rouge">dcup</code> were exactly.</p>
+
+<p>Example:</p>
+
+<p>It may look that I’m typing super fast in the gif above – because of its frames per second rate – but I’m only typing <code class="language-plaintext highlighter-rouge">fn</code>, <code class="language-plaintext highlighter-rouge">gs</code>, <code class="language-plaintext highlighter-rouge">gd</code>, <code class="language-plaintext highlighter-rouge">ga .</code>, <code class="language-plaintext highlighter-rouge">gc</code>, <code class="language-plaintext highlighter-rouge">gp</code>.</p>
+
+<p><img src="/assets/images/posts/fish-abbreviations.gif" alt="Using fish abbreviations, commands expand as I type the abbreviations to let other know what you are doing and keep you give sense to your history." /></p>
+
+<p>Fish also have aliases, but I just don’t use them that much in favor of abbreviations.</p>
+
+<h3 id="2-syntax-highlight">2. Syntax highlight</h3>
+
+<p>When typing commands to your shell, you get syntax highlighting that shows when a program exists, if you made a typo and many more things.</p>
+
+<p>Showing command as red when the program doesn’t exists</p>
+
+<p><img src="/assets/images/posts/fish-doesnt-exist.png" alt="program doesn't exists" /></p>
+
+<p>Showing darker blue for the program and lighter blue for its arguments</p>
+
+<p><img src="/assets/images/posts/fish-syntax-highlight.png" alt="darker blue for program and lighter blue for its arguments" /></p>
+
+<h3 id="3-oh-my-fish">3. Oh my fish</h3>
+
+<p><a href="https://github.com/oh-my-fish/oh-my-fish">Oh my fish</a> is a fast, extensible and easy to use framework that let you write functions that work as bin programs.</p>
+
+<p>You may have noticed that I typed <code class="language-plaintext highlighter-rouge">gp</code> in the gif above and it expanded to <code class="language-plaintext highlighter-rouge">git pull origin (current_branch)</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">current_branch</code> is a function I copied from somewhere – I can’t remember – but all it does is to return the name of the branch you are currently using.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.config/fish/functions/current_branch.fish
+
+function current_branch
+    set ref (git symbolic-ref HEAD 2&gt; /dev/null); or \
+    set ref (git rev-parse --short HEAD 2&gt; /dev/null); or return
+    echo $ref | sed -e 's|^refs/heads/||'
+end
+</code></pre></div></div>
+
+<p>I also have <code class="language-plaintext highlighter-rouge">gP</code> that expands to <code class="language-plaintext highlighter-rouge">git push origin (current_branch)</code>.</p>
+
+<p>Another function I have is <code class="language-plaintext highlighter-rouge">kp</code> to interactively kill processes using <a href="https://github.com/junegunn/fzf">fzf</a>, a fast command line fuzzy finder.</p>
+
+<p><img src="/assets/images/posts/fish-kp.gif" alt="using kp to kill a sleep program running forever" /></p>
+
+<p>Oh my fish also brings to the table a number of <a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md">themes</a> for your shell with special formating to show branch names, current directories, if there is any git change, etc.</p>
+
+<p><img src="/assets/images/posts/fish-oh-my-fish-shell.png" alt="my custom fish theme is quite simple" /></p>
+
+<h3 id="4-autocomplete">4. Autocomplete</h3>
+
+<p>The default autocomplete behaviour in fish is adding a gray auto completion option as you type commands, then you can use your right arrow key and it autocompletes.</p>
+
+<p><img src="/assets/images/posts/fish-autocomplete.png" alt="default auto complete" /></p>
+
+<p>But if you, like me, miss the <code class="language-plaintext highlighter-rouge">ctrl+r</code> history search from bash and zsh, you can add it to fish.</p>
+
+<p><img src="/assets/images/posts/fish-querying-history.png" alt="fzf auto complete" /></p>
+
+<p>The way to add it is by adding a symbolic link and an existing function that comes by default when you install fzf to your fish config, assuming you use fzf.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s ~/.fzf/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
+
+# ~/.cofig/fish/functions/fish_user_key_bindings.fish
+function fish_user_key_bindings
+  fzf_key_bindings
+end
+</code></pre></div></div>
+
+<p>I really like having both autocomplete benefits. 😎</p>
+
+<h3 id="reason-why-not-use-it">Reason why <em>not</em> use it</h3>
+
+<p>Fish is intentionally not fully POSIX compliant meaning that a script written for bash will likely not work on fish.</p>
+
+<p>As a result, in order to run a bash script you need to explicitly run it on bash, for example <code class="language-plaintext highlighter-rouge">bash script.sh</code>.</p>
+
+<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>
+
+<hr />
+
+<p><a href="https://fishshell.com/">Fish</a> is not new, but it can be new to you as it was to me. If you like to try new programming things, I suggest fish. 🐠</p>
+
+<p>I hope you enjoyed this post, please ping on twitter if you have any question, suggestion or just say hi. 👋</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry><entry><title type="html">A year of ruby meetups in Kitchener</title><link href="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/" rel="alternate" type="text/html" title="A year of ruby meetups in Kitchener" /><published>2019-12-12T00:00:00+00:00</published><updated>2019-12-12T00:00:00+00:00</updated><id>https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener</id><content type="html" xml:base="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/"><![CDATA[<p>I’ve been living in Kitchener for over an year and in the first time I attended to the ruby workshop I created my <a href="https://github.com/rails/rails/pull/34233">first PR</a> to Rails 🎉</p>
+
+<p>It was quite simple of course, but in that workshop I’ve learned that it’s not that hard to do open source. Eventually I found a small problem in Rails and I created <a href="https://github.com/rails/rails/pull/36470">another PR</a>.</p>
+
+<p>Then I started doing more open source in projects that I was using at work like <a href="https://github.com/mezis/viscacha/pull/3">viscacha</a>, <a href="https://github.com/rails/sprockets/pull/599">sprockets</a>, <a href="https://github.com/itchyny/lightline.vim/pull/398">lightline.vim</a>, tabulous PR <a href="https://github.com/webdevel/tabulous/pull/2">#1</a> and <a href="https://github.com/webdevel/tabulous/pull/3">#2</a>, <a href="https://github.com/thadeu/vscode-run-rspec-file/pull/8">vscode-run-rspec-file</a> and hopefully this list is only going to grow overtime.</p>
+
+<p>In other ruby workshops, it was really nice to be able to help other people’s projects.</p>
+
+<p>The meetup when <a href="https://github.com/jayelkaake">Jay El-Kaake</a> gave a talk about <a href="https://www.meetup.com/kw-ruby-on-rails/events/260999605/">how to make Rails faster than the speed of light</a> was really interesting, I’ve learned a few things on how to do speed tests, how to reduce latency when connecting to your app/postsgresql/redis and much more!</p>
+
+<p>In the workshop focused on <a href="https://www.meetup.com/kw-ruby-on-rails/events/265685895/">Hacktoberfest</a> I helped a developer to participate and I decided to participate myself which was great. 🌟</p>
+
+<p><img src="/assets/images/posts/hacktoberfest-email.jpg" alt="The email I got saying that I've completed the Hacktoberfest challenge." /></p>
+
+<p>I missed the talk about Rails and Docker, that was a shame, I wish I could have made for that one.</p>
+
+<p>In the <a href="https://www.meetup.com/kw-ruby-on-rails/events/259429067/">Career, Business and Software Development</a> talk by <a href="https://twitter.com/martinbasiri">Martin Basiri</a> I’ve learned one thing or two about the business side of tech companies. He also talked about his first endeavor which was earphones that made it easier to untangle their cable - 4 seconds less than others - and how it failed when wireless earphones got popular.</p>
+
+<p>It was quite inspiring to see so many students and developers asking interesting questions in the <a href="https://www.meetup.com/kw-ruby-on-rails/events/266616653/">Building a Career in Technology</a> talk by <a href="https://www.linkedin.com/in/robsciuk/">Rob Sciuk</a> and <a href="https://www.linkedin.com/in/ralphjanke/">Ralph Janke</a>.</p>
+
+<p>Not all meetups are very productive, but the last one of 2019 was really special and this is why:</p>
+<ul>
+  <li>I talked to someone who was new to Ruby, did the classic blog tutorial</li>
+  <li>I did open source by working on an <a href="https://github.com/kwruby/kwruby.ca/issues/35">issue</a> to automate the deployment of the <a href="http://kwruby.ca/">KWRuby’s website</a>.</li>
+  <li>we talked about <a href="https://elixir-lang.org/">Elixir</a>, pattern matching and <a href="https://twitter.com/dwhelan/">Declan</a> gave us a lesson – almost a talk by itself – on aspects of <a href="https://en.wikipedia.org/wiki/Actor_model">actor model</a> implemented in Erlang</li>
+  <li>we talked about new things comming up to Ruby like pattern matching on ruby 2.7</li>
+  <li>and there were lots of Pizza 🍕</li>
+</ul>
+
+<p>Definitely one of the best ruby workshops. So many things happened in just one meetup.</p>
+
+<p>Big thanks to <a href="https://github.com/acant">Andrew</a>, the person behind this group and all the people who have helped him.</p>
+
+<p>If you are in Kitchener/Waterloo I strongly recommend you to attend a few times to the <a href="http://kwruby.ca/">KWRuby meetup</a>. If not in the area, try to see if there are groups in your city. It’s totally worthy.</p>
+
+<center>
+<h3>2020 is going to be great! 💎</h3>
+</center>
+
+<p><em><a href="https://dev.to/lucasprag/a-year-of-ruby-meetups-in-kitchener-5g72">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="community" /><summary type="html"><![CDATA[Contributed to Rails and other open source projects, learned great things on talks, helped others with their projects and more!]]></summary></entry><entry><title type="html">Use ctags to jump to definition even inside ruby gems</title><link href="https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/" rel="alternate" type="text/html" title="Use ctags to jump to definition even inside ruby gems" /><published>2019-11-06T00:00:00+00:00</published><updated>2019-11-06T00:00:00+00:00</updated><id>https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems</id><content type="html" xml:base="https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/"><![CDATA[<p>If you don’t know what ctags is:</p>
+
+<blockquote>
+  <p>Ctags is a programming tool that generates an index file of names found in source and header files of various programming languages. Depending on the language, functions, variables, class members, macros and so on may be indexed. – Wikipedia</p>
+</blockquote>
+
+<p>In the case of Ruby you can jump to a method definition, class, etc using  <a href="http://ctags.sourceforge.net/">ctags</a> which doesn’t work 100% of the time but it helps a lot.</p>
+
+<h2 id="vim">vim</h2>
+
+<p>Vim has a native functionality where you can <code class="language-plaintext highlighter-rouge">:tag MyClass</code> and it opens your class based on the index created by <a href="http://ctags.sourceforge.net/">ctags</a>.</p>
+
+<p>You can extend this functionality as much as you like</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" open tag of the word under the cursor, requires to run "ctargs -R ." before</span>
+command<span class="p">!</span> JumpToTag <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+command<span class="p">!</span> JumpToTagOnVsplit <span class="p">:</span><span class="k">vsplit</span>
+<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+command<span class="p">!</span> JumpToTagOnSplit <span class="p">:</span><span class="k">split</span>
+<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>but there is one limitation when using Rails and other gems; you can’t jump inside them, like <code class="language-plaintext highlighter-rouge">:tag ApplicationRecord</code>.</p>
+
+<h2 id="the-catch">The catch</h2>
+
+<p>You can run bundle install and set the path to install gems inside your project so when you run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the gems get indexed.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span><span class="o">=</span>vendor/bundle
+</code></pre></div></div>
+
+<p>But remember to git ignore them</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.gitignore_global
+vendor/bundle
+</code></pre></div></div>
+
+<h2 id="gutentags">Gutentags</h2>
+
+<p>If you don’t like to run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the time, there is a plugin for vim that runs ctags in the background while you are coding. It’s called <a href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a>. All you need to do is install it.</p>
+
+<p>I hope you’ve enjoyed this little trick to make our lives a bit easier when coding Rails on vim. 👍</p>
+
+<p><em><a href="https://dev.to/lucasprag/little-trick-to-use-ctags-to-jump-to-definition-even-inside-gems-like-rails-on-vim-244j">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This is really helpful especially if you need to debug other people's gems or your own. 👌]]></summary></entry><entry><title type="html">How to reload your vim configs without exiting vim</title><link href="https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim/" rel="alternate" type="text/html" title="How to reload your vim configs without exiting vim" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim/"><![CDATA[<p>This can be very useful, I’m going to show how to reload your vim configs anytime you save them or using a command and a map.</p>
+
+<p><img src="/assets/images/posts/reloaded.png" alt="neovim showing reloaded" class="image" /></p>
+
+<h3 id="make-your-configs-reloadable">Make your configs reloadable</h3>
+
+<p>Add <code class="language-plaintext highlighter-rouge">!</code> on your commands and functions like this:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="p">!</span> ToggleLineNumbers<span class="p">()</span>
+  <span class="k">if</span> &amp;<span class="k">number</span> <span class="p">==</span> <span class="m">1</span>
+    <span class="k">set</span> <span class="nb">nonumber</span>
+  <span class="k">else</span>
+    <span class="k">set</span> <span class="k">number</span>
+  <span class="k">endif</span>
+<span class="k">endfunction</span>
+
+command<span class="p">!</span> GoToDefinitionUsingCTags <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">!</code> means that you are overwriting the function/commands if it is already loaded.</p>
+
+<h3 id="option-1-auto-command">Option #1: Auto command</h3>
+
+<p>When using an auto command, vim is going to source – or reload – your vim configs every time you save them.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" the BufWritePost event gets triggered after writing buffers to files</span>
+autocmd<span class="p">!</span> <span class="nb">BufWritePost</span> *<span class="p">.</span><span class="k">vim</span>* <span class="k">so</span> $MYVIMRC
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">$MYVIMRC</code> is the path to your <code class="language-plaintext highlighter-rouge">vimrc</code> file.</p>
+
+<p>More on auto commands: <a href="/vim/2019/07/26/introduction-on-viml-for-vimmers.html">Introduction to vimL for vimmers</a></p>
+
+<h3 id="option-2-command-and-map">Option #2: Command and map</h3>
+
+<p>When using a command, vim is also going to source your configs, but only when you call the command.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command<span class="p">!</span> ReloadVimConfigs <span class="k">so</span> $MYVIMRC
+<span class="se">  \</span><span class="p">|</span> echo <span class="s1">'configs reloaded!'</span>
+</code></pre></div></div>
+
+<p>After adding it to your vimrc, you need to type <code class="language-plaintext highlighter-rouge">:ReloadVimConfigs</code>.</p>
+
+<p>I prefer this option because I have more control over <strong>when</strong> my configs are reloaded.</p>
+
+<p>You can create a map for that:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">map</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;</span> <span class="p">:</span>ReloadVimConfig<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>That’s all, hope you enjoyed. Any problems or questions? Please reach out on twitter and I can help you out.</p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This can be very useful, I'm going to show how to reload your vim configs anytime you save them or using a command and a map.]]></summary></entry></feed>

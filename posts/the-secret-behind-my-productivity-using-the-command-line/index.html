@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    The secret behind my productivity using the command line -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS 2.0"/>
+  <script src="/assets/js/main.js"></script>
+</head>
+
+<body class="dark:bg-gray-900"></body>
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <div class="flex justify-between my-8">
+  <a href="/" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
+    <h1 class="font-medium text-xl">
+      <img src="/assets/images/favicon.ico" height="15" width="15" alt="lucasprag emoji" class="inline" />
+      <span class="ml-2">lucasprag</span>
+    </h1>
+  </a>
+
+  <div class="flex justify-end">
+    <button class="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" onclick="switchTheme()">
+      <!-- Dark Icon  -->
+      <svg
+        class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="currentColor" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+
+      <!-- Light Icon -->
+      <svg
+        class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="currentColorr"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+    </button>
+  </div>
+</div>
+
+    <main class="flex-1">
+      <h1 class="font-semibold text-3xl">
+  The secret behind my productivity using the command line
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3 text-gray-400">
+    Last updated: August 10, 2022
+  </time>
+  <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
+
+  <div class="text-xs mt-1 inline">
+    
+    <span class="tag mr-1">
+      terminal
+    </span>,
+    
+    <span class="tag mr-1">
+      productivity
+    </span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I’ve picked up that go along the way to help me get work done and that might help you as well.</p>
+
+<h2 id="combine-commands-with-pipe-">Combine commands with pipe <code class="language-plaintext highlighter-rouge">|</code></h2>
+
+<p>Here are some commands from my own history:</p>
+
+<h4 id="pbcopy">pbcopy</h4>
+
+<p>I can copy the results of commands using <code class="language-plaintext highlighter-rouge">pbcopy</code> on Mac, but there is a similar command on other systems.</p>
+
+<p>No need to switch to the mouse to copy any output from a command.</p>
+
+<p>Examples:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git diff | pbcopy</code> to share a quick idea with a colleague at work</li>
+  <li><code class="language-plaintext highlighter-rouge">cat ~/.ssh/id_rsa.pub | pbcopy</code> to copy a key and add it to Github</li>
+  <li><code class="language-plaintext highlighter-rouge">ruby weekly_report.rb -p7d | pbcopy</code> to run a script, generate a weekly report and copy the output</li>
+</ul>
+
+<p>I can also use <code class="language-plaintext highlighter-rouge">pbpaste</code>, but I don’t find that as useful as <code class="language-plaintext highlighter-rouge">pbcopy</code> because I’m usually pasting the content on Slack, Jira, Github, etc, not the other way around.</p>
+
+<h4 id="grep">grep</h4>
+
+<p><code class="language-plaintext highlighter-rouge">grep</code> is useful for filtering the output of the previous command and searching the content of files</p>
+
+<p>Examples:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">gem list | grep rubocop</code> to see the version of the rubocop gem I have installed on my machine</li>
+  <li><code class="language-plaintext highlighter-rouge">cat Gemfile.lock | grep rubocop</code> to see the version of the rubocop gem I have installed on a Rails project</li>
+</ul>
+
+<h4 id="xargs">xargs</h4>
+
+<p><code class="language-plaintext highlighter-rouge">xargs</code> executes a command for each line of the previous output.</p>
+
+<p>For example, sometimes I have too many branches locally on my git repository so I delete them in steps to make sure I don’t delete a branch I’m currently working on.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch | grep fix | xargs git branch -D
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">git branch</code> lists all branches, <code class="language-plaintext highlighter-rouge">grep fix</code> filters them using the term “fix”, finally, <code class="language-plaintext highlighter-rouge">xargs</code> deletes all these branches in one go.</p>
+
+<h4 id="awk">awk</h4>
+
+<p>I find <code class="language-plaintext highlighter-rouge">awk</code> helpful for extracting data from more complex outputs. This means I can extract only one column of the previous output to continue working with my pipes.</p>
+
+<p>For example, when I need to delete files in my git repository, I simply do this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status -s | grep '??' | awk '{ print $2 }' | xargs rm -rf
+</code></pre></div></div>
+
+<p>There might be a nice git command to do the same, but I don’t need that because at some point I wrote the command above so it made to my history and now it’s a quick <code class="language-plaintext highlighter-rouge">ctrl+r</code> away which brings me to the next topic.</p>
+
+<h2 id="history-search">History search</h2>
+
+<p>All the commands I type on my terminal are saved into a history file. Then I search on said file using <code class="language-plaintext highlighter-rouge">ctrl+r</code> and it brings up the commands I used before to my current terminal.</p>
+
+<p>This means that the command above is just a few keystrokes away. Try it yourself!</p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">ctrl+r</code> is available by default on shells like <code class="language-plaintext highlighter-rouge">bash</code> or <code class="language-plaintext highlighter-rouge">zsh</code>, but it needs to be added when using <code class="language-plaintext highlighter-rouge">fish</code>.</p>
+
+<h2 id="gpu-accelerated-terminal-emulator">GPU-accelerated terminal emulator</h2>
+
+<p>After I started using a GPU-accelerated terminal, I couldn’t look back to <a href="https://iterm2.com/index.html">iTerm</a> and others.</p>
+
+<p>As a developer, the terminal is my second most used tool – the code editor being the first – and I need it to be really fast. Not just fast, <em>really</em> fast.</p>
+
+<p>I currently use <a href="https://github.com/alacritty/alacritty">Alacritty</a> and it gets the job done, but there are a few features I miss from it like splits, tabs, search, etc. For all of that, I need to use <a href="https://github.com/tmux/tmux">tmux</a> which I was already using before so I’m ok with it for now.</p>
+
+<p>However, another option that caught my eye as a GPU-accelerated terminal and that implements all these features I mentioned – and much more! – is <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a> 🤩</p>
+
+<p>I’m considering moving away from Alacritty+tmux and going all in into Kitty because it could be a <em>much easier</em> way to allow me to:</p>
+
+<ul>
+  <li>organize and name all my terminals</li>
+  <li>predefine them on list and open them all in one go</li>
+  <li>move around within tabs, splits, etc using shortcuts – this is gold 🏆</li>
+</ul>
+
+<p>Sometimes the apps at work can use multiple terminals and even more when I have to work on multiple apps at the same time (e.g. API + front-end + admin + backoffice app + ???). In addition to that, they also output a lot of content and a GPU-accelerated terminal emulator comes in handy for that.</p>
+
+<h2 id="bonus-1-turn-off-all-animations">Bonus #1: Turn off all animations</h2>
+
+<p>I turn off all animations I can or simply avoid Mac features that have them. I know they look great, but the way I see them, they just take time out of me. They are also not fun for my computer to render, <strong>especially</strong> when I’m sharing my screen over the internet with my colleagues. 😕</p>
+
+<h2 id="bonus-2-automate-moving-windows-around">Bonus #2: Automate moving windows around</h2>
+
+<p>This is not terminal-related, but one tool that heavily improves my productivity is <a href="https://www.hammerspoon.org/">Hammerspoon</a>.</p>
+
+<p>The app itself is a bridge between the operating system and a Lua scripting engine, which can be used to manage, move, and resize windows around.</p>
+
+<p>This is my script (<a href="https://github.com/lucasprag/dotfiles/blob/main/hammerspoon/init.lua">link</a>) as an example. I have shortcuts to move windows to predefined spots on my screen, in addition, to resizing them to occupy 50%, 75% or 100% of the space. Multi-monitor support is also available. ✨</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>
+
+
+</div>
+    </main>
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my twitter profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+</body>
+
+</html>
