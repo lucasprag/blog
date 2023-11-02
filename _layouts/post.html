@@ -8,7 +8,11 @@ layout: default
 
 <div>
   <time class="font-medium text-sm py-3 text-gray-400">
-    Last updated: {{ page.date | date: '%B %e, %Y' }}
+    {% if page.last_modified_at %}
+      Last updated: {{ page.last_modified_at | date: '%B %e, %Y' }}
+    {% else %}
+      Published: {{ page.date | date: '%B %e, %Y' }}
+    {% endif %}
   </time>
   <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
 

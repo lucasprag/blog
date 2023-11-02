@@ -10,6 +10,7 @@ collections:
 plugins:
   - jekyll-postcss
   - jekyll-feed
+  - jekyll-sitemap
 
 postcss:
   cache: false

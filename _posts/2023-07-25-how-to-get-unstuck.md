@@ -2,6 +2,7 @@
 layout: post
 title: How to get unstuck
 date: "Jul 25, 2023"
+last_modified_at: "Jul 25, 2023"
 tags:
   - productivity
 description: Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can't be done without doing the boring first? I know the feeling.
