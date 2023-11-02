@@ -37,11 +37,11 @@ Work might not the most exciting thing ever, but it's still a step towards your 
 
 Sometimes I find that writting anything down unblocks my mind to actually do what needs to be done.
 
-I know some people journal, some people write TODOs, but I find that blogging does the trick for me. Even if I don't publish it -- and I usually don't. This post is one I decided to actually finish it and publish it.
+I know some people journal, some people write TODOs, but I find that blogging does the trick for me. Even if I don't publish it -- and I usually don't. This post is one I decided to actually finish and publish.
 
 ## Let it burn mindset
 
-Sometimes when I feel overwhelmed about the amount or difficult of tasks I need to do. When that happens, I pick one of them -- anyone of them, maybe giving some preferences if there are concerning negative consequences -- and just let the rest burn.
+Sometimes when I feel overwhelmed about the amount or difficulty of tasks I need to do. When that happens, I pick one of them -- anyone of them, maybe giving some preferences if there are concerning negative consequences -- and just let the rest burn.
 
 Freeing my mind from the burden of worrying for all those _other_ tasks is what I'm looking for here. I might still do them or maybe I don't. It doesn't matter. This is the mindset.
 
