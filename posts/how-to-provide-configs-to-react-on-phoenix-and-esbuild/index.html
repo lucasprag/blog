@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    How to provide configs to React on Phoenix and esbuild -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <meta name="description" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, etc.">
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS 2.0"/>
+  <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
+</head>
+
+<body class="dark:bg-gray-900"></body>
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <div class="flex justify-between my-8">
+  <a href="/" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
+    <h1 class="font-medium text-xl">
+      <img src="/assets/images/computer.png" height="15" width="15" alt="lucasprag emoji" class="inline" />
+      <span class="ml-2">lucasprag</span>
+    </h1>
+  </a>
+
+  <div class="flex justify-end">
+    <button class="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" onclick="switchTheme()" aria-label="Switch between dark mode and light mode">
+      <!-- Dark Icon  -->
+      <svg
+        class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="currentColor" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+
+      <!-- Light Icon -->
+      <svg
+        class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="currentColorr"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+    </button>
+  </div>
+</div>
+
+    <main class="flex-1">
+      <h1 class="font-semibold text-3xl">
+  How to provide configs to React on Phoenix and esbuild
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3 text-gray-400">
+    
+      Published: February 18, 2022
+    
+  </time>
+  <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
+
+  <div class="text-xs mt-1 inline">
+    
+    <span class="tag mr-1">
+      elixir
+    </span>,
+    
+    <span class="tag mr-1">
+      phoenix
+    </span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>I’ve seen a few blog posts about using environment variables on React/Vue/etc when they’re part of a Phoenix app using webpack, but I didn’t find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.</p>
+
+<h2 id="where-to-save-configs">Where to save configs</h2>
+
+<p>On <code class="language-plaintext highlighter-rouge">config/dev.ex</code> you can set arbitrary configs to make them available to your application. You can also import other configs from other files that might not get committed like this:</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.ex</span>
+
+<span class="n">import_config</span> <span class="s2">"dev.secret.exs"</span>
+</code></pre></div></div>
+
+<p>Then you can add <code class="language-plaintext highlighter-rouge">dev.secrets.exs</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> and write down your configs there.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.secret.exs</span>
+
+<span class="n">config</span> <span class="ss">:my_app</span><span class="p">,</span>
+  <span class="ss">public_key:</span> <span class="s2">"you can write your key here"</span><span class="p">,</span>
+  <span class="ss">secret_key:</span> <span class="s2">"you can write your key here"</span>
+</code></pre></div></div>
+
+<p>Note: You can also get these keys from the environment using <code class="language-plaintext highlighter-rouge">System.fetch_env!("NAME_OF_YOUR_ENV_VAR")</code> if you prefer, but it sounds like this is not the Elixir way of doing these things because it doesn’t work well with all configuration scenarios (dev/prod/runtime/etc). More details on <a href="https://groups.google.com/g/elixir-lang-core/c/SLlJxiMa-7Q/m/Un1bTb2XLzsJ?pli=1">this thread</a>.</p>
+
+<h2 id="providing-configs-to-your-front-end">Providing configs to your front-end</h2>
+
+<p>You don’t need to change your esbuild configuration to provide keys to your front-end. The trick here is to create a JavaScript object on your <code class="language-plaintext highlighter-rouge">root.html.heex</code> to make <strong>public keys</strong> available before the the front-end loads.</p>
+
+<p>NOTE: Don’t provide your <strong>private/secret keys</strong> to your front-end.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="kd">var</span> <span class="nx">PUBLIC_CONFIGS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">public_key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;%= Application.fetch_env!(:my_app, :public_key) %&gt;</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="using-it-in-your-front-end">Using it in your front-end</h2>
+
+<p>With that you have a <code class="language-plaintext highlighter-rouge">PUBLIC_CONFIGS</code> object available to use anywhere in your front-end. Here is an example using a component from the <a href="https://www.npmjs.com/package/react-google-invisible-recaptcha">react-google-invisible-recaptcha</a> package:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Recaptcha</span>
+  <span class="na">onResolved</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="p">}</span><span class="si">}</span>
+  <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">refRecaptcha</span><span class="si">}</span>
+  <span class="na">sitekey</span><span class="p">=</span><span class="si">{</span><span class="nx">PUBLIC_CONFIGS</span><span class="p">.</span><span class="nx">public_key</span><span class="si">}</span> <span class="c1">// here is your key</span>
+<span class="p">/&gt;</span>
+</code></pre></div></div>
+
+<p>This approach is something I had to figure out by myself for a project, do you have a better idea about how to do the same? Please ping on twitter. Thanks.</p>
+
+</div>
+    </main>
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag"
+      aria-label="Visit my Github profile"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my twitter profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      aria-label="Link to feed RSS"
+      target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
