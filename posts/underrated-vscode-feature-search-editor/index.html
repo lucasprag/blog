@@ -9,7 +9,7 @@
     
     
     
-    Underrated VSCode feature: Native Tabs -
+    Underrated VSCode feature: Search Editor -
     
     
     Lucas Arantes
@@ -50,13 +50,13 @@
 
     <main class="flex-1">
       <h1 class="font-semibold text-3xl">
-  Underrated VSCode feature: Native Tabs
+  Underrated VSCode feature: Search Editor
 </h1>
 
 <div>
   <time class="font-medium text-sm py-3 text-gray-400">
     
-      Published: February  1, 2024
+      Published: February  2, 2024
     
   </time>
   <span class="mx-2 text-gray-700 dark:text-gray-400">-</span>
@@ -75,53 +75,39 @@
 </div>
 
 <div class="post-content prose mt-5">
-  <p>At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
+  <p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
 
-<p>With so many projects, I used to often struggle with many VSCode windows.</p>
+<p><img src="/assets/images/posts/vscode-sidebar-search.png" alt="Using the search in the sidebar to search for I18n in Rails" /></p>
 
-<p>I tried working with VSCode Workspaces, but they didn’t really click for me.</p>
+<p>With the <strong>Search Editor</strong> built-in in VSCode, the search results show up in a new editor which can use all the editor space making it much more comfortable to read and find what you’re looking for.</p>
 
-<p>However, there is a feature called <strong>Native Tabs</strong> that allows me to group all my VSCode windows together and move between them easily. Notice how each project is in a different tab:</p>
+<p>The result also features <strong>previews with syntax highlighting</strong> in addition to the features anyone would expect from a search engine like folder inclusion/exclusion, Regex support, match case, etc.</p>
 
-<p><img src="/assets/images/posts/vscode-native-tabs.png" alt="Native Tabs on VSCode" /></p>
+<p><img src="/assets/images/posts/vscode-search-editor.png" alt="Using the search editor to search for I18n in Rails" /></p>
 
-<h2 id="how-to-setup-native-tabs">How to setup Native Tabs</h2>
+<p>It’s very similar to how Sublime Text does searches and it works well.</p>
 
-<p>Look for Native Tabs on Settings or add <code class="language-plaintext highlighter-rouge">"window.nativeTabs": true</code> to your <code class="language-plaintext highlighter-rouge">settings.json</code>.</p>
+<p>To open a <strong>New Search Editor</strong>, type the command <code class="language-plaintext highlighter-rouge">&gt; Search Editor: New Search Editor</code> or add a short to your <code class="language-plaintext highlighter-rouge">keybindings.json</code>.</p>
 
-<p><img src="/assets/images/posts/vscode-native-tabs-setting.png" alt="Native Tabs Settings on VSCode" /></p>
-
-<p>Restart VSCode.</p>
-
-<h2 id="how-to-move-between-native-tabs">How to move between Native Tabs</h2>
-
-<p>Add shortcuts to <code class="language-plaintext highlighter-rouge">workbench.action.showPreviousWindowTab</code> and <code class="language-plaintext highlighter-rouge">workbench.action.showNextWindowTab</code> to move between them without having to navigate throughout the screen with the mouse cursor.</p>
+<p>Mine are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cmd+k s</code> to <code class="language-plaintext highlighter-rouge">search.action.openEditor</code> which opens a new editor if none is already open so you can go back to your search without using the mouse.</li>
+  <li><code class="language-plaintext highlighter-rouge">cmd+k shift+s</code> to <code class="language-plaintext highlighter-rouge">search.action.openNewEditor</code> which opens a new editor regardless if there is already one open.</li>
+</ul>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+h"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showPreviousWindowTab"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmd+k s"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search.action.openEditor"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+l"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showNextWindowTab"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmd+k shift+s"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search.action.openNewEditor"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Also add a shortcut for creating a new Native Tab.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+t"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.newWindowTab"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Done. Enjoy your Native Tabs.</p>
+<p>Done. Enjoy doing searches in VSCode.</p>
 
 </div>
     </main>

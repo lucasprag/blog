@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-02-02T15:50:19+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Underrated VSCode feature: Native Tabs</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" rel="alternate" type="text/html" title="Underrated VSCode feature: Native Tabs" /><published>2024-02-01T00:00:00+00:00</published><updated>2024-02-01T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-native-tabs</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/"><![CDATA[<p>At work, I have to work at many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-02-02T23:16:31+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Underrated VSCode feature: Search Editor</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/" rel="alternate" type="text/html" title="Underrated VSCode feature: Search Editor" /><published>2024-02-02T00:00:00+00:00</published><updated>2024-02-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-search-editor</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/"><![CDATA[<p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
+
+<p><img src="/assets/images/posts/vscode-sidebar-search.png" alt="Using the search in the sidebar to search for I18n in Rails" /></p>
+
+<p>With the <strong>Search Editor</strong> built-in in VSCode, the search results show up in a new editor which can use all the editor space making it much more comfortable to read and find what you’re looking for.</p>
+
+<p>The result also features <strong>previews with syntax highlighting</strong> in addition to the features anyone would expect from a search engine like folder inclusion/exclusion, Regex support, match case, etc.</p>
+
+<p><img src="/assets/images/posts/vscode-search-editor.png" alt="Using the search editor to search for I18n in Rails" /></p>
+
+<p>It’s very similar to how Sublime Text does searches and it works well.</p>
+
+<p>To open a <strong>New Search Editor</strong>, type the command <code class="language-plaintext highlighter-rouge">&gt; Search Editor: New Search Editor</code> or add a short to your <code class="language-plaintext highlighter-rouge">keybindings.json</code>.</p>
+
+<p>Mine are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cmd+k s</code> to <code class="language-plaintext highlighter-rouge">search.action.openEditor</code> which opens a new editor if none is already open so you can go back to your search without using the mouse.</li>
+  <li><code class="language-plaintext highlighter-rouge">cmd+k shift+s</code> to <code class="language-plaintext highlighter-rouge">search.action.openNewEditor</code> which opens a new editor regardless if there is already one open.</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmd+k s"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search.action.openEditor"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cmd+k shift+s"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search.action.openNewEditor"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Done. Enjoy doing searches in VSCode.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up in the sidebar which is small and hard to read.]]></summary></entry><entry><title type="html">Underrated VSCode feature: Native Tabs</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" rel="alternate" type="text/html" title="Underrated VSCode feature: Native Tabs" /><published>2024-02-01T00:00:00+00:00</published><updated>2024-02-01T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-native-tabs</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/"><![CDATA[<p>At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
 
 <p>With so many projects, I used to often struggle with many VSCode windows.</p>
 
@@ -44,7 +76,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Done. Enjoy your Native Tabs.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[At work, I have to work at many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.]]></summary></entry><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
+<p>Done. Enjoy your Native Tabs.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.]]></summary></entry><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
 
 <p>It can be quite overwhelming having too many things to do. It causes stress and anxiety making us freeze on the spot unable to do anything. I get that.</p>
 
@@ -887,54 +919,4 @@ vendor/bundle
 
 <p>I hope you’ve enjoyed this little trick to make our lives a bit easier when coding Rails on vim. 👍</p>
 
-<p><em><a href="https://dev.to/lucasprag/little-trick-to-use-ctags-to-jump-to-definition-even-inside-gems-like-rails-on-vim-244j">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This is really helpful especially if you need to debug other people's gems or your own. 👌]]></summary></entry><entry><title type="html">How to reload your vim configs without exiting vim</title><link href="https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim/" rel="alternate" type="text/html" title="How to reload your vim configs without exiting vim" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-reload-your-vim-configs-without-exiting-vim/"><![CDATA[<p>This can be very useful, I’m going to show how to reload your vim configs anytime you save them or using a command and a map.</p>
-
-<p><img src="/assets/images/posts/reloaded.png" alt="neovim showing reloaded" class="image" /></p>
-
-<h3 id="make-your-configs-reloadable">Make your configs reloadable</h3>
-
-<p>Add <code class="language-plaintext highlighter-rouge">!</code> on your commands and functions like this:</p>
-
-<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="p">!</span> ToggleLineNumbers<span class="p">()</span>
-  <span class="k">if</span> &amp;<span class="k">number</span> <span class="p">==</span> <span class="m">1</span>
-    <span class="k">set</span> <span class="nb">nonumber</span>
-  <span class="k">else</span>
-    <span class="k">set</span> <span class="k">number</span>
-  <span class="k">endif</span>
-<span class="k">endfunction</span>
-
-command<span class="p">!</span> GoToDefinitionUsingCTags <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Using <code class="language-plaintext highlighter-rouge">!</code> means that you are overwriting the function/commands if it is already loaded.</p>
-
-<h3 id="option-1-auto-command">Option #1: Auto command</h3>
-
-<p>When using an auto command, vim is going to source – or reload – your vim configs every time you save them.</p>
-
-<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" the BufWritePost event gets triggered after writing buffers to files</span>
-autocmd<span class="p">!</span> <span class="nb">BufWritePost</span> *<span class="p">.</span><span class="k">vim</span>* <span class="k">so</span> $MYVIMRC
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">$MYVIMRC</code> is the path to your <code class="language-plaintext highlighter-rouge">vimrc</code> file.</p>
-
-<p>More on auto commands: <a href="/vim/2019/07/26/introduction-on-viml-for-vimmers.html">Introduction to vimL for vimmers</a></p>
-
-<h3 id="option-2-command-and-map">Option #2: Command and map</h3>
-
-<p>When using a command, vim is also going to source your configs, but only when you call the command.</p>
-
-<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command<span class="p">!</span> ReloadVimConfigs <span class="k">so</span> $MYVIMRC
-<span class="se">  \</span><span class="p">|</span> echo <span class="s1">'configs reloaded!'</span>
-</code></pre></div></div>
-
-<p>After adding it to your vimrc, you need to type <code class="language-plaintext highlighter-rouge">:ReloadVimConfigs</code>.</p>
-
-<p>I prefer this option because I have more control over <strong>when</strong> my configs are reloaded.</p>
-
-<p>You can create a map for that:</p>
-
-<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">map</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;</span> <span class="p">:</span>ReloadVimConfig<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-</code></pre></div></div>
-
-<p>That’s all, hope you enjoyed. Any problems or questions? Please reach out on twitter and I can help you out.</p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This can be very useful, I'm going to show how to reload your vim configs anytime you save them or using a command and a map.]]></summary></entry></feed>
+<p><em><a href="https://dev.to/lucasprag/little-trick-to-use-ctags-to-jump-to-definition-even-inside-gems-like-rails-on-vim-244j">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This is really helpful especially if you need to debug other people's gems or your own. 👌]]></summary></entry></feed>
