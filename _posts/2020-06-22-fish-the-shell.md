@@ -4,6 +4,8 @@ title: 🐠 Fish, the shell
 date: 'Jun 22, 2020'
 tags:
   - terminal
+redirect_from:
+- /2020-06-22-fish-the-shell
 ---
 
 One of the greatest changes I've made to my set of programming tools was changing from zsh to [fish](https://fishshell.com/) and these are the reasons that drove me to this change:

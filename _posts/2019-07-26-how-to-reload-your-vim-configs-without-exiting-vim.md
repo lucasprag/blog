@@ -5,6 +5,8 @@ date: 'Jul 26, 2019'
 tags:
   - vim
 description: "This can be very useful, I'm going to show how to reload your vim configs anytime you save them or using a command and a map."
+redirect_from:
+- /2020-06-22-fish-the-shell
 ---
 
 This can be very useful, I'm going to show how to reload your vim configs anytime you save them or using a command and a map.

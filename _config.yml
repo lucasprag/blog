@@ -11,6 +11,7 @@ plugins:
   - jekyll-postcss
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 postcss:
   cache: false

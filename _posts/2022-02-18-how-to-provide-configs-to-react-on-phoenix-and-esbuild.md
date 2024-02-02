@@ -6,6 +6,8 @@ tags:
   - elixir
   - phoenix
 description: I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.
+redirect_from:
+- /2022-02-18-how-to-provide-configs-to-react-on-phoenix-and-esbuild
 ---
 
 I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.

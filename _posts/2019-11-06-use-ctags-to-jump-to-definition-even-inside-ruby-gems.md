@@ -5,6 +5,8 @@ date: 'Nov 6, 2019'
 tags:
   - vim
 description: This is really helpful especially if you need to debug other people's gems or your own. 👌
+redirect_from:
+- /posts/trick-to-use-ctags-to-jump-to-definition-even-inside-ruby-gems
 ---
 
 If you don't know what ctags is:
