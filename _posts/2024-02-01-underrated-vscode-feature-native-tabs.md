@@ -57,4 +57,4 @@ Also add a shortcut for creating a new Native Tab.
 ]
 ```
 
-Done. Enjoy your Native Tabs
+Done. Enjoy your Native Tabs.
