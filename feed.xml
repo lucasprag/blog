@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2023-11-21T19:45:34+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, etc.</subtitle><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-02-02T15:46:35+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, etc.</subtitle><entry><title type="html">Underrated VSCode feature: Native Tabs</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" rel="alternate" type="text/html" title="Underrated VSCode feature: Native Tabs" /><published>2024-02-01T00:00:00+00:00</published><updated>2024-02-01T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-native-tabs</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/"><![CDATA[<p>At work, I have to work at many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
+
+<p>With so many projects, I used to often struggle with many VSCode windows.</p>
+
+<p>I tried working with VSCode Workspaces, but they didn’t really click for me.</p>
+
+<p>However, there is a feature called <strong>Native Tabs</strong> that allows me to group all my VSCode windows together and move between them easily. Notice how each project is in a different tab:</p>
+
+<p><img src="/assets/images/posts/vscode-native-tabs.png" alt="Native Tabs on VSCode" /></p>
+
+<h2 id="how-to-setup-native-tabs">How to setup Native Tabs</h2>
+
+<p>Look for Native Tabs on Settings or add <code class="language-plaintext highlighter-rouge">"window.nativeTabs": true</code> to your <code class="language-plaintext highlighter-rouge">settings.json</code>.</p>
+
+<p><img src="/assets/images/posts/vscode-native-tabs-setting.png" alt="Native Tabs Settings on VSCode" /></p>
+
+<p>Restart VSCode.</p>
+
+<h2 id="how-to-move-between-native-tabs">How to move between Native Tabs</h2>
+
+<p>Add shortcuts to <code class="language-plaintext highlighter-rouge">workbench.action.showPreviousWindowTab</code> and <code class="language-plaintext highlighter-rouge">workbench.action.showNextWindowTab</code> to move between them without having to navigate throughout the screen with the mouse cursor.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+h"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showPreviousWindowTab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+l"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showNextWindowTab"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Also add a shortcut for creating a new Native Tab.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+t"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.newWindowTab"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Done. Enjoy your Native Tabs</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[At work, I have to work at many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.]]></summary></entry><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
 
 <p>It can be quite overwhelming having too many things to do. It causes stress and anxiety making us freeze on the spot unable to do anything. I get that.</p>
 

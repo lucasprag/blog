@@ -565,6 +565,7 @@ body {
 .intro a, .post-content a {
   --tw-text-opacity:1;
   color: rgb(51 65 85/var(--tw-text-opacity));
+  font-weight: 600;
   text-decoration-line: underline;
 }
 
@@ -584,8 +585,8 @@ body {
 }
 
 p {
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .post-content li {
@@ -593,6 +594,10 @@ p {
   margin-left: 1.25rem;
   padding-bottom: 0.125rem;
   padding-top: 0.125rem;
+}
+
+.post-content img {
+  border-radius: 0.25rem;
 }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
@@ -700,8 +705,19 @@ blockquote p {
   margin-top: 1.25rem;
 }
 
+.post-content h5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.post-content h5, .post-content h6 {
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+
 .highlight pre {
   background-color: #f4f4f5;
+  margin-top: 1rem;
 }
 
 .highlight .hll {
