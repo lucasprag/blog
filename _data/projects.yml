@@ -1,11 +1,12 @@
 - name: Alguém Recommenda? (pt-BR)
   url: https://alguemrecomenda.ca/
-  description: Lista de Brasileiros oferecendo produtos ou serviços na grande Montréal. 🇧🇷 💙 🇨🇦
+  description: List of Brazilian businesses offering products or services in greater Montréal. 🇧🇷 💙 🇨🇦
 
 - name: FormigaBot
   url: https://formigabot.com/
   description: The all-in-one bot for Slack for tech startups working async.
 
+# DEAD
 # - name: Goma.club
 #   url: https://goma.club/
 #   description: A place for organization to share internal posts, news, knowledge, ask for help, collaborate async and find the information you need to get your work done.
