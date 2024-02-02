@@ -11,15 +11,19 @@ body {
 }
 
 .post-content a, .intro a {
-  @apply text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-500 underline
+  @apply text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-500 underline font-semibold
 }
 
 p {
-  @apply py-1;
+  @apply py-2;
 }
 
 .post-content li {
   @apply list-disc ml-5 py-0.5
+}
+
+.post-content img {
+  @apply rounded
 }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
@@ -50,6 +54,10 @@ blockquote p {
 .post-content h2 { @apply text-3xl mt-7 font-medium }
 .post-content h3 { @apply text-2xl mt-6 font-medium }
 .post-content h4 { @apply text-2xl mt-5 font-medium }
+.post-content h5 { @apply text-lg mt-5 font-medium }
+.post-content h6 { @apply  mt-5 font-medium }
+
+.highlight pre { @apply mt-4 }
 
 /*********** Github ***********/
 /* copied frmo https://raw.githubusercontent.com/jwarby/pygments-css/master/github.css */
