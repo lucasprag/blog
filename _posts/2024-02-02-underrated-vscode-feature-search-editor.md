@@ -20,7 +20,7 @@ The result also features **previews with syntax highlighting** in addition to th
 
 It's very similar to how Sublime Text does searches and it works well.
 
-To open a **New Search Editor**, type the command `> Search Editor: New Search Editor` or add a short to your `keybindings.json`.
+To open a **New Search Editor**, type the command `> Search Editor: New Search Editor` or add a shortcut to your `keybindings.json`.
 
 Mine are:
 - `cmd+k s` to `search.action.openEditor` which opens a new editor if none is already open so you can go back to your search without using the mouse.
