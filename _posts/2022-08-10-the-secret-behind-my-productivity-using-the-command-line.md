@@ -6,6 +6,8 @@ tags:
   - terminal
   - productivity
 description: As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.
+redirect_from:
+- /2022-08-10-the-secret-behind-my-productivity-using-the-command-line
 ---
 
 As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.
