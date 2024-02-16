@@ -6,6 +6,10 @@
   url: https://alguemrecomenda.ca/
   description: List of Brazilian businesses offering products or services in greater Montréal. 🇧🇷 💙 🇨🇦
 
+- name: "VSCode Extension: TeamDocs"
+  url: https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs
+  description: TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
+
 # DEAD
 # - name: FormigaBot
 #   url: https://formigabot.com/
