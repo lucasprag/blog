@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-02-23T16:01:13+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Underrated VSCode feature: Search Editor</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/" rel="alternate" type="text/html" title="Underrated VSCode feature: Search Editor" /><published>2024-02-02T00:00:00+00:00</published><updated>2024-02-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-search-editor</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/"><![CDATA[<p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-04-16T02:37:41+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Bad Advice for indie hackers: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for indie hackers: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
+
+<blockquote>
+  <p>You keep shipping project after project. You need to stop and focus on only one thing.</p>
+</blockquote>
+
+<p>That’s actually the opposite of what I should be doing.</p>
+
+<p>It’s counter intuitive to keep shipping projects when you don’t get great results from each time you ship something, but here is a little story.</p>
+
+<h2 id="the-101st-picture">The 101st picture.</h2>
+
+<p>There is a story in the internet that I’ve heard many times.</p>
+
+<blockquote>
+  <p>An art teacher told 10 students to take 101 pictures and another 10 students to take only one great picture but put it all on it.</p>
+</blockquote>
+
+<blockquote>
+  <p>The 101st picture from the students that took 101 pictures were much better than the pictures from the students that only took one great picture.</p>
+</blockquote>
+
+<p>That’s because you learn more when you get more done.</p>
+
+<h2 id="do-you-put-all-your-money-into-only-one-investment">Do you put all your money into only one investment?</h2>
+
+<p>No. Why would you invest your time making only one thing?</p>
+
+<p>By diversifying your apps, you protect yourself if one goes badly and you have more changes of shipping an app that goes really well.</p>
+
+<p>Don’t put all your eggs in one basket.</p>
+
+<h2 id="easier-on-the-mind">Easier on the mind</h2>
+
+<p>It’s easy to get blocked after shipping many updates to one app. When you have more than one app in the works, you can rest from one problem and get back to it later with a renewed mind.</p>
+
+<h2 id="even-the-bible-says-to-invest-in-many-ventures">Even the Bible says to invest in many ventures</h2>
+
+<p>As a christian, it’s only natural to try find guidance for everything in the bible, including entrepreneurship.</p>
+
+<p>Blessed are you that seek wisdom in the bible, especially in the books of Proverbs and Ecclesiastes.</p>
+
+<blockquote>
+  <p>[2] Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. – Ecclesiastes 11:2 NIV</p>
+</blockquote>
+
+<blockquote>
+  <p>[6] Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well. – Ecclesiastes 11:6 NIV</p>
+</blockquote>
+
+<p>And there is much more!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Ship more! And learn while doing it.</p>]]></content><author><name></name></author><category term="indie hacking" /><summary type="html"><![CDATA[This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:]]></summary></entry><entry><title type="html">Underrated VSCode feature: Search Editor</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/" rel="alternate" type="text/html" title="Underrated VSCode feature: Search Editor" /><published>2024-02-02T00:00:00+00:00</published><updated>2024-02-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-search-editor</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/"><![CDATA[<p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
 
 <p><img src="/assets/images/posts/vscode-sidebar-search.png" alt="Using the search in the sidebar to search for I18n in Rails" /></p>
 
@@ -873,50 +927,4 @@ end
 <h3>2020 is going to be great! 💎</h3>
 </center>
 
-<p><em><a href="https://dev.to/lucasprag/a-year-of-ruby-meetups-in-kitchener-5g72">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="community" /><summary type="html"><![CDATA[Contributed to Rails and other open source projects, learned great things on talks, helped others with their projects and more!]]></summary></entry><entry><title type="html">Use ctags to jump to definition even inside ruby gems</title><link href="https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/" rel="alternate" type="text/html" title="Use ctags to jump to definition even inside ruby gems" /><published>2019-11-06T00:00:00+00:00</published><updated>2019-11-06T00:00:00+00:00</updated><id>https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems</id><content type="html" xml:base="https://lucasprag.com/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/"><![CDATA[<p>If you don’t know what ctags is:</p>
-
-<blockquote>
-  <p>Ctags is a programming tool that generates an index file of names found in source and header files of various programming languages. Depending on the language, functions, variables, class members, macros and so on may be indexed. – Wikipedia</p>
-</blockquote>
-
-<p>In the case of Ruby you can jump to a method definition, class, etc using  <a href="http://ctags.sourceforge.net/">ctags</a> which doesn’t work 100% of the time but it helps a lot.</p>
-
-<h2 id="vim">vim</h2>
-
-<p>Vim has a native functionality where you can <code class="language-plaintext highlighter-rouge">:tag MyClass</code> and it opens your class based on the index created by <a href="http://ctags.sourceforge.net/">ctags</a>.</p>
-
-<p>You can extend this functionality as much as you like</p>
-
-<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" open tag of the word under the cursor, requires to run "ctargs -R ." before</span>
-command<span class="p">!</span> JumpToTag <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
-
-command<span class="p">!</span> JumpToTagOnVsplit <span class="p">:</span><span class="k">vsplit</span>
-<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
-
-command<span class="p">!</span> JumpToTagOnSplit <span class="p">:</span><span class="k">split</span>
-<span class="se">      \</span><span class="p">|</span> <span class="nb">execute</span> <span class="s1">':tag '</span> <span class="p">.</span> <span class="nb">expand</span><span class="p">(</span><span class="s2">"&lt;cword&gt;"</span><span class="p">)</span>
-
-</code></pre></div></div>
-
-<p>but there is one limitation when using Rails and other gems; you can’t jump inside them, like <code class="language-plaintext highlighter-rouge">:tag ApplicationRecord</code>.</p>
-
-<h2 id="the-catch">The catch</h2>
-
-<p>You can run bundle install and set the path to install gems inside your project so when you run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the gems get indexed.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span><span class="o">=</span>vendor/bundle
-</code></pre></div></div>
-
-<p>But remember to git ignore them</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.gitignore_global
-vendor/bundle
-</code></pre></div></div>
-
-<h2 id="gutentags">Gutentags</h2>
-
-<p>If you don’t like to run <code class="language-plaintext highlighter-rouge">ctags -R .</code> all the time, there is a plugin for vim that runs ctags in the background while you are coding. It’s called <a href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a>. All you need to do is install it.</p>
-
-<p>I hope you’ve enjoyed this little trick to make our lives a bit easier when coding Rails on vim. 👍</p>
-
-<p><em><a href="https://dev.to/lucasprag/little-trick-to-use-ctags-to-jump-to-definition-even-inside-gems-like-rails-on-vim-244j">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="vim" /><summary type="html"><![CDATA[This is really helpful especially if you need to debug other people's gems or your own. 👌]]></summary></entry></feed>
+<p><em><a href="https://dev.to/lucasprag/a-year-of-ruby-meetups-in-kitchener-5g72">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="community" /><summary type="html"><![CDATA[Contributed to Rails and other open source projects, learned great things on talks, helped others with their projects and more!]]></summary></entry></feed>
