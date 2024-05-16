@@ -9,7 +9,7 @@ description:
 
 This is one of the most common advice I get when I talk about my projects to other people, especially with people that don't build projects of their own:
 
-> You keep shipping project after project. You need to stop and focus on only one thing.
+> You keep shipping project after project. You need to stop and focus on one thing only.
 
 That's actually the opposite of what I should be doing.
 
@@ -41,7 +41,7 @@ It's easy to get blocked after shipping many updates to one app. When you have m
 
 As a christian, it's only natural to try find guidance for everything in the bible, including entrepreneurship.
 
-Blessed are you because there are is plenty of wisdom in the bible, especially in the books of Proverbs and Ecclesiastes.
+Blessed are you because there is an abundance of wisdom in the bible, especially in the books of Proverbs and Ecclesiastes.
 
 > [2] Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. -- Ecclesiastes 11:2 NIV
 
