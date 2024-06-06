@@ -42,8 +42,6 @@ autocmd! BufWritePost *.vim* so $MYVIMRC
 
 `$MYVIMRC` is the path to your `vimrc` file.
 
-More on auto commands: [Introduction to vimL for vimmers](/vim/2019/07/26/introduction-on-viml-for-vimmers.html)
-
 ### Option #2: Command and map
 
 When using a command, vim is also going to source your configs, but only when you call the command.
