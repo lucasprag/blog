@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Bad Advice for indie hackers: Focus on one thing."
+title: "Bad Advice for Solopreneurs: Focus on one thing."
 date: "Feb 15, 2024"
 tags:
+  - solopreneurship
   - indie hacking
 description:
 ---

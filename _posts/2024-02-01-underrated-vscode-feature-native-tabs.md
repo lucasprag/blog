@@ -58,3 +58,5 @@ Also add a shortcut for creating a new Native Tab.
 ```
 
 Done. Enjoy your Native Tabs.
+
+Note: Unfortunately, this is only available on MacOS. `=/`
