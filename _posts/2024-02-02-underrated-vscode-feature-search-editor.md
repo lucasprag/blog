@@ -6,6 +6,7 @@ tags:
   - vscode
   - productivity
 description:
+image: vscode-search-editor.png
 ---
 
 The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up *in the sidebar* which is small and hard to read.

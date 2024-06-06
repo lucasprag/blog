@@ -6,6 +6,7 @@ tags:
   - vscode
   - productivity
 description:
+image: vscode-native-tabs.png
 ---
 
 At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.
