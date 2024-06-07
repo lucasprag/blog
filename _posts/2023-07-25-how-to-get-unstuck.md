@@ -16,9 +16,11 @@ This is a post mostly to remind myself of some tools or ways of thinking that I'
 
 ## Progress is progress
 
-Sometimes some tasks seem to be impossible or extremelly difficult. This means that your first try is certainly going to fail.
+Sometimes some tasks seem to be impossible or extremely difficult. This means that your first try is certainly going to fail.
 
-Example: getting a document from a government institution where you don't speak the language and where their website doesn't explain the requirements very well. In addition to have to get there by 6am otherwise you might not even get your turn. In the first visit, you will certainly spend hours there and still go home without the document or any real progress whatsoever. The thinking here is that going there is not real progress, but **it's still progress**.
+Example: getting a document from a government institution where you don't speak the language and where their website doesn't explain the requirements very well. In addition to have to get there by 6am otherwise you might not even get your turn. In the first visit, you will certainly spend hours there and still go home without the document or any real progress whatsoever.
+
+The thinking here is that going there is not real progress, but **it's still progress**.
 
 The way I think about this sort of task is that failure -- and repeat failurate -- is still progress.
 

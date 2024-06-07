@@ -44,9 +44,9 @@ As a christian, it's only natural to try find guidance for everything in the bib
 
 Blessed are you because there is an abundance of wisdom in the bible, especially in the books of Proverbs and Ecclesiastes.
 
-> [2] Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. -- Ecclesiastes 11:2 NIV
+> Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. -- Ecclesiastes 11:2 NIV
 
-> [6] Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well. -- Ecclesiastes 11:6 NIV
+> Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well. -- Ecclesiastes 11:6 NIV
 
 And there is much more!
 
