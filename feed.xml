@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-06-06T13:12:19+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2024-06-07T19:18:54+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
 
 <blockquote>
   <p>You keep shipping project after project. You need to stop and focus on one thing only.</p>
@@ -41,11 +41,11 @@
 <p>Blessed are you because there is an abundance of wisdom in the bible, especially in the books of Proverbs and Ecclesiastes.</p>
 
 <blockquote>
-  <p>[2] Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. – Ecclesiastes 11:2 NIV</p>
+  <p>Invest in seven ventures, yes, in eight; you do not know what disaster may come upon the land. – Ecclesiastes 11:2 NIV</p>
 </blockquote>
 
 <blockquote>
-  <p>[6] Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well. – Ecclesiastes 11:6 NIV</p>
+  <p>Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well. – Ecclesiastes 11:6 NIV</p>
 </blockquote>
 
 <p>And there is much more!</p>
@@ -140,9 +140,11 @@
 
 <h2 id="progress-is-progress">Progress is progress</h2>
 
-<p>Sometimes some tasks seem to be impossible or extremelly difficult. This means that your first try is certainly going to fail.</p>
+<p>Sometimes some tasks seem to be impossible or extremely difficult. This means that your first try is certainly going to fail.</p>
 
-<p>Example: getting a document from a government institution where you don’t speak the language and where their website doesn’t explain the requirements very well. In addition to have to get there by 6am otherwise you might not even get your turn. In the first visit, you will certainly spend hours there and still go home without the document or any real progress whatsoever. The thinking here is that going there is not real progress, but <strong>it’s still progress</strong>.</p>
+<p>Example: getting a document from a government institution where you don’t speak the language and where their website doesn’t explain the requirements very well. In addition to have to get there by 6am otherwise you might not even get your turn. In the first visit, you will certainly spend hours there and still go home without the document or any real progress whatsoever.</p>
+
+<p>The thinking here is that going there is not real progress, but <strong>it’s still progress</strong>.</p>
 
 <p>The way I think about this sort of task is that failure – and repeat failurate – is still progress.</p>
 
