@@ -9,9 +9,9 @@ layout: default
 <div>
   <time class="font-medium text-sm py-3">
     {% if page.last_modified_at %}
-      Last updated: {{ page.last_modified_at | date: '%B %e, %Y' }}
+    Last updated: {{ page.last_modified_at | date: '%B %e, %Y' }}
     {% else %}
-      Published: {{ page.date | date: '%B %e, %Y' }}
+    Published: {{ page.date | date: '%B %e, %Y' }}
     {% endif %}
   </time>
 
@@ -25,3 +25,5 @@ layout: default
 <div class="post-content prose mt-5">
   {{ content }}
 </div>
+
+{% include latest_project.html %}

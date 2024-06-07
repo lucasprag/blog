@@ -1,0 +1,23 @@
+
+<div class="border-t border-gray-700 mt-10 py-7">
+  <h1 class="py-3 font-semibold text-lg border-gray-200 dark:border-gray-700">
+    Thanks for reading my blog! Check out my latest project 👇🏼
+  </h1>
+
+
+  {% assign project = site.data.projects | first %}
+
+  <a href="{{project.url}}" target="_blank" rel="noreferrer"
+    class="flex py-1 px-3 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
+
+    <div class="w-full p-2">
+      <h2 class="font-semibold text-2xl">
+        {{project.name}} {% include external.html size="24px" %}
+      </h2>
+
+      <div class="text-lg mt-3">
+        {{project.description}}
+      </div>
+    </div>
+  </a>
+</div>
