@@ -44,10 +44,10 @@ I know some people journal, some people write TODOs, but I find that blogging do
 
 ## Let it burn mindset
 
-Sometimes when I feel overwhelmed about the amount or difficulty of tasks I need to do. When that happens, I pick one of them -- anyone of them, maybe giving some preferences if there are concerning negative consequences -- and just let the rest burn.
+Sometimes I feel overwhelmed about the amount or the difficulty of tasks I need to do. When that happens, I pick one of them -- anyone of them, maybe giving some preferences if there are concerning negative consequences -- and just let the rest burn.
 
 Freeing my mind from the burden of worrying for all those _other_ tasks is what I'm looking for here. I might still do them or maybe I don't. It doesn't matter. This is the mindset.
 
 ## Wrapping up
 
-These are some things I've picked up during my life as a developer that helped me get unstuck. If you have any more tips, let me know on twitter! 💪
+These are some things I've picked up during my life as a developer that helped me get unstuck. Another thing is asking for help, but that deserves its own post. If you have any more tips, let me know on twitter! 💪
