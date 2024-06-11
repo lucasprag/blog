@@ -1,14 +1,17 @@
 - name: StoryPoints.online
   url: https://storypoints.online/
   description: Estimate your stories & tasks faster in real time without letting the first response influence the others.
+  free: true
 
 - name: Alguém Recommenda? (pt-BR)
   url: https://alguemrecomenda.ca/
   description: List of Brazilian businesses offering products or services in greater Montréal. 🇧🇷 💙 🇨🇦
+  free: true
 
 - name: "VSCode Extension: TeamDocs"
   url: https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs
   description: TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
+  free: true
 
 # DEAD
 # - name: TeamLead.tools

@@ -1,6 +1,5 @@
-
-<div class="border-t border-gray-700 mt-10 py-7">
-  <h1 class="py-3 font-semibold text-lg border-gray-200 dark:border-gray-700">
+<div class="border-t border-gray-300 dark:border-gray-800 mt-10 py-7">
+  <h1 class="py-3 font-semibold text-lg">
     Thanks for reading my blog! Check out my latest project 👇🏼
   </h1>
 
@@ -13,6 +12,10 @@
     <div class="w-full p-2">
       <h2 class="font-semibold text-2xl">
         {{project.name}} {% include external.html size="24px" %}
+
+        {% if project.free %}
+          <span class="tag rounded-lg text-lg">Free!</span>
+        {% endif %}
       </h2>
 
       <div class="text-lg mt-3">
