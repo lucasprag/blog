@@ -10,13 +10,13 @@
     class="flex py-1 px-3 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
 
     <div class="w-full p-2">
-      <h2 class="font-semibold text-2xl">
+      <p class="font-semibold text-2xl">
         {{project.name}} {% include external.html size="24px" %}
 
         {% if project.free %}
           <span class="tag rounded-lg text-lg">Free!</span>
         {% endif %}
-      </h2>
+      </p>
 
       <div class="text-lg mt-3">
         {{project.description}}
