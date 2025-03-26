@@ -28,25 +28,23 @@
   {% include ga.html %}
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-900">
-<div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
-  {% include header.html %}
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    {% include header.html %}
 
-  <main class="flex-1">
-    {{ content }}
-  </main>
+    <main class="flex-1">
+      {{ content }}
+    </main>
 
-  {% include newsletter.html %}
+    {% include footer.html %}
+  </div>
 
-  {% include footer.html %}
-</div>
+  <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
 
-<script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
-
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-    referrerpolicy="no-referrer-when-downgrade" /></noscript>
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </body>
 
 </html>
