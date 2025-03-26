@@ -7,11 +7,11 @@
 
 ```
 bundle install
-npm install
+yarn install
 ```
 
-## Serve
+## Serve the blog locally
 
 ```
-bundle exec jekyll serve --livereload
+bin/dev
 ```
