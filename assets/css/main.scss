@@ -12,21 +12,6 @@ body {
     "Segoe UI Symbol";
 }
 
-.btn {
-  @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium transition-colors duration-200
-           focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
-}
-
-.btn-primary {
-  @apply bg-sky-700 text-white hover:bg-sky-900 focus:ring-sky-600
-           dark:bg-sky-700 dark:hover:bg-sky-900 dark:focus:ring-sky-700;
-}
-
-.btn-secondary {
-  @apply bg-zinc-500 text-white hover:bg-zinc-700 focus:ring-zinc-700
-           dark:bg-zinc-600 dark:hover:bg-zinc-800 dark:focus:ring-zinc-800;
-}
-
 .btn-nav {
   @apply rounded-md px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-200 hover:underline hover:underline-offset-4;
 }
@@ -35,9 +20,8 @@ body {
   @apply underline underline-offset-4; /* Active state styles */
 }
 
-.post-content a,
-.intro a {
-  @apply text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-500 underline font-semibold;
+.post-content a {
+  @apply text-sky-700 hover:text-sky-500 dark:text-sky-500 dark:hover:text-sky-300 underline underline-offset-4;
 }
 
 p {
@@ -49,31 +33,11 @@ p {
 }
 
 .post-content img {
-  @apply rounded;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  @apply text-black dark:text-white;
-}
-
-li code,
-p code,
-h1 code,
-h2 code,
-h3 code,
-h4 code,
-h5 code,
-h6 code {
-  @apply bg-slate-200 dark:bg-slate-700 py-1 px-2 rounded my-0.5;
+  @apply rounded-lg;
 }
 
 blockquote {
-  @apply px-4 my-2 border-l-4 border-gray-300 dark:border-slate-700;
+  @apply px-4 my-2 border-l-4 border-gray-300 dark:border-gray-800;
 }
 
 .tag {
@@ -533,7 +497,8 @@ code.highlighter-rouge {
   padding: 1px 5px 1px 5px;
 }
 
-/* ConvertKit customizations */
-.formkit-form [data-style="clean"] {
-  padding-top: 10px !important;
+/* inline code blocks */
+code.language-plaintext {
+  @apply py-0.5 px-1 rounded my-0.5;
 }
+
