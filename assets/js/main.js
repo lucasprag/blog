@@ -24,7 +24,11 @@ if (savedThemeOnPageLoad) {
 }
 
 function switchTheme() {
-  const currentAttributeTheme = document.documentElement.classList.contains("dark") ? "dark" : "light";
+  const currentAttributeTheme = document.documentElement.classList.contains(
+    "dark"
+  )
+    ? "dark"
+    : "light";
 
   if (currentAttributeTheme == "light") {
     document.documentElement.classList.remove("light");
@@ -34,3 +38,20 @@ function switchTheme() {
     switchToTheme("light", true);
   }
 }
+
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", switchTheme);
+
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector(
+  '[aria-controls="mobile-menu"]'
+);
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileIcons = mobileMenuButton.querySelectorAll('[data-slot="icon"]');
+
+mobileMenuButton.addEventListener("click", () => {
+  const isExpanded = mobileMenuButton.getAttribute("aria-expanded") === "true";
+  mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
+  mobileMenu.classList.toggle("hidden");
+  mobileIcons.forEach((icon) => icon.classList.toggle("hidden"));
+});

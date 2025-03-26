@@ -50,33 +50,97 @@
 </script>
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-900">
-<div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
-  <div class="flex justify-between my-8">
-  <a href="/" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 py-3 rounded">
-    <p class="font-medium text-xl">
-      <img src="/assets/images/computer.png" height="15" width="15" alt="lucasprag emoji" class="inline" />
-      <span class="ml-2">lucasprag</span>
-    </p>
-  </a>
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <nav class="pt-2 sm:my-5">
+  <div class="relative flex h-16 items-center justify-between">
+    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-950 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+            Icon when menu is closed.
 
-  <div class="flex justify-end">
-    <button class="px-4 pb-3 pt-3 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" onclick="switchTheme()" aria-label="Switch between dark mode and light mode">
-      <!-- Dark Icon  -->
-      <svg
-        class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="currentColor" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+            Menu open: "hidden", Menu closed: "block"
+          -->
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!--
+            Icon when menu is open.
 
-      <!-- Light Icon -->
-      <svg
-        class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="currentColorr"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
-    </button>
+            Menu open: "block", Menu closed: "hidden"
+          -->
+        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex shrink-0 items-center">
+        <a href="/" class="px-4 py-3 rounded">
+          <p class="font-medium text-xl">
+            <img src="/assets/images/computer.png" height="15" width="15" alt="lucasprag emoji" class="inline mb-1" />
+            <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
+          </p>
+        </a>
+
+      </div>
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="btn-nav mt-5" aria-current="page">Home</a>
+          <a href="/projects" class="btn-nav mt-5" aria-current="">Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <button
+        class="p-3 ml-1 text-gray-500 dark:text-white hover:bg-gray-500 dark:hover:bg-gray-800 hover:text-white rounded-md cursor-pointer mr-5"
+        id="theme-toggle" aria-label="Switch between dark mode and light mode">
+        <!-- Dark Icon  -->
+        <svg class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z" />
+          <circle fill="currentColor" cx="18" cy="18" r="10" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+
+        <!-- Light Icon -->
+        <svg class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z" />
+          <path
+            d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z"
+            fill="currentColorr" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+      </button>
+    </div>
   </div>
-</div>
 
-  <main class="flex-1">
-    <div class="intro text-md md:text-xl mb-5 text-center">
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden sm:hidden bg-gray-900 rounded" id="mobile-menu">
+    <div class="space-y-1 px-2 py-2">
+      <a href="/" class="block btn-nav" aria-current="page">Home</a>
+      <a href="/projects" class="block btn-nav" aria-current="">Projects</a>
+    </div>
+  </div>
+</nav>
+
+    <main class="flex-1">
+      <div class="intro text-md p-5 text-center">
   <div>
     <span class="block md:inline mb-2">
       Working as a Software Engineer for over 10 years, building side projects for fun.
@@ -84,355 +148,275 @@
   </div>
 </div>
 
-<h1 class="py-3 px-5 font-semibold text-lg border-gray-200 dark:border-gray-700">
-  Projects
-</h1>
-
-<div>
-
-  
-
-  <a href="https://sharethegood.news/" target="_blank" rel="noreferrer"
-    class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <div class="w-full p-2">
-      <h2 class="font-semibold text-md">
-        Share The Good News <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
-      </h2>
-      <div class="text-sm mt-1">
-        Helping christians share the good news of Jesus in Canada.
-      </div>
-    </div>
-  </a>
-
-  
-
-  <a href="https://storypoints.online/" target="_blank" rel="noreferrer"
-    class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <div class="w-full p-2">
-      <h2 class="font-semibold text-md">
-        StoryPoints.online <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
-      </h2>
-      <div class="text-sm mt-1">
-        Estimate your stories & tasks faster in real time without letting the first response influence the others.
-      </div>
-    </div>
-  </a>
-
-  
-
-  <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs" target="_blank" rel="noreferrer"
-    class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <div class="w-full p-2">
-      <h2 class="font-semibold text-md">
-        VSCode Extension: TeamDocs <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
-      </h2>
-      <div class="text-sm mt-1">
-        TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
-      </div>
-    </div>
-  </a>
-
-  
-
-</div>
 
 
 
-<h1 class="py-3 px-5 font-semibold text-lg border-gray-200 dark:border-gray-700">
+<h1 class="py-3 px-5 font-semibold text-2xl border-gray-200 dark:border-gray-700">
   Posts
 </h1>
 
 <div>
 
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/bad-advice-focus-on-one-thing/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        Bad Advice for Solopreneurs: Focus on one thing.
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          February 15, 2024
+        </time>
 
-<a href="/posts/bad-advice-focus-on-one-thing/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      Bad Advice for Solopreneurs: Focus on one thing.
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        February 15, 2024
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">solopreneurship</span>,
-      
-      <span class="tag mr-1">indie hacking</span>
-      
+        
+        <span class="tag mr-1">solopreneurship</span>,
+        
+        <span class="tag mr-1">indie hacking</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/underrated-vscode-feature-search-editor/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        Underrated VSCode feature: Search Editor
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          February  2, 2024
+        </time>
 
-<a href="/posts/underrated-vscode-feature-search-editor/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      Underrated VSCode feature: Search Editor
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        February  2, 2024
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">vscode</span>,
-      
-      <span class="tag mr-1">productivity</span>
-      
+        
+        <span class="tag mr-1">vscode</span>,
+        
+        <span class="tag mr-1">productivity</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/underrated-vscode-feature-native-tabs/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        Underrated VSCode feature: Native Tabs
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          February  1, 2024
+        </time>
 
-<a href="/posts/underrated-vscode-feature-native-tabs/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      Underrated VSCode feature: Native Tabs
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        February  1, 2024
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">vscode</span>,
-      
-      <span class="tag mr-1">productivity</span>
-      
+        
+        <span class="tag mr-1">vscode</span>,
+        
+        <span class="tag mr-1">productivity</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/how-to-get-unstuck/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        How to get unstuck
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          July 25, 2023
+        </time>
 
-<a href="/posts/how-to-get-unstuck/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      How to get unstuck
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        July 25, 2023
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">productivity</span>
-      
+        
+        <span class="tag mr-1">productivity</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/i-like-to-write/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        "I like to write"
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          July 23, 2023
+        </time>
 
-<a href="/posts/i-like-to-write/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      "I like to write"
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        July 23, 2023
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">meta</span>
-      
+        
+        <span class="tag mr-1">meta</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/the-secret-behind-my-productivity-using-the-command-line/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        The secret behind my productivity using the command line
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          August 10, 2022
+        </time>
 
-<a href="/posts/the-secret-behind-my-productivity-using-the-command-line/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      The secret behind my productivity using the command line
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        August 10, 2022
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">terminal</span>,
-      
-      <span class="tag mr-1">productivity</span>
-      
+        
+        <span class="tag mr-1">terminal</span>,
+        
+        <span class="tag mr-1">productivity</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        How to provide configs to React on Phoenix and esbuild
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          February 18, 2022
+        </time>
 
-<a href="/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      How to provide configs to React on Phoenix and esbuild
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        February 18, 2022
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">elixir</span>,
-      
-      <span class="tag mr-1">phoenix</span>
-      
+        
+        <span class="tag mr-1">elixir</span>,
+        
+        <span class="tag mr-1">phoenix</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/fish-the-shell/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        🐠 Fish, the shell
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          June 22, 2020
+        </time>
 
-<a href="/posts/fish-the-shell/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      🐠 Fish, the shell
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        June 22, 2020
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">terminal</span>
-      
+        
+        <span class="tag mr-1">terminal</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/expanding-rails-sti-to-your-architecture/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        Expanding Rails' STI to your architecture
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          June 22, 2020
+        </time>
 
-<a href="/posts/expanding-rails-sti-to-your-architecture/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      Expanding Rails' STI to your architecture
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        June 22, 2020
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">architecture</span>,
-      
-      <span class="tag mr-1">rails</span>
-      
+        
+        <span class="tag mr-1">architecture</span>,
+        
+        <span class="tag mr-1">rails</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/a-year-of-ruby-meetups-in-kitchener/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        A year of ruby meetups in Kitchener
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          December 12, 2019
+        </time>
 
-<a href="/posts/a-year-of-ruby-meetups-in-kitchener/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      A year of ruby meetups in Kitchener
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        December 12, 2019
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">community</span>
-      
+        
+        <span class="tag mr-1">community</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        Use ctags to jump to definition even inside ruby gems
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          November  6, 2019
+        </time>
 
-<a href="/posts/use-ctags-to-jump-to-definition-even-inside-ruby-gems/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      Use ctags to jump to definition even inside ruby gems
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        November  6, 2019
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">vim</span>
-      
+        
+        <span class="tag mr-1">vim</span>
+        
+      </div>
     </div>
   </div>
-</a>
+  
+  <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
+    <div class="w-full p-2">
+      <a href="/posts/how-to-reload-your-vim-configs-without-exiting-vim/"
+        class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-md py-2">
+        How to reload your vim configs without exiting vim
+      </a>
+      <div class="text-xs mt-1">
+        <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
+          July 26, 2019
+        </time>
 
-<a href="/posts/how-to-reload-your-vim-configs-without-exiting-vim/"
-  class="flex py-1 px-3 first-of-type:mt-0 my-4 rounded bg-gray-100 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
-  <div class="w-full p-2">
-    <h2 class="font-semibold text-md">
-      How to reload your vim configs without exiting vim
-    </h2>
-    <div class="text-xs mt-1">
-      <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
-        July 26, 2019
-      </time>
+        <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
 
-      <!-- <span class="mx-2 text-gray-700 dark:text-gray-400">-</span> -->
-
-      
-      <span class="tag mr-1">vim</span>
-      
+        
+        <span class="tag mr-1">vim</span>
+        
+      </div>
     </div>
   </div>
-</a>
-
-
+  
 </div>
 
-  </main>
+    </main>
 
-  <div class="mt-10 py-7">
-  <div class="mx-auto max-w-[700px]">
-    <p class="font-semibold text-lg">
-      Subscribe to my newsletter 💌
-    </p>
-    <script async data-uid="bcf06ab548" src="https://lucasprag.ck.page/bcf06ab548/index.js"></script>
-  </div>
-</div>
-
-  <footer class="mt-8">
+    <footer class="mt-8">
   <div class="flex justify-center">
-    <a href="https://github.com/lucasprag"
-      aria-label="Visit my Github profile"
+    <a href="https://github.com/lucasprag" aria-label="Visit my Github profile"
       class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
       <!-- Github Icon -->
       <svg class="align-middle" height="25" width="25" alt="my github profile" xmlns="http://www.w3.org/2000/svg"
@@ -443,8 +427,7 @@
     </a>
 
     <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-      aria-label="Link to feed RSS"
-      target="_blank">
+      aria-label="Link to feed RSS" target="_blank">
       <!-- RSS Icon -->
       <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
         focusable="false" viewBox="0 0 448 512">
@@ -460,14 +443,14 @@
     </a>
   </div>
 </footer>
-</div>
+  </div>
 
-<script src="https://lucasprag.com/assets/js/main.js"></script>
+  <script src="https://lucasprag.com/assets/js/main.js"></script>
 
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-    referrerpolicy="no-referrer-when-downgrade" /></noscript>
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </body>
 
 </html>
