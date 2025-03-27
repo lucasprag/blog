@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-03-26T04:17:09+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-03-27T04:23:30+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Tech Interview Tips</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Tips" /><published>2025-03-27T00:00:00+00:00</published><updated>2025-03-27T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.</p>
+
+<p>Here are some tips to help you answer some of the most common questions in technical interviews.</p>
+
+<h2 id="question-1-tell-me-about-yourself">Question #1: Tell me about yourself.</h2>
+
+<p>This is a very common first question. Usually, it is the first step to get to know more about you.</p>
+
+<p>This question can be asked in many different ways, such as “Could you give us an overview of your career?” or “Could you explain your past experiences?” What interviewers are really asking is, “Are you a fit for this job position?”</p>
+
+<p>It’s your job to answer that using your Elevator Pitch ™️.</p>
+
+<blockquote>
+  <p>ℹ Info<br />
+An elevator pitch quickly summarizes your experiences and skills in a short period of time, like the time it takes to go up in an elevator. It can either elevate the tone or level of the interview or diminish it.</p>
+</blockquote>
+
+<p>A good elevator pitch will:</p>
+
+<h3 id="1-connect-your-experiences-and-skills-to-the-job-position-or-company-stack">1. Connect your experiences and skills to the job position or company stack</h3>
+
+<p>If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about experiences with Java.</p>
+
+<p>Even if you have more experience in Java than in Ruby, perhaps just briefly mention unrelated experience when you can highlight skills that are interchangeable.</p>
+
+<h3 id="2-highlight-impactful-experiences">2. Highlight impactful experiences</h3>
+
+<p>Avoid going through all your experiences. Bring to the front the ones where you had a great impact, such as leading the research, planning, and/or implementation of a large feature, refactor, or optimization.</p>
+
+<p>Some folks make the mistake of going through all their experiences starting from their first few jobs.</p>
+
+<p>Others only talk about their current job, even if they didn’t have many opportunities to do impactful work.</p>
+
+<p>Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent ones.</p>
+
+<h2 id="question-2-could-you-talk-about-a-project-you-are-proud-of">Question #2: Could you talk about a project you are proud of?</h2>
+
+<p>What this question is really asking is, “What is a cool project that can show off your skills?”</p>
+
+<p>Some folks focus too much on being proud of the project, which isn’t the point.</p>
+
+<p>The point is to talk about a project while showing off your:</p>
+<ul>
+  <li>hard skills – such as programming, debugging, finding bottlenecks, writing tests, system design, an eye for code quality, etc.</li>
+  <li>soft skills – such as communication, leadership, time management, willingness to learn, etc.</li>
+</ul>
+
+<h2 id="question-3-have-you-ever-worked-on-improving-the-performance-of-a-system">Question #3: Have you ever worked on improving the performance of a system?</h2>
+
+<p>What is behind that question is, “Do you <strong>know</strong> how to optimize a system?”.</p>
+
+<p>Some folks focus too much on what exactly they have done to optimize a system or endpoint, but that isn’t the point.</p>
+
+<p>The point is – yes, highlight your experiences if you have them – but also show off that you know the techniques for accomplishing it.</p>
+
+<p>For instance, when optimizing some part of a system that is visibly slow, you could start with these common steps:</p>
+
+<ol>
+  <li>Add instrumentation – meaning metrics, logs, profiling, etc.</li>
+  <li>Find the bottlenecks – based on the instrumentation.</li>
+  <li>Experiment with some solutions using the instrumentation to know if it was resolved or not.</li>
+</ol>
+
+<p>As for solutions, it’s good to mention even the ones you never had the opportunity to use.</p>
+
+<p>For example, you could say that you have experience with:</p>
+
+<ol>
+  <li>Optimizing or simplifying database queries.</li>
+  <li>Eager loading or lazy loading data.</li>
+  <li>Improving hits on indexes.</li>
+</ol>
+
+<p>But you are also aware of other techniques that didn’t make sense at work yet, such as:</p>
+
+<ol>
+  <li>Adding cache.</li>
+  <li>Refactoring the code to break it down or simplify it.</li>
+  <li>Database or app sharding.</li>
+  <li>Horizontal or vertical scaling.</li>
+</ol>
+
+<p>Be prepared to talk about the advantages or disadvantages of any of them because they all have trade-offs.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Summarizing all the above:</p>
+
+<ul>
+  <li>Practice your Elevator Pitch ™️.</li>
+  <li>Connect most of what you say to the job.</li>
+  <li>Highlight the most relevant experiences first.</li>
+  <li>Don’t just talk about what you did, but also about what you know.</li>
+</ul>
+
+<p>Good luck in your tech interview. 👋🏼</p>]]></content><author><name></name></author><category term="interview tips" /><summary type="html"><![CDATA[I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.]]></summary></entry><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
 
 <blockquote>
   <p>You keep shipping project after project. You need to stop and focus on one thing only.</p>
@@ -892,43 +987,4 @@ end
 
 <p>As a result, in order to run a bash script you need to explicitly run it on bash, for example <code class="language-plaintext highlighter-rouge">bash script.sh</code>.</p>
 
-<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry><entry><title type="html">A year of ruby meetups in Kitchener</title><link href="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/" rel="alternate" type="text/html" title="A year of ruby meetups in Kitchener" /><published>2019-12-12T00:00:00+00:00</published><updated>2019-12-12T00:00:00+00:00</updated><id>https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener</id><content type="html" xml:base="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/"><![CDATA[<p>I’ve been living in Kitchener for over an year and in the first time I attended to the ruby workshop I created my <a href="https://github.com/rails/rails/pull/34233">first PR</a> to Rails 🎉</p>
-
-<p>It was quite simple of course, but in that workshop I’ve learned that it’s not that hard to do open source. Eventually I found a small problem in Rails and I created <a href="https://github.com/rails/rails/pull/36470">another PR</a>.</p>
-
-<p>Then I started doing more open source in projects that I was using at work like <a href="https://github.com/mezis/viscacha/pull/3">viscacha</a>, <a href="https://github.com/rails/sprockets/pull/599">sprockets</a>, <a href="https://github.com/itchyny/lightline.vim/pull/398">lightline.vim</a>, tabulous PR <a href="https://github.com/webdevel/tabulous/pull/2">#1</a> and <a href="https://github.com/webdevel/tabulous/pull/3">#2</a>, <a href="https://github.com/thadeu/vscode-run-rspec-file/pull/8">vscode-run-rspec-file</a> and hopefully this list is only going to grow overtime.</p>
-
-<p>In other ruby workshops, it was really nice to be able to help other people’s projects.</p>
-
-<p>The meetup when <a href="https://github.com/jayelkaake">Jay El-Kaake</a> gave a talk about <a href="https://www.meetup.com/kw-ruby-on-rails/events/260999605/">how to make Rails faster than the speed of light</a> was really interesting, I’ve learned a few things on how to do speed tests, how to reduce latency when connecting to your app/postsgresql/redis and much more!</p>
-
-<p>In the workshop focused on <a href="https://www.meetup.com/kw-ruby-on-rails/events/265685895/">Hacktoberfest</a> I helped a developer to participate and I decided to participate myself which was great. 🌟</p>
-
-<p><img src="/assets/images/posts/hacktoberfest-email.jpg" alt="The email I got saying that I've completed the Hacktoberfest challenge." /></p>
-
-<p>I missed the talk about Rails and Docker, that was a shame, I wish I could have made for that one.</p>
-
-<p>In the <a href="https://www.meetup.com/kw-ruby-on-rails/events/259429067/">Career, Business and Software Development</a> talk by <a href="https://twitter.com/martinbasiri">Martin Basiri</a> I’ve learned one thing or two about the business side of tech companies. He also talked about his first endeavor which was earphones that made it easier to untangle their cable - 4 seconds less than others - and how it failed when wireless earphones got popular.</p>
-
-<p>It was quite inspiring to see so many students and developers asking interesting questions in the <a href="https://www.meetup.com/kw-ruby-on-rails/events/266616653/">Building a Career in Technology</a> talk by <a href="https://www.linkedin.com/in/robsciuk/">Rob Sciuk</a> and <a href="https://www.linkedin.com/in/ralphjanke/">Ralph Janke</a>.</p>
-
-<p>Not all meetups are very productive, but the last one of 2019 was really special and this is why:</p>
-<ul>
-  <li>I talked to someone who was new to Ruby, did the classic blog tutorial</li>
-  <li>I did open source by working on an <a href="https://github.com/kwruby/kwruby.ca/issues/35">issue</a> to automate the deployment of the <a href="http://kwruby.ca/">KWRuby’s website</a>.</li>
-  <li>we talked about <a href="https://elixir-lang.org/">Elixir</a>, pattern matching and <a href="https://twitter.com/dwhelan/">Declan</a> gave us a lesson – almost a talk by itself – on aspects of <a href="https://en.wikipedia.org/wiki/Actor_model">actor model</a> implemented in Erlang</li>
-  <li>we talked about new things comming up to Ruby like pattern matching on ruby 2.7</li>
-  <li>and there were lots of Pizza 🍕</li>
-</ul>
-
-<p>Definitely one of the best ruby workshops. So many things happened in just one meetup.</p>
-
-<p>Big thanks to <a href="https://github.com/acant">Andrew</a>, the person behind this group and all the people who have helped him.</p>
-
-<p>If you are in Kitchener/Waterloo I strongly recommend you to attend a few times to the <a href="http://kwruby.ca/">KWRuby meetup</a>. If not in the area, try to see if there are groups in your city. It’s totally worthy.</p>
-
-<center>
-<h3>2020 is going to be great! 💎</h3>
-</center>
-
-<p><em><a href="https://dev.to/lucasprag/a-year-of-ruby-meetups-in-kitchener-5g72">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="community" /><summary type="html"><![CDATA[Contributed to Rails and other open source projects, learned great things on talks, helped others with their projects and more!]]></summary></entry></feed>
+<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry></feed>

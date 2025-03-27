@@ -743,16 +743,25 @@ body {
   color: rgb(125 211 252/var(--tw-text-opacity));
 }
 
-p {
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+.post-content p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
 }
 
-.post-content li {
+.post-content ul li {
   list-style-type: disc;
+}
+
+.post-content ol li, .post-content ul li {
   margin-left: 1.25rem;
   padding-bottom: 0.125rem;
   padding-top: 0.125rem;
+}
+
+.post-content ol li {
+  list-style-type: decimal;
 }
 
 .post-content img {

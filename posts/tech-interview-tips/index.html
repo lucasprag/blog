@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    Tech Interview Tips -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <meta name="description" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
+  <meta name="keywords" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
+
+  <meta content="Lucas Arantes" property="og:site_name">
+
+  <meta content="Tech Interview Tips" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc." property="og:description">
+
+
+  <meta content="https://lucasprag.com/posts/tech-interview-tips/" property="og:url">
+
+
+  <meta content="2025-03-27T00:00:00+00:00" property="article:published_time">
+  <meta content="https://lucasprag.com/about/" property="article:author">
+
+
+  <meta content="https://lucasprag.com/assets/images/computer.png" property="og:image">
+
+
+  
+
+
+  
+  <meta content="interview tips" property="article:tag">
+  
+
+
+  <link rel="canonical" href="https://lucasprag.com/posts/tech-interview-tips/">
+  <link rel="icon" type="image/x-icon" href="https://lucasprag.com/assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://lucasprag.com/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="https://lucasprag.com/feed.xml" title="RSS 2.0" />
+  <link rel="sitemap" href="https://lucasprag.com/sitemap.xml" type="application/xml" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTKH1J2E5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTKH1J2E5Z');
+</script>
+</head>
+
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <nav class="pt-2 sm:my-5">
+  <div class="relative flex h-16 items-center justify-between">
+    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-950 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex shrink-0 items-center">
+        <a href="/" class="px-4 py-3 rounded">
+          <p class="font-medium text-xl">
+            <img src="/assets/images/computer.png" height="15" width="15" alt="lucasprag emoji" class="inline mb-1" />
+            <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
+          </p>
+        </a>
+
+      </div>
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="btn-nav mt-5" aria-current="">Home</a>
+          <a href="/projects" class="btn-nav mt-5" aria-current="">Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <button
+        class="p-3 ml-1 text-gray-500 dark:text-white hover:bg-gray-500 dark:hover:bg-gray-800 hover:text-white rounded-md cursor-pointer mr-5"
+        id="theme-toggle" aria-label="Switch between dark mode and light mode">
+        <!-- Dark Icon  -->
+        <svg class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z" />
+          <circle fill="currentColor" cx="18" cy="18" r="10" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+
+        <!-- Light Icon -->
+        <svg class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z" />
+          <path
+            d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z"
+            fill="currentColorr" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden sm:hidden bg-gray-900 rounded" id="mobile-menu">
+    <div class="space-y-1 px-2 py-2">
+      <a href="/" class="block btn-nav" aria-current="">Home</a>
+      <a href="/projects" class="block btn-nav" aria-current="">Projects</a>
+    </div>
+  </div>
+</nav>
+
+    <main class="flex-1">
+      <h1 class="font-semibold text-3xl mt-5">
+  Tech Interview Tips
+</h1>
+
+<div>
+  <time class="font-medium text-sm py-3">
+    
+    Published: March 27, 2025
+    
+  </time>
+
+  <div class="text-xs ml-4 mt-1 inline">
+    
+    <span class="tag mr-1">interview tips</span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.</p>
+
+<p>Here are some tips to help you answer some of the most common questions in technical interviews.</p>
+
+<h2 id="question-1-tell-me-about-yourself">Question #1: Tell me about yourself.</h2>
+
+<p>This is a very common first question. Usually, it is the first step to get to know more about you.</p>
+
+<p>This question can be asked in many different ways, such as “Could you give us an overview of your career?” or “Could you explain your past experiences?” What interviewers are really asking is, “Are you a fit for this job position?”</p>
+
+<p>It’s your job to answer that using your Elevator Pitch ™️.</p>
+
+<blockquote>
+  <p>ℹ Info<br />
+An elevator pitch quickly summarizes your experiences and skills in a short period of time, like the time it takes to go up in an elevator. It can either elevate the tone or level of the interview or diminish it.</p>
+</blockquote>
+
+<p>A good elevator pitch will:</p>
+
+<h3 id="1-connect-your-experiences-and-skills-to-the-job-position-or-company-stack">1. Connect your experiences and skills to the job position or company stack</h3>
+
+<p>If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about experiences with Java.</p>
+
+<p>Even if you have more experience in Java than in Ruby, perhaps just briefly mention unrelated experience when you can highlight skills that are interchangeable.</p>
+
+<h3 id="2-highlight-impactful-experiences">2. Highlight impactful experiences</h3>
+
+<p>Avoid going through all your experiences. Bring to the front the ones where you had a great impact, such as leading the research, planning, and/or implementation of a large feature, refactor, or optimization.</p>
+
+<p>Some folks make the mistake of going through all their experiences starting from their first few jobs.</p>
+
+<p>Others only talk about their current job, even if they didn’t have many opportunities to do impactful work.</p>
+
+<p>Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent ones.</p>
+
+<h2 id="question-2-could-you-talk-about-a-project-you-are-proud-of">Question #2: Could you talk about a project you are proud of?</h2>
+
+<p>What this question is really asking is, “What is a cool project that can show off your skills?”</p>
+
+<p>Some folks focus too much on being proud of the project, which isn’t the point.</p>
+
+<p>The point is to talk about a project while showing off your:</p>
+<ul>
+  <li>hard skills – such as programming, debugging, finding bottlenecks, writing tests, system design, an eye for code quality, etc.</li>
+  <li>soft skills – such as communication, leadership, time management, willingness to learn, etc.</li>
+</ul>
+
+<h2 id="question-3-have-you-ever-worked-on-improving-the-performance-of-a-system">Question #3: Have you ever worked on improving the performance of a system?</h2>
+
+<p>What is behind that question is, “Do you <strong>know</strong> how to optimize a system?”.</p>
+
+<p>Some folks focus too much on what exactly they have done to optimize a system or endpoint, but that isn’t the point.</p>
+
+<p>The point is – yes, highlight your experiences if you have them – but also show off that you know the techniques for accomplishing it.</p>
+
+<p>For instance, when optimizing some part of a system that is visibly slow, you could start with these common steps:</p>
+
+<ol>
+  <li>Add instrumentation – meaning metrics, logs, profiling, etc.</li>
+  <li>Find the bottlenecks – based on the instrumentation.</li>
+  <li>Experiment with some solutions using the instrumentation to know if it was resolved or not.</li>
+</ol>
+
+<p>As for solutions, it’s good to mention even the ones you never had the opportunity to use.</p>
+
+<p>For example, you could say that you have experience with:</p>
+
+<ol>
+  <li>Optimizing or simplifying database queries.</li>
+  <li>Eager loading or lazy loading data.</li>
+  <li>Improving hits on indexes.</li>
+</ol>
+
+<p>But you are also aware of other techniques that didn’t make sense at work yet, such as:</p>
+
+<ol>
+  <li>Adding cache.</li>
+  <li>Refactoring the code to break it down or simplify it.</li>
+  <li>Database or app sharding.</li>
+  <li>Horizontal or vertical scaling.</li>
+</ol>
+
+<p>Be prepared to talk about the advantages or disadvantages of any of them because they all have trade-offs.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Summarizing all the above:</p>
+
+<ul>
+  <li>Practice your Elevator Pitch ™️.</li>
+  <li>Connect most of what you say to the job.</li>
+  <li>Highlight the most relevant experiences first.</li>
+  <li>Don’t just talk about what you did, but also about what you know.</li>
+</ul>
+
+<p>Good luck in your tech interview. 👋🏼</p>
+
+
+</div>
+
+    </main>
+
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag" aria-label="Visit my Github profile"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my github profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      aria-label="Link to feed RSS" target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+
+  <script src="https://lucasprag.com/assets/js/main.js"></script>
+
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>
