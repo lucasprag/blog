@@ -2,6 +2,7 @@
 layout: post
 title: "Tech Interview Questions: Tell me about yourself."
 date: "Mar 27, 2025"
+last_modified_at: "Apr 2, 2025"
 tags:
   - tech interview
 description:
