@@ -1,94 +1,76 @@
 ---
 layout: post
-title: "Tech Interview Tips"
+title: "Tech Interview Questions: Tell me about yourself."
 date: "Mar 27, 2025"
 tags:
-  - interview tips
+  - tech interview
 description:
 ---
 
-I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.
-
-Here are some tips to help you answer some of the most common questions in technical interviews.
-
-## Question #1: Tell me about yourself.
+I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: **Could you tell me about yourself?**
 
 This is a very common first question. Usually, it is the first step to get to know more about you.
 
-This question can be asked in many different ways, such as "Could you give us an overview of your career?" or "Could you explain your past experiences?" What interviewers are really asking is, "Are you a fit for this job position?"
+This question can be asked in many different ways, such as "Could you give us an overview of your career?" or "Could you explain your past experiences?", but what interviewers are really asking is "Why do you think **you** are a fit for this job position?"
 
-It's your job to answer that using your Elevator Pitch ™️.
+It's your job to answer that by using your Elevator Pitch ™️.
 
 > ℹ Info<br>
 > An elevator pitch quickly summarizes your experiences and skills in a short period of time, like the time it takes to go up in an elevator. It can either elevate the tone or level of the interview or diminish it.
 
 A good elevator pitch will:
 
-### 1. Connect your experiences and skills to the job position or company stack
+### 1. Connect your skills to the job position or company stack
 
-If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about experiences with Java.
+If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about Java.
 
-Even if you have more experience in Java than in Ruby, perhaps just briefly mention unrelated experience when you can highlight skills that are interchangeable.
+If you have more experiences in Java than in Ruby, try to highlight the skills that are **interchangeable**.
 
-### 2. Highlight impactful experiences
+### 2. Only talk about your last couple of most impactful experiences
 
 Avoid going through all your experiences. Bring to the front the ones where you had a great impact, such as leading the research, planning, and/or implementation of a large feature, refactor, or optimization.
 
-Some folks make the mistake of going through all their experiences starting from their first few jobs.
+Some folks make the mistake of going through all their experiences starting from their first few jobs usually as interns.
 
 Others only talk about their current job, even if they didn't have many opportunities to do impactful work.
 
-Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent ones.
+Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent few ones.
 
-## Question #2: Could you talk about a project you are proud of?
+### 3. Talk about things that you can talk in depth
 
-What this question is really asking is, "What is a cool project that can show off your skills?"
+The elevator pitch is useful for bringing subjects to the table that we can discuss in pursuit of identifying if the candidate is a good fit.
 
-Some folks focus too much on being proud of the project, which isn't the point.
+Some folks overly use "big words" such as system design, architecture or performance optimization, but when asked about it, they can't go deep.
 
-The point is to talk about a project while showing off your:
-- hard skills -- such as programming, debugging, finding bottlenecks, writing tests, system design, an eye for code quality, etc.
-- soft skills -- such as communication, leadership, time management, willingness to learn, etc.
+If a senior engineer talks about doing great optimization in a project, but when asked more about it, they can only talk about making sure the app is hitting indexes or avoiding N+1 queries, that's disappointing.
 
-## Question #3: Have you ever worked on improving the performance of a system?
+## Example of an elevator pitch
 
-What is behind that question is, "Do you **know** how to optimize a system?".
+Job example: Senior full stack meant to work with Ruby on Rails, Postgres, React and TypeScript on an app that serves 3M daily users. Requirements include writing code, leading projects and mentoring other less senior engineers.
 
-Some folks focus too much on what exactly they have done to optimize a system or endpoint, but that isn't the point.
+> H. I'm Lucas. I've been working with Ruby on Rails for the last 10 years, mostly working with React. A couple of years ago, I picked up TypeScript which has been a fun ride.
+>
+> I'm a tech lead in my current job and my responsibilities include defining an implementation plan for features that we want to build setting the technical direction for our Ruby on Rails back-end, sometimes creating tasks, writing back-end code in Ruby and front-end in React &TypeScript, increasing observability of our services making sure our metrics are visible and actionable, having 1:1s with my peers and participating in the upstream process to help validating how feasible features are and estimate their effort.
+>
+> I'm often drawn into complex problems which I love to solve. A cool project I worked recently was to optimize a task/script that would take several months to finish reducing it to be able to finish in 13 days.
+>
+> I currently work on a Loyalty platform for ecommerce and another cool project I worked recently was a React app to be placed during checkout that would allow customers to use exchange their Points for discounts🍀. That proved to be quite successful being responsible for XX% of all Point exchanges.
+>
+> That’s me in a nutshell.
 
-The point is -- yes, highlight your experiences if you have them -- but also show off that you know the techniques for accomplishing it.
-
-For instance, when optimizing some part of a system that is visibly slow, you could start with these common steps:
-
-1. Add instrumentation -- meaning metrics, logs, profiling, etc.
-2. Find the bottlenecks -- based on the instrumentation.
-3. Experiment with some solutions using the instrumentation to know if it was resolved or not.
-
-As for solutions, it's good to mention even the ones you never had the opportunity to use.
-
-For example, you could say that you have experience with:
-
-1. Optimizing or simplifying database queries.
-2. Eager loading or lazy loading data.
-3. Improving hits on indexes.
-
-But you are also aware of other techniques that didn't make sense at work yet, such as:
-
-4. Adding cache.
-5. Refactoring the code to break it down or simplify it.
-6. Database or app sharding.
-7. Horizontal or vertical scaling.
-
-Be prepared to talk about the advantages or disadvantages of any of them because they all have trade-offs.
+Take-aways:
+- I only talked about my most recent role.
+- I mentioned an impactful back-end project and an impactful front-end project leaving room for follow-up questions.
+- I gave some metrics to show how impactful the projects were.
+- If asked, I could talk about either project for hours because I was deeply involved in them.
+- If asked, I could talk in depth about each of the responsibilities I mentioned. I didn't include all my responsibilities, only the ones I could connect to the job position and that I had great experiences to share related to them.
 
 ## Conclusion
 
-Summarizing all the above:
+A good Elevator Pitch ™️ is the perfect tool to give a great start for an interview. Write it down, practice it and try to use your natural language so it's not so different from your other less prepared answers.
 
-- Practice your Elevator Pitch ™️.
-- Connect most of what you say to the job.
-- Highlight the most relevant experiences first.
-- Don't just talk about what you did, but also about what you know.
+Good luck 🍀
 
-Good luck in your tech interview. 👋🏼
+
+
 
