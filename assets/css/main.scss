@@ -13,7 +13,7 @@ body {
 }
 
 .btn-nav {
-  @apply rounded-md px-3 py-2 text-sm font-medium text-gray-900 dark:text-gray-200 hover:underline hover:underline-offset-4;
+  @apply rounded-md px-3 py-1 text-base font-medium text-gray-900 dark:text-gray-200 hover:underline hover:underline-offset-4;
 }
 
 .btn-nav[aria-current="page"] {
@@ -49,19 +49,19 @@ blockquote {
 }
 
 .post-content h1 {
-  @apply text-4xl mt-8 font-medium;
+  @apply text-4xl mt-8 font-semibold;
 }
 .post-content h2 {
-  @apply text-3xl mt-7 font-medium;
+  @apply text-3xl mt-7 font-semibold;
 }
 .post-content h3 {
-  @apply text-2xl mt-6 font-medium;
+  @apply text-2xl mt-6 font-semibold;
 }
 .post-content h4 {
-  @apply text-2xl mt-5 font-medium;
+  @apply text-2xl mt-5 font-semibold;
 }
 .post-content h5 {
-  @apply text-lg mt-5 font-medium;
+  @apply text-lg mt-5 font-semibold;
 }
 .post-content h6 {
   @apply mt-5 font-medium;

@@ -30,9 +30,9 @@
 
     <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
       <div class="flex shrink-0 items-center">
-        <a href="/" class="px-4 py-3 rounded">
-          <p class="font-medium text-xl">
-            <img src="/assets/images/computer.png" height="15" width="15" alt="lucasprag emoji" class="inline mb-1" />
+        <a href="/" class="px-4 py-2 rounded">
+          <p class="font-medium text-2xl">
+            <img src="/assets/images/computer.png" height="20" width="20" alt="lucasprag emoji" class="inline mb-1" />
             <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
           </p>
         </a>
@@ -41,7 +41,7 @@
       <div class="hidden sm:ml-6 sm:block">
         <div class="flex space-x-4">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="/" class="btn-nav mt-3" aria-current="{% if page.name == 'index.html' %}page{% endif %}">Home</a>
+          <a href="/" class="btn-nav mt-3" aria-current="{% if page.name == 'index.html' %}page{% endif %}">Posts</a>
           <a href="/projects" class="btn-nav mt-3" aria-current="{% if page.name == 'projects.html' %}page{% endif %}">Projects</a>
         </div>
       </div>
@@ -78,8 +78,8 @@
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
-    <div class="space-y-1 px-2 py-2">
-      <a href="/" class="block btn-nav" aria-current="{% if page.name == 'index.html' %}page{% endif %}">Home</a>
+    <div class="space-y-3 px-2 py-5">
+      <a href="/" class="block btn-nav" aria-current="{% if page.name == 'index.html' %}page{% endif %}">Posts</a>
       <a href="/projects" class="block btn-nav" aria-current="{% if page.name == 'projects.html' %}page{% endif %}">Projects</a>
     </div>
   </div>
