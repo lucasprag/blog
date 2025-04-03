@@ -346,6 +346,10 @@ img, video {
   white-space: nowrap;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .absolute {
   position: absolute;
 }
@@ -526,10 +530,10 @@ img, video {
   margin-right: calc(1rem * var(--tw-space-x-reverse));
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse:0;
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-  margin-top: calc(0.25rem * (1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  margin-top: calc(0.75rem * (1 - var(--tw-space-y-reverse)));
 }
 
 .rounded {
@@ -568,10 +572,6 @@ img, video {
   padding: 0.75rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -603,10 +603,16 @@ img, video {
 }
 
 .py-3 {
+  padding-bottom: 0.75rem;
   padding-top: 0.75rem;
 }
 
-.pb-3, .py-3 {
+.py-5 {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.pb-3 {
   padding-bottom: 0.75rem;
 }
 
@@ -640,18 +646,18 @@ img, video {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -709,10 +715,10 @@ body {
 
 .btn-nav {
   border-radius: 0.375rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.25rem;
-  padding: 0.5rem 0.75rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.75rem;
   --tw-text-opacity:1;
   color: rgb(17 24 39/var(--tw-text-opacity));
 }
@@ -806,14 +812,14 @@ blockquote:is(.dark *) {
 
 .post-content h1 {
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 2.5rem;
   margin-top: 2rem;
 }
 
 .post-content h2 {
   font-size: 1.875rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 2.25rem;
   margin-top: 1.75rem;
 }
@@ -824,7 +830,7 @@ blockquote:is(.dark *) {
 
 .post-content h3, .post-content h4 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 2rem;
 }
 
@@ -834,10 +840,12 @@ blockquote:is(.dark *) {
 
 .post-content h5 {
   font-size: 1.125rem;
+  font-weight: 600;
   line-height: 1.75rem;
+  margin-top: 1.25rem;
 }
 
-.post-content h5, .post-content h6 {
+.post-content h6 {
   font-weight: 500;
   margin-top: 1.25rem;
 }
@@ -1309,6 +1317,11 @@ code.language-plaintext {
   }
   .sm\:pr-0 {
     padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .md\:mt-3 {
+    margin-top: 0.75rem;
   }
 }
 

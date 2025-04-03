@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-03-27T04:31:03+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Tech Interview Tips</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Tips" /><published>2025-03-27T00:00:00+00:00</published><updated>2025-03-27T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.</p>
-
-<p>Here are some tips to help you answer some of the most common questions in technical interviews.</p>
-
-<h2 id="question-1-tell-me-about-yourself">Question #1: Tell me about yourself.</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-04-03T02:59:35+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Tech Interview Questions: Tell me about yourself.</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Questions: Tell me about yourself." /><published>2025-03-27T00:00:00+00:00</published><updated>2025-03-27T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: <strong>Could you tell me about yourself?</strong></p>
 
 <p>This is a very common first question. Usually, it is the first step to get to know more about you.</p>
 
-<p>This question can be asked in many different ways, such as “Could you give us an overview of your career?” or “Could you explain your past experiences?” What interviewers are really asking is, “Are you a fit for this job position?”</p>
+<p>This question can be asked in many different ways, such as “Could you give us an overview of your career?” or “Could you explain your past experiences?”, but what interviewers are really asking is “Why do you think <strong>you</strong> are a fit for this job position?”</p>
 
-<p>It’s your job to answer that using your Elevator Pitch ™️.</p>
+<p>It’s your job to answer that by using your Elevator Pitch ™️.</p>
 
 <blockquote>
   <p>ℹ Info<br />
@@ -17,83 +13,60 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 
 <p>A good elevator pitch will:</p>
 
-<h3 id="1-connect-your-experiences-and-skills-to-the-job-position-or-company-stack">1. Connect your experiences and skills to the job position or company stack</h3>
+<h3 id="1-connect-your-skills-to-the-job-position-or-company-stack">1. Connect your skills to the job position or company stack</h3>
 
-<p>If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about experiences with Java.</p>
+<p>If the job description is asking for a Ruby engineer and you have experience with Ruby, avoid talking too much about Java.</p>
 
-<p>Even if you have more experience in Java than in Ruby, perhaps just briefly mention unrelated experience when you can highlight skills that are interchangeable.</p>
+<p>If you have more experiences in Java than in Ruby, try to highlight the skills that are <strong>interchangeable</strong>.</p>
 
-<h3 id="2-highlight-impactful-experiences">2. Highlight impactful experiences</h3>
+<h3 id="2-only-talk-about-your-last-couple-of-most-impactful-experiences">2. Only talk about your last couple of most impactful experiences</h3>
 
 <p>Avoid going through all your experiences. Bring to the front the ones where you had a great impact, such as leading the research, planning, and/or implementation of a large feature, refactor, or optimization.</p>
 
-<p>Some folks make the mistake of going through all their experiences starting from their first few jobs.</p>
+<p>Some folks make the mistake of going through all their experiences starting from their first few jobs usually as interns.</p>
 
 <p>Others only talk about their current job, even if they didn’t have many opportunities to do impactful work.</p>
 
-<p>Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent ones.</p>
+<p>Talk about the most impactful and relevant experiences, connecting them to the job position. They are usually the most recent few ones.</p>
 
-<h2 id="question-2-could-you-talk-about-a-project-you-are-proud-of">Question #2: Could you talk about a project you are proud of?</h2>
+<h3 id="3-talk-about-things-that-you-can-talk-in-depth">3. Talk about things that you can talk in depth</h3>
 
-<p>What this question is really asking is, “What is a cool project that can show off your skills?”</p>
+<p>The elevator pitch is useful for bringing subjects to the table that we can discuss in pursuit of identifying if the candidate is a good fit.</p>
 
-<p>Some folks focus too much on being proud of the project, which isn’t the point.</p>
+<p>Some folks overly use “big words” such as system design, architecture or performance optimization, but when asked about it, they can’t go deep.</p>
 
-<p>The point is to talk about a project while showing off your:</p>
+<p>If a senior engineer talks about doing great optimization in a project, but when asked more about it, they can only talk about making sure the app is hitting indexes or avoiding N+1 queries, that’s disappointing.</p>
+
+<h2 id="example-of-an-elevator-pitch">Example of an elevator pitch</h2>
+
+<p>Job example: Senior full stack meant to work with Ruby on Rails, Postgres, React and TypeScript on an app that serves 3M daily users. Requirements include writing code, leading projects and mentoring other less senior engineers.</p>
+
+<blockquote>
+  <p>H. I’m Lucas. I’ve been working with Ruby on Rails for the last 10 years, mostly working with React. A couple of years ago, I picked up TypeScript which has been a fun ride.</p>
+
+  <p>I’m a tech lead in my current job and my responsibilities include defining an implementation plan for features that we want to build setting the technical direction for our Ruby on Rails back-end, sometimes creating tasks, writing back-end code in Ruby and front-end in React &amp;TypeScript, increasing observability of our services making sure our metrics are visible and actionable, having 1:1s with my peers and participating in the upstream process to help validating how feasible features are and estimate their effort.</p>
+
+  <p>I’m often drawn into complex problems which I love to solve. A cool project I worked recently was to optimize a task/script that would take several months to finish reducing it to be able to finish in 13 days.</p>
+
+  <p>I currently work on a Loyalty platform for ecommerce and another cool project I worked recently was a React app to be placed during checkout that would allow customers to use exchange their Points for discounts🍀. That proved to be quite successful being responsible for XX% of all Point exchanges.</p>
+
+  <p>That’s me in a nutshell.</p>
+</blockquote>
+
+<p>Take-aways:</p>
 <ul>
-  <li>hard skills – such as programming, debugging, finding bottlenecks, writing tests, system design, an eye for code quality, etc.</li>
-  <li>soft skills – such as communication, leadership, time management, willingness to learn, etc.</li>
+  <li>I only talked about my most recent role.</li>
+  <li>I mentioned an impactful back-end project and an impactful front-end project leaving room for follow-up questions.</li>
+  <li>I gave some metrics to show how impactful the projects were.</li>
+  <li>If asked, I could talk about either project for hours because I was deeply involved in them.</li>
+  <li>If asked, I could talk in depth about each of the responsibilities I mentioned. I didn’t include all my responsibilities, only the ones I could connect to the job position and that I had great experiences to share related to them.</li>
 </ul>
-
-<h2 id="question-3-have-you-ever-worked-on-improving-the-performance-of-a-system">Question #3: Have you ever worked on improving the performance of a system?</h2>
-
-<p>What is behind that question is, “Do you <strong>know</strong> how to optimize a system?”.</p>
-
-<p>Some folks focus too much on what exactly they have done to optimize a system or endpoint, but that isn’t the point.</p>
-
-<p>The point is – yes, highlight your experiences if you have them – but also show off that you know the techniques for accomplishing it.</p>
-
-<p>For instance, when optimizing some part of a system that is visibly slow, you could start with these common steps:</p>
-
-<ol>
-  <li>Add instrumentation – meaning metrics, logs, profiling, etc.</li>
-  <li>Find the bottlenecks – based on the instrumentation.</li>
-  <li>Experiment with some solutions using the instrumentation to know if it was resolved or not.</li>
-</ol>
-
-<p>As for solutions, it’s good to mention even the ones you never had the opportunity to use.</p>
-
-<p>For example, you could say that you have experience with:</p>
-
-<ol>
-  <li>Optimizing or simplifying database queries.</li>
-  <li>Eager loading or lazy loading data.</li>
-  <li>Improving hits on indexes.</li>
-</ol>
-
-<p>But you are also aware of other techniques that didn’t make sense at work yet, such as:</p>
-
-<ol>
-  <li>Adding cache.</li>
-  <li>Refactoring the code to break it down or simplify it.</li>
-  <li>Database or app sharding.</li>
-  <li>Horizontal or vertical scaling.</li>
-</ol>
-
-<p>Be prepared to talk about the advantages or disadvantages of any of them because they all have trade-offs.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Summarizing all the above:</p>
+<p>A good Elevator Pitch ™️ is the perfect tool to give a great start for an interview. Write it down, practice it and try to use your natural language so it’s not so different from your other less prepared answers.</p>
 
-<ul>
-  <li>Practice your Elevator Pitch ™️.</li>
-  <li>Connect most of what you say to the job.</li>
-  <li>Highlight the most relevant experiences first.</li>
-  <li>Don’t just talk about what you did, but also about what you know.</li>
-</ul>
-
-<p>Good luck in your tech interview. 👋🏼</p>]]></content><author><name></name></author><category term="interview tips" /><summary type="html"><![CDATA[I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers. Usually, I would participate in the technical interview and evaluate the take-home assignment containing a test project.]]></summary></entry><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
+<p>Good luck 🍀</p>]]></content><author><name></name></author><category term="tech interview" /><summary type="html"><![CDATA[I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: Could you tell me about yourself?]]></summary></entry><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
 
 <blockquote>
   <p>You keep shipping project after project. You need to stop and focus on one thing only.</p>
