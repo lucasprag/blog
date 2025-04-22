@@ -40,6 +40,12 @@ body {
   @apply rounded-lg;
 }
 
+.post-content hr {
+  @apply my-4 border-t-2 border-gray-300 dark:border-gray-800;
+}
+
+
+
 blockquote {
   @apply px-4 my-2 border-l-4 border-gray-300 dark:border-gray-800;
 }
