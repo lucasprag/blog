@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-04-03T03:28:17+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">Tech Interview Questions: Tell me about yourself.</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Questions: Tell me about yourself." /><published>2025-03-27T00:00:00+00:00</published><updated>2025-04-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: <strong>Could you tell me about yourself?</strong></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2025-04-22T19:27:15+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">VSCode Extensions for Ruby Programming</title><link href="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/" rel="alternate" type="text/html" title="VSCode Extensions for Ruby Programming" /><published>2025-04-22T00:00:00+00:00</published><updated>2025-04-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/vscode-extensions-for-ruby-programming</id><content type="html" xml:base="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/"><![CDATA[<h2 id="fuzzy-ruby-server"><a href="https://marketplace.visualstudio.com/items?itemName=Blinknlights.fuzzy-ruby-server">Fuzzy Ruby Server</a></h2>
+
+<p>Fuzzy Ruby Server provides <strong>go to definition</strong> and <strong>find references</strong> features. It works flawless on my personal projects and very well at work as well. Sometimes it doesn’t know which class definition to go to, but it shows a list with preview that you can select. At work we have over-complicated namespaces and repeated class names so it makes sense it can figure out by itself.</p>
+
+<p>I heard good things and I would recommend <a href="https://marketplace.visualstudio.com/items?itemName=Shopify.ruby-lsp">Ruby LSP</a> but I always have trouble making it work. At work I use Docker which is not supported unless you want to also run VSCode inside Docker. However, even on my own computer I often see errors and I can’t easily figure out.</p>
+
+<p>Fuzzy Ruby Server just works™️ with very good accuracy.</p>
+
+<h2 id="change-case"><a href="https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case">change-case</a></h2>
+
+<p>Change-case provides many commands to change the case of the select text between snake, camel, pascal, constant, kebab and many others.</p>
+
+<p>This extension is specially useful when working with Rails and React, however I found myself using it frequently within Ruby code as well.</p>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-change-case.png" alt="change-case" /></p>
+
+<h2 id="ruby-around-the-block"><a href="https://marketplace.visualstudio.com/items?itemName=elliotlarson.ruby-around-the-block">Ruby Around the Block</a></h2>
+
+<p>This extension provides a Ruby Block Toggle command to toggle between <code class="language-plaintext highlighter-rouge">{ }</code> and <code class="language-plaintext highlighter-rouge">do end</code> syntaxes for Ruby blocks.</p>
+
+<h2 id="vscode-run-rspec-file"><a href="https://marketplace.visualstudio.com/items?itemName=Thadeu.vscode-run-rspec-file">vscode-run-rspec-file</a></h2>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-run-rspec.png" alt="run rspec" /></p>
+
+<h2 id="rails-rspec-file-toggler"><a href="https://marketplace.visualstudio.com/items?itemName=malt-03.rails-rspec-file-toggler&amp;ssr=false">rails-rspec-file-toggler</a></h2>
+
+<p>This extension provides a command to toggle between spec and implementation and it works really well.</p>
+
+<h2 id="endwise"><a href="https://marketplace.visualstudio.com/items?itemName=kaiwood.endwise">endwise</a></h2>
+
+<p>This extensions adds the <code class="language-plaintext highlighter-rouge">end</code> in Ruby methods, classes, blocks, etc. Very small, yet coding without it is a hustle.</p>
+
+<h2 id="standard-ruby-or-rubocop"><a href="https://marketplace.visualstudio.com/items?itemName=testdouble.vscode-standard-ruby">Standard Ruby</a> or <a href="https://marketplace.visualstudio.com/items?itemName=rubocop.vscode-rubocop">RuboCop</a></h2>
+
+<p>Depending on what linter/formatter you use, they provide format on save which is very helpful. I don’t care about spacing or which type of coma to use. I just code, save and then I see my code all fall in line.</p>
+
+<h2 id="erb"><a href="https://marketplace.visualstudio.com/items?itemName=CraigMaslowski.erb">erb</a></h2>
+
+<p>Provides syntax highlighting for ERB templates.</p>
+
+<h2 id="jbuilder-highlight"><a href="https://marketplace.visualstudio.com/items?itemName=MashDuek.jbuilder-highlight">jbuilder highlight</a></h2>
+
+<p>Provides syntax highlighting for jbuilder templates.</p>
+
+<h1 id="bonus-non-ruby-related-yet-very-useful-extensions">Bonus: Non-Ruby related, yet very useful extensions</h1>
+
+<h2 id="tailwind-css-intellisense"><a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">Tailwind CSS IntelliSense</a></h2>
+
+<p>Auto-complete when writing tailwind class. Even when using <code class="language-plaintext highlighter-rouge">@apply</code>.</p>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-tailwindcss.png" alt="tailwindcss" /></p>
+
+<h2 id="thunder-client"><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a></h2>
+
+<p>Feature rich alternative to <a href="https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode">Postman</a>.</p>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-thunder-client.png" alt="thunder-client" /></p>
+
+<h2 id="project-manager"><a href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager">Project Manager</a></h2>
+
+<p>Save folder or workspace as a Project in the extension and access them easily from a list.</p>
+
+<h2 id="open-in-github"><a href="https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github">Open In GitHub</a></h2>
+
+<p>Provides a command to quickly copy the Github link of the current open file. Very helpful when you want to share the file or point to a line of code to send to someone in your team.</p>
+
+<p>You can select a section in code, run the command and send it. When the person opens it, it will be highlighted.</p>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-open-in-github.png" alt="open-it-github" /></p>
+
+<h2 id="git-mob-co-author-commits"><a href="https://marketplace.visualstudio.com/items?itemName=RichardKotze.git-mob">Git Mob co-author commits</a></h2>
+
+<p>Provides a list of co-authors to include in your commits. This is specially useful when pair programming.</p>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-co-author.png" alt="co-author" /></p>
+
+<h2 id="teamdocs"><a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs">TeamDocs</a></h2>
+
+<p>Provides a way to check your team’s markdown documentation without having to leave your code.</p>
+
+<p>At work, we have a repository with all our documentation such ADRs, decision docs, setup docs &amp; guides. With this extension, I can preview all the docs by using the Activity Bar or by using the <code class="language-plaintext highlighter-rouge">TeamDocs: search</code> command.</p>
+
+<h3 id="in-the-activity-bar">In the Activity Bar</h3>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-teamdocs-in-activity-bar.png" alt="teamdocs-activity-bar" /></p>
+
+<h3 id="the-search-command">The search command</h3>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-teamdocs-search.png" alt="teamdocs search command" /></p>
+
+<h3 id="previewing-markdown-docs">Previewing markdown docs</h3>
+
+<p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-teamdocs-preview.png" alt="teamdocs preview" /></p>
+
+<p>Have fun 💻 👋🏼</p>]]></content><author><name></name></author><category term="ruby" /><category term="rails" /><category term="vscode" /><summary type="html"><![CDATA[Fuzzy Ruby Server]]></summary></entry><entry><title type="html">Tech Interview Questions: Tell me about yourself.</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Questions: Tell me about yourself." /><published>2025-03-27T00:00:00+00:00</published><updated>2025-04-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: <strong>Could you tell me about yourself?</strong></p>
 
 <p>This is a very common first question. Usually, it is the first step to get to know more about you.</p>
 
@@ -877,87 +971,4 @@ app/operations/
 
 <p><small>
   “What about validations?” you may ask, well, I can write a blog post about it, ping on twitter if you want to see my approach for that 👍
-</small></p>]]></content><author><name></name></author><category term="architecture" /><category term="rails" /><summary type="html"><![CDATA[Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.]]></summary></entry><entry><title type="html">🐠 Fish, the shell</title><link href="https://lucasprag.com/posts/fish-the-shell/" rel="alternate" type="text/html" title="🐠 Fish, the shell" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/fish-the-shell</id><content type="html" xml:base="https://lucasprag.com/posts/fish-the-shell/"><![CDATA[<p>One of the greatest changes I’ve made to my set of programming tools was changing from zsh to <a href="https://fishshell.com/">fish</a> and these are the reasons that drove me to this change:</p>
-
-<h3 id="1-abbreviations">1. Abbreviations</h3>
-
-<p>Abbreviations behave like aliases on bash and zsh but instead of only running their respective commands, they also expand and show the full command.</p>
-
-<p>This is useful to let others know what you are doing when pair programming, to give some sense to your history of commands and to not let you forget how to use other shells when you’re using other people’s computers. This last one is special to me because I used to have lots of aliases on zsh, but when I had to help a colleague, I’d be lost because I wouldn’t remember what <code class="language-plaintext highlighter-rouge">gcam</code> or <code class="language-plaintext highlighter-rouge">dcup</code> were exactly.</p>
-
-<p>Example:</p>
-
-<p>It may look that I’m typing super fast in the gif above – because of its frames per second rate – but I’m only typing <code class="language-plaintext highlighter-rouge">fn</code>, <code class="language-plaintext highlighter-rouge">gs</code>, <code class="language-plaintext highlighter-rouge">gd</code>, <code class="language-plaintext highlighter-rouge">ga .</code>, <code class="language-plaintext highlighter-rouge">gc</code>, <code class="language-plaintext highlighter-rouge">gp</code>.</p>
-
-<p><img src="/assets/images/posts/fish-abbreviations.gif" alt="Using fish abbreviations, commands expand as I type the abbreviations to let other know what you are doing and keep you give sense to your history." /></p>
-
-<p>Fish also have aliases, but I just don’t use them that much in favor of abbreviations.</p>
-
-<h3 id="2-syntax-highlight">2. Syntax highlight</h3>
-
-<p>When typing commands to your shell, you get syntax highlighting that shows when a program exists, if you made a typo and many more things.</p>
-
-<p>Showing command as red when the program doesn’t exists</p>
-
-<p><img src="/assets/images/posts/fish-doesnt-exist.png" alt="program doesn't exists" /></p>
-
-<p>Showing darker blue for the program and lighter blue for its arguments</p>
-
-<p><img src="/assets/images/posts/fish-syntax-highlight.png" alt="darker blue for program and lighter blue for its arguments" /></p>
-
-<h3 id="3-oh-my-fish">3. Oh my fish</h3>
-
-<p><a href="https://github.com/oh-my-fish/oh-my-fish">Oh my fish</a> is a fast, extensible and easy to use framework that let you write functions that work as bin programs.</p>
-
-<p>You may have noticed that I typed <code class="language-plaintext highlighter-rouge">gp</code> in the gif above and it expanded to <code class="language-plaintext highlighter-rouge">git pull origin (current_branch)</code></p>
-
-<p><code class="language-plaintext highlighter-rouge">current_branch</code> is a function I copied from somewhere – I can’t remember – but all it does is to return the name of the branch you are currently using.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.config/fish/functions/current_branch.fish
-
-function current_branch
-    set ref (git symbolic-ref HEAD 2&gt; /dev/null); or \
-    set ref (git rev-parse --short HEAD 2&gt; /dev/null); or return
-    echo $ref | sed -e 's|^refs/heads/||'
-end
-</code></pre></div></div>
-
-<p>I also have <code class="language-plaintext highlighter-rouge">gP</code> that expands to <code class="language-plaintext highlighter-rouge">git push origin (current_branch)</code>.</p>
-
-<p>Another function I have is <code class="language-plaintext highlighter-rouge">kp</code> to interactively kill processes using <a href="https://github.com/junegunn/fzf">fzf</a>, a fast command line fuzzy finder.</p>
-
-<p><img src="/assets/images/posts/fish-kp.gif" alt="using kp to kill a sleep program running forever" /></p>
-
-<p>Oh my fish also brings to the table a number of <a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md">themes</a> for your shell with special formating to show branch names, current directories, if there is any git change, etc.</p>
-
-<p><img src="/assets/images/posts/fish-oh-my-fish-shell.png" alt="my custom fish theme is quite simple" /></p>
-
-<h3 id="4-autocomplete">4. Autocomplete</h3>
-
-<p>The default autocomplete behaviour in fish is adding a gray auto completion option as you type commands, then you can use your right arrow key and it autocompletes.</p>
-
-<p><img src="/assets/images/posts/fish-autocomplete.png" alt="default auto complete" /></p>
-
-<p>But if you, like me, miss the <code class="language-plaintext highlighter-rouge">ctrl+r</code> history search from bash and zsh, you can add it to fish.</p>
-
-<p><img src="/assets/images/posts/fish-querying-history.png" alt="fzf auto complete" /></p>
-
-<p>The way to add it is by adding a symbolic link and an existing function that comes by default when you install fzf to your fish config, assuming you use fzf.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s ~/.fzf/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
-
-# ~/.cofig/fish/functions/fish_user_key_bindings.fish
-function fish_user_key_bindings
-  fzf_key_bindings
-end
-</code></pre></div></div>
-
-<p>I really like having both autocomplete benefits. 😎</p>
-
-<h3 id="reason-why-not-use-it">Reason why <em>not</em> use it</h3>
-
-<p>Fish is intentionally not fully POSIX compliant meaning that a script written for bash will likely not work on fish.</p>
-
-<p>As a result, in order to run a bash script you need to explicitly run it on bash, for example <code class="language-plaintext highlighter-rouge">bash script.sh</code>.</p>
-
-<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry></feed>
+</small></p>]]></content><author><name></name></author><category term="architecture" /><category term="rails" /><summary type="html"><![CDATA[Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.]]></summary></entry></feed>

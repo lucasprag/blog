@@ -783,6 +783,19 @@ body {
   border-radius: 0.5rem;
 }
 
+.post-content hr {
+  border-top-width: 2px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  --tw-border-opacity:1;
+  border-color: rgb(209 213 219/var(--tw-border-opacity));
+}
+
+.post-content hr:is(.dark *) {
+  --tw-border-opacity:1;
+  border-color: rgb(31 41 55/var(--tw-border-opacity));
+}
+
 blockquote {
   border-left-width: 4px;
   margin-bottom: 0.5rem;
