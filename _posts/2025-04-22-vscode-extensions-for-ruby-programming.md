@@ -85,6 +85,10 @@ Provides a list of co-authors to include in your commits. This is especially use
 
 ![co-author]({{ site.url }}/assets/images/posts/vscode-ext-co-author.png)
 
+## [Code Spell Checker](https://marketplace.visualstudio.com/items/?itemName=streetsidesoftware.code-spell-checker)
+
+Gives you warnings of misspelled words in VSCode in whatever you are writing. Specially useful for blog posts!
+
 ## [TeamDocs](https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs)
 
 Provides a way to check your team's markdown documentation without having to leave your code.
