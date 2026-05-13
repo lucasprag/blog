@@ -1,20 +1,27 @@
-- name: Share The Good News
-  url: https://sharethegood.news/
-  description: Helping christians share the good news of Jesus in the US & Canada.
-
-- name: StoryPoints.online
-  url: https://storypoints.online/
-  description: Estimate your stories & tasks faster in real time without letting the first response influence the others.
-
 - name: "VSCode Extension: TeamDocs"
   url: https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs
   description: TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
+  tools: TypeScript, VSCode API
+  tech: true
 
 - name: SimpleBlack
   url: https://github.com/lucasprag/simpleblack
   description: "A black colorscheme for (neo)vim, real black background, #000000."
+  tools: VimScript
+  tech: true
 
 # DEAD
+# - name: Share The Good News
+#   url: https://sharethegood.news/
+#   description: Helping christians share the good news of Jesus in the US & Canada.
+#   tools: Shopify, Printify, Inkscape
+#   tech: false
+
+# - name: StoryPoints.online
+#   url: https://storypoints.online/
+#   description: Estimate your stories & tasks faster in real time without letting the first response influence the others.
+#   tools: Elixir, Phoenix, LiveView, GenServer, Presence
+#   tech: true
 # - name: Alguém Recommenda? (pt-BR)
 #   url: https://alguemrecomenda.ca/
 #   description: List of Brazilian businesses offering products or services in greater Montréal. 🇧🇷 💙 🇨🇦
