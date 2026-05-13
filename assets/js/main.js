@@ -40,7 +40,9 @@ function switchTheme() {
 }
 
 const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", switchTheme);
+if (themeToggle) {
+  themeToggle.addEventListener("click", switchTheme);
+}
 
 // Mobile menu toggle
 const mobileMenuButton = document.querySelector(
@@ -49,9 +51,12 @@ const mobileMenuButton = document.querySelector(
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileIcons = mobileMenuButton.querySelectorAll('[data-slot="icon"]');
 
-mobileMenuButton.addEventListener("click", () => {
-  const isExpanded = mobileMenuButton.getAttribute("aria-expanded") === "true";
-  mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
-  mobileMenu.classList.toggle("hidden");
-  mobileIcons.forEach((icon) => icon.classList.toggle("hidden"));
-});
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener("click", () => {
+    const isExpanded =
+      mobileMenuButton.getAttribute("aria-expanded") === "true";
+    mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
+    mobileMenu.classList.toggle("hidden");
+    mobileIcons.forEach((icon) => icon.classList.toggle("hidden"));
+  });
+}
