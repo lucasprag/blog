@@ -7,11 +7,9 @@ module.exports = {
     './*.md',
     './*.html',
   ],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
-    theme: {
-      extend: {},
-    },
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }
