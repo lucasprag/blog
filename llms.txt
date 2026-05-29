@@ -4,9 +4,9 @@
 
 ## VS Code Extensions
 
-- [Don't Git Lost](https://lucasprag.com/extensions/dont-git-lost/): Step through any file's git history without leaving VS Code. Inline blame annotation on the current line, rich commit hover cards with author photos, and time-travel navigation through every commit that touched a file. A lightweight alternative to GitLens focused on file history.
-- [Folder Projects](https://lucasprag.com/extensions/folder-projects/): Turn your directory structure into a VS Code project switcher. Point it at root directories like ~/Projects and switch between any project instantly from the command palette — no manual registration, no stale lists. A lightweight alternative to Project Manager.
-- [TeamDocs](https://lucasprag.com/extensions/teamdocs/): Keep your team's Markdown documentation one click away in the VS Code Activity Bar, across every project. Browse, search, and preview docs without switching windows or opening a browser. Works with any local folder — git repos, ADRs, runbooks, onboarding guides.
+- [Don't Git Lost](https://lucasprag.com/extensions/dont-git-lost): Step through any file's git history without leaving VS Code. Inline blame annotation on the current line, rich commit hover cards with author photos, and time-travel navigation through every commit that touched a file. A lightweight alternative to GitLens focused on file history.
+- [Folder Projects](https://lucasprag.com/extensions/folder-projects): Turn your directory structure into a VS Code project switcher. Point it at root directories like ~/Projects and switch between any project instantly from the command palette — no manual registration, no stale lists. A lightweight alternative to Project Manager.
+- [TeamDocs](https://lucasprag.com/extensions/teamdocs): Keep your team's Markdown documentation one click away in the VS Code Activity Bar, across every project. Browse, search, and preview docs without switching windows or opening a browser. Works with any local folder — git repos, ADRs, runbooks, onboarding guides.
 
 ## Blog posts about the extensions
 
@@ -17,7 +17,7 @@
 
 ## Other selected blog posts
 
-- [VS Code extensions for Ruby programming](https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/): A curated list of VS Code extensions useful for Ruby and Rails developers, including TeamDocs.
-- [Underrated VS Code feature: Native Tabs](https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/): How to use VS Code's built-in tab management effectively.
-- [Underrated VS Code feature: Search Editor](https://lucasprag.com/posts/underrated-vscode-feature-search-editor/): Using VS Code's Search Editor for persistent, navigable search results.
+- [VS Code Extensions for Ruby and Rails Development](https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/): A curated list of VS Code extensions for Ruby and Rails developers — go-to-definition, case conversion, RSpec runner, linting, ERB support, and more.
+- [VS Code Native Tabs: manage multiple projects without juggling windows](https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/): How to group all your VS Code project windows into one tabbed interface with keyboard shortcuts.
+- [VS Code Search Editor: full-editor search results with syntax highlighting](https://lucasprag.com/posts/underrated-vscode-feature-search-editor/): How to use VS Code's built-in Search Editor to get full-tab search results instead of squinting at the sidebar.
 - [The secret behind my productivity using the command line](https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line/): Command-line productivity techniques for developers.
