@@ -17,7 +17,7 @@
 
 ## Other selected blog posts
 
-- [VS Code extensions for Ruby programming](https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/): A curated list of VS Code extensions useful for Ruby and Rails developers, including TeamDocs.
-- [Underrated VS Code feature: Native Tabs](https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/): How to use VS Code's built-in tab management effectively.
-- [Underrated VS Code feature: Search Editor](https://lucasprag.com/posts/underrated-vscode-feature-search-editor/): Using VS Code's Search Editor for persistent, navigable search results.
+- [VS Code Extensions for Ruby and Rails Development](https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/): A curated list of VS Code extensions for Ruby and Rails developers — go-to-definition, case conversion, RSpec runner, linting, ERB support, and more.
+- [VS Code Native Tabs: manage multiple projects without juggling windows](https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/): How to group all your VS Code project windows into one tabbed interface with keyboard shortcuts.
+- [VS Code Search Editor: full-editor search results with syntax highlighting](https://lucasprag.com/posts/underrated-vscode-feature-search-editor/): How to use VS Code's built-in Search Editor to get full-tab search results instead of squinting at the sidebar.
 - [The secret behind my productivity using the command line](https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line/): Command-line productivity techniques for developers.
