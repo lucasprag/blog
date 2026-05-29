@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    TeamDocs — VS Code Team Documentation Extension -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <meta name="description" content="Keep your team's Markdown documentation one click away in VS Code, across every project. Browse, search, and preview docs without switching windows.">
+  <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
+
+  <meta content="Lucas Arantes" property="og:site_name">
+
+  <meta content="TeamDocs — VS Code Team Documentation Extension" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Keep your team's Markdown documentation one click away in VS Code, across every project. Browse, search, and preview docs without switching windows." property="og:description">
+
+
+  <meta content="https://lucasprag.com/extensions/teamdocs.html" property="og:url">
+
+
+
+  <meta content="https://lucasprag.com/assets/images/extensions/teamdocs/docs-in-activity-bar.png" property="og:image">
+
+
+
+  
+  <meta content="vscode" property="article:tag">
+  
+  <meta content="documentation" property="article:tag">
+  
+  <meta content="extension" property="article:tag">
+  
+
+
+  <link rel="canonical" href="https://lucasprag.com/extensions/teamdocs.html">
+  <link rel="icon" type="image/x-icon" href="https://lucasprag.com/assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://lucasprag.com/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="https://lucasprag.com/feed.xml" title="RSS 2.0" />
+  <link rel="sitemap" href="https://lucasprag.com/sitemap.xml" type="application/xml" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTKH1J2E5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTKH1J2E5Z');
+</script>
+</head>
+
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <nav class="pt-2 sm:my-5">
+  <div class="relative flex h-16 items-center justify-between">
+    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-950 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex shrink-0 items-center">
+        <a href="/" class="px-4 py-2 rounded">
+          <p class="font-medium text-2xl">
+            <img src="/assets/images/computer.png" height="20" width="20" alt="lucasprag emoji" class="inline mb-1" />
+            <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
+          </p>
+        </a>
+
+      </div>
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="btn-nav mt-3" aria-current="">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="page">Extensions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <button
+        class="p-3 ml-1 text-gray-500 dark:text-white hover:bg-gray-500 dark:hover:bg-gray-800 hover:text-white rounded-md cursor-pointer mr-5"
+        id="theme-toggle" aria-label="Switch between dark mode and light mode">
+        <!-- Dark Icon  -->
+        <svg class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z" />
+          <circle fill="currentColor" cx="18" cy="18" r="10" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+
+        <!-- Light Icon -->
+        <svg class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z" />
+          <path
+            d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z"
+            fill="currentColorr" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
+    <div class="space-y-3 px-2 py-5">
+      <a href="/" class="block btn-nav" aria-current="">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="page">Extensions</a>
+    </div>
+  </div>
+</nav>
+
+    <main class="flex-1 mt-1 md:mt-3">
+      
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "Does it only work with Markdown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — any file type works. Markdown files open as rendered previews; everything else opens with VS Code's default editor for that file type."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Do my docs need to be in a git repo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. TeamDocs just reads from a folder path. It can be any directory — a git repo, a local folder, or a network path."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Does it work with private documentation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TeamDocs reads from the local filesystem, so access is controlled by whatever you have cloned or mounted locally."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What if I want different docs at work vs. personal projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can change the teamdocs.path_to_docs_folder setting at any time, or create VS Code profiles for work and personal use each with a different path configured."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Does it support nested folders in the docs tree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the Activity Bar view shows the full recursive folder tree."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What VS Code version does it require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VS Code 1.75 or newer."
+      }
+    }
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TeamDocs",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Visual Studio Code Extension",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "Keep your team's Markdown documentation one click away in VS Code, across every project. Browse, search, and preview docs without switching windows.",
+  "url": "https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs",
+  "author": {
+    "@type": "Person",
+    "name": "Lucas Arantes",
+    "url": "https://lucasprag.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to use. Optional one-time license purchase to support development."
+  },
+  "softwareRequirements": "Visual Studio Code 1.75 or newer",
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+
+<article>
+  <h1 class="font-semibold text-3xl mt-5 px-5">TeamDocs — VS Code Team Documentation Extension</h1>
+
+  <div class="post-content prose mt-5">
+    <div class="flex items-center gap-4 mb-6 not-prose">
+  <img src="https://lucasprag.com/assets/images/extensions/teamdocs/logo.png" alt="TeamDocs logo" class="w-16 h-16 rounded-xl" />
+  <div>
+    <p class="text-lg text-gray-600 dark:text-gray-400 mt-1">Your team's docs, always one click away — no matter which project you're working on.</p>
+  </div>
+</div>
+
+<div class="not-prose flex gap-3 mb-8">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg text-sm">
+    Install from VS Code Marketplace
+  </a>
+  <a href="https://open-vsx.org/extension/lucasprag/teamdocs" class="inline-block border border-gray-400 dark:border-gray-600 hover:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold px-5 py-2 rounded-lg text-sm">
+    Open VSX Registry
+  </a>
+</div>
+
+<h2 id="what-it-does">What it does</h2>
+
+<p>Engineering teams keep their documentation somewhere: a git repo full of Markdown files, a folder of ADRs, a set of runbooks, setup guides, decision docs. The problem is that when you need to look something up, you have to leave VS Code — open a browser tab, find the right Notion page, search GitHub, or switch to a different folder in a new window.</p>
+
+<p><strong>TeamDocs</strong> puts that documentation folder directly in your VS Code sidebar. One click on the Activity Bar icon and your entire docs tree is there, searchable, and renders Markdown as a preview. It doesn’t matter which project you have open — the same docs folder is always available.</p>
+
+<hr />
+
+<h2 id="browse-your-docs-from-the-activity-bar">Browse your docs from the Activity Bar</h2>
+
+<p>A dedicated <strong>Team Docs</strong> icon is added to the Activity Bar. Click it to see the full folder tree of your documentation, regardless of which project is currently open in VS Code.</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/teamdocs/docs-in-activity-bar.png" alt="Team docs in the Activity Bar" /></p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/teamdocs/docs.png" alt="Browsing the documentation tree" /></p>
+
+<ul>
+  <li>The view title is automatically set to the name of your docs folder</li>
+  <li>Folders are listed before files, sorted alphabetically</li>
+  <li>Files and folders matching VS Code’s <code class="language-plaintext highlighter-rouge">files.exclude</code> setting are hidden automatically</li>
+</ul>
+
+<hr />
+
+<h2 id="markdown-opens-as-a-rendered-preview">Markdown opens as a rendered preview</h2>
+
+<p>Clicking any Markdown file opens the <strong>rendered preview</strong> directly — not the raw source. You see formatted headings, code blocks, tables, and links, exactly as your team intended.</p>
+
+<p>Non-Markdown files (images, PDFs, code files) open with their default editor.</p>
+
+<p>Supported extensions: <code class="language-plaintext highlighter-rouge">.md</code>, <code class="language-plaintext highlighter-rouge">.markdown</code>, <code class="language-plaintext highlighter-rouge">.mdown</code>, <code class="language-plaintext highlighter-rouge">.mkdn</code>, <code class="language-plaintext highlighter-rouge">.mkd</code>, <code class="language-plaintext highlighter-rouge">.mdwn</code>, <code class="language-plaintext highlighter-rouge">.mdtxt</code>, <code class="language-plaintext highlighter-rouge">.mdtext</code>, <code class="language-plaintext highlighter-rouge">.text</code></p>
+
+<hr />
+
+<h2 id="quick-search-across-all-docs">Quick search across all docs</h2>
+
+<p>Run <strong><code class="language-plaintext highlighter-rouge">Team Docs: Search</code></strong> from the command palette (or click the search icon in the Team Docs view header) to fuzzy-find any file without browsing the tree.</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/teamdocs/search.png" alt="Running Team Docs: Search from the command palette" /></p>
+
+<p>Type to filter files by name or path:</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/teamdocs/search-result.png" alt="Filtering docs by typing" /></p>
+
+<p>Hit Enter — Markdown files open as a rendered preview, everything else opens normally:</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/teamdocs/search-preview.png" alt="Previewing a markdown doc" /></p>
+
+<hr />
+
+<h2 id="works-across-every-project">Works across every project</h2>
+
+<p>TeamDocs is configured globally, not per-workspace. The same docs folder appears in every project you open — there’s no per-project setup, no <code class="language-plaintext highlighter-rouge">.vscode/settings.json</code> to maintain in each repo.</p>
+
+<hr />
+
+<h2 id="who-its-for">Who it’s for</h2>
+
+<p>TeamDocs works well for any team that:</p>
+
+<ul>
+  <li>Keeps engineering docs in a git repo (ADRs, RFCs, runbooks, setup guides, onboarding docs)</li>
+  <li>Wants documentation accessible without a browser or a separate window</li>
+  <li>Uses Markdown as the primary documentation format</li>
+  <li>Works in VS Code or a compatible editor like Cursor</li>
+</ul>
+
+<p>It’s especially useful on engineering teams where context-switching to Notion or Confluence mid-coding breaks flow. Clone your docs repo once, point TeamDocs at it, and your documentation lives in the sidebar.</p>
+
+<hr />
+
+<h2 id="getting-started">Getting started</h2>
+
+<ol>
+  <li>Install <strong>TeamDocs</strong> from the Marketplace</li>
+  <li>Clone or locate your team’s documentation folder (e.g. <code class="language-plaintext highlighter-rouge">~/Docs/engineering</code>)</li>
+  <li>Open VS Code settings and set <code class="language-plaintext highlighter-rouge">teamdocs.path_to_docs_folder</code>:
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"teamdocs.path_to_docs_folder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~/Docs/engineering"</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Click the <strong>Team Docs</strong> icon in the Activity Bar — your docs are now always available</li>
+</ol>
+
+<p>If the setting is empty, TeamDocs will prompt you to configure it the first time you open the view.</p>
+
+<hr />
+
+<h2 id="faq">FAQ</h2>
+
+<p><strong>Does it only work with Markdown?</strong>
+No — any file type works. Markdown files open as rendered previews; everything else opens with VS Code’s default editor for that file type.</p>
+
+<p><strong>Do my docs need to be in a git repo?</strong>
+No. TeamDocs just reads from a folder path. It can be any directory — a git repo, a local folder, a network path.</p>
+
+<p><strong>Does it work with private documentation?</strong>
+Yes. TeamDocs reads from the local filesystem, so access is controlled by whatever you have cloned or mounted locally.</p>
+
+<p><strong>What if I want different docs at work vs. personal projects?</strong>
+You can change the <code class="language-plaintext highlighter-rouge">teamdocs.path_to_docs_folder</code> setting at any time. You could also create a VS Code profile for work and personal use, each with a different path configured.</p>
+
+<p><strong>Does it support nested folders in the docs tree?</strong>
+Yes — the Activity Bar view shows the full recursive folder tree.</p>
+
+<p><strong>What VS Code version does it require?</strong>
+VS Code 1.75 or newer.</p>
+
+<hr />
+
+<h2 id="settings">Settings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">teamdocs.path_to_docs_folder</code></td>
+      <td>Absolute path to the folder containing your team’s documentation. Supports <code class="language-plaintext highlighter-rouge">~</code> and <code class="language-plaintext highlighter-rouge">${HOME}</code> expansion.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>TeamDocs also honors VS Code’s <code class="language-plaintext highlighter-rouge">files.exclude</code> setting to filter what shows up in the explorer and search results.</p>
+
+<hr />
+
+<h2 id="check-out-my-other-extensions">Check out my other extensions</h2>
+
+<ul>
+  <li><a href="/extensions/dont-git-lost/">Don’t Git Lost</a> — step through any file’s git history without opening a terminal</li>
+  <li><a href="/extensions/folder-projects/">Folder Projects</a> — turn your directory structure into an instant project switcher</li>
+</ul>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag" aria-label="Visit my Github profile"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my github profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      aria-label="Link to feed RSS" target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+
+  <script src="https://lucasprag.com/assets/js/main.js"></script>
+
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>

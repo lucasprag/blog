@@ -11,8 +11,8 @@
     Lucas Arantes
   </title>
 
-  <meta name="description" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
-  <meta name="keywords" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
+  <meta name="description" content="Software engineer and VS Code extension developer. I build Don't Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.">
+  <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
 
   <meta content="Lucas Arantes" property="og:site_name">
 
@@ -22,7 +22,7 @@
   <meta content="website" property="og:type">
 
 
-  <meta content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc." property="og:description">
+  <meta content="Software engineer and VS Code extension developer. I build Don't Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line." property="og:description">
 
 
   <meta content="https://lucasprag.com/" property="og:url">
@@ -96,6 +96,7 @@
         <div class="flex space-x-4">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a href="/" class="btn-nav mt-3" aria-current="page">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="">Extensions</a>
         </div>
       </div>
     </div>
@@ -133,6 +134,7 @@
   <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
     <div class="space-y-3 px-2 py-5">
       <a href="/" class="block btn-nav" aria-current="page">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="">Extensions</a>
     </div>
   </div>
 </nav>
@@ -147,18 +149,14 @@
   
   <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
     <div class="w-full p-2">
-      <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost" target="_blank" rel="noreferrer"
+      
+      <a href="/extensions/dont-git-lost/"
+        
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl">
-        VSCode Extension: Don't Git Lost <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
+        VSCode Extension: Don't Git Lost 
       </a>
       <div class="text-lg mt-1 text-gray-700 dark:text-gray-400">
-        Step through any file's history in the editor. Subdued blame, rich hover, lightweight.
+        Step through any file's git history without leaving the editor. Inline blame, rich commit hover cards, and time-travel navigation — lightweight and focused.
       </div>
     </div>
   </div>
@@ -166,18 +164,14 @@
   
   <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
     <div class="w-full p-2">
-      <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects" target="_blank" rel="noreferrer"
+      
+      <a href="/extensions/folder-projects/"
+        
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl">
-        VSCode Extension: Folder Projects <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
+        VSCode Extension: Folder Projects 
       </a>
       <div class="text-lg mt-1 text-gray-700 dark:text-gray-400">
-        Set root directories and every subdirectory becomes a project — switch between them instantly.
+        Set root directories and every subdirectory becomes a project — switch between them instantly with no manual registration.
       </div>
     </div>
   </div>
@@ -185,18 +179,14 @@
   
   <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
     <div class="w-full p-2">
-      <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs" target="_blank" rel="noreferrer"
+      
+      <a href="/extensions/teamdocs/"
+        
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl">
-        VSCode Extension: TeamDocs <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
-  <g id="External_Link">
-    <path id="Vector"
-      d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-</svg>
+        VSCode Extension: TeamDocs 
       </a>
       <div class="text-lg mt-1 text-gray-700 dark:text-gray-400">
-        TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
+        Keep your team's Markdown documentation one click away in the Activity Bar, across every project you work on.
       </div>
     </div>
   </div>
@@ -204,7 +194,9 @@
   
   <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
     <div class="w-full p-2">
-      <a href="https://github.com/lucasprag/simpleblack" target="_blank" rel="noreferrer"
+      
+      <a href="https://github.com/lucasprag/simpleblack"
+        target="_blank" rel="noreferrer"
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl">
         SimpleBlack <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline">
   <g id="External_Link">
@@ -237,7 +229,7 @@
     <div class="w-full p-2">
       <a href="/posts/vscode-extensions-for-ruby-programming/"
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl py-2">
-        VSCode Extensions for Ruby Programming
+        VS Code Extensions for Ruby and Rails Development
       </a>
       <div class="text-base mt-1">
         <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
@@ -261,7 +253,7 @@
     <div class="w-full p-2">
       <a href="/posts/tech-interview-tips/"
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl py-2">
-        Tech Interview Questions: Tell me about yourself.
+        How to answer 'Tell me about yourself' in a tech interview
       </a>
       <div class="text-base mt-1">
         <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
@@ -303,7 +295,7 @@
     <div class="w-full p-2">
       <a href="/posts/underrated-vscode-feature-search-editor/"
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl py-2">
-        Underrated VSCode feature: Search Editor
+        VS Code Search Editor: full-editor search results with syntax highlighting
       </a>
       <div class="text-base mt-1">
         <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">
@@ -325,7 +317,7 @@
     <div class="w-full p-2">
       <a href="/posts/underrated-vscode-feature-native-tabs/"
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl py-2">
-        Underrated VSCode feature: Native Tabs
+        VS Code Native Tabs: manage multiple projects without juggling windows
       </a>
       <div class="text-base mt-1">
         <time class="text-center font-medium py-3 mr-2 text-gray-700 dark:text-gray-400">

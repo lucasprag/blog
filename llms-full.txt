@@ -1,0 +1,712 @@
+# lucasprag.com — Full Content
+
+> Complete content of VS Code extension pages and blog posts for AI retrieval.
+> Source: https://lucasprag.com
+
+---
+
+## Don't Git Lost — VS Code Git History Extension
+
+> Step through any file's git history without leaving VS Code. Inline blame, rich commit hover cards, and time-travel navigation. Lightweight and focused.
+
+## What it does
+
+Every codebase has lines you didn't write — code that looked obvious until it broke, or logic that makes no sense without context. The standard answers are `git log --follow -p -- file.rb`, which drops you into a terminal wall of text, or navigating a nightmare of commits on GitHub/GitLab trying to find when a specific file changed. Both break your train of thought.
+
+**Don't Git Lost** keeps you in the editor and answers the question *"what happened to this file before now?"*:
+
+- Walk through every commit that touched the current file, forwards and backwards
+- See who wrote the line your cursor is on, right there at the end of the line
+- Hover for the full story — author photo, complete commit message, links to the commit and PR
+
+---
+
+## Time-travel through your file's history
+
+Five buttons appear in the editor toolbar when you open any file tracked by git:
+
+| Button | Action |
+|---|---|
+| ← | Previous commit — gutter overlay shows exactly what changed |
+| ◁ | Previous commit — side-by-side diff editor |
+| ▷ | Next commit — side-by-side diff editor |
+| → | Next commit — gutter overlay |
+| ⌂ | Return to the current working copy |
+
+Each navigation updates the **same tab in place** — no pile-up of diff tabs. The status bar shows which commit you're viewing so you always know where you are in the history.
+
+![Stepping back through history with gutter overlay](https://lucasprag.com/assets/images/extensions/dont-git-lost/time-travel-overlay.png)
+
+![Stepping back through history in a side-by-side diff](https://lucasprag.com/assets/images/extensions/dont-git-lost/time-travel-diff.png)
+
+---
+
+## Inline blame for the current line
+
+The line where your cursor sits gets a quiet annotation at the end:
+
+```
+Jane Doe, 11 years ago • First working version of cleaned-up production logs.
+```
+
+- Updates as you move the cursor (debounced, so it doesn't flicker)
+- Hides automatically on uncommitted lines
+- Fully configurable format: `${author}`, `${ago}`, `${date}`, `${sha}`, `${message}`, `${pr}`
+
+![Inline blame annotation at the end of the current line](https://lucasprag.com/assets/images/extensions/dont-git-lost/inline-blame.png)
+
+---
+
+## Rich commit hover card
+
+Hover the blame annotation to see the full picture:
+
+- Author photo (from GitHub, GitLab, or Bitbucket)
+- Full multi-line commit message
+- Short SHA, absolute date, and relative time
+- **Copy SHA** to clipboard
+- **Open commit** in your browser
+- **Open PR** that introduced the change (when available)
+
+Works with public repos out of the box. For private repos, sign in once via VS Code's built-in GitHub account, or paste a GitLab/Bitbucket token in settings.
+
+![Hover card with author photo, commit message, and links](https://lucasprag.com/assets/images/extensions/dont-git-lost/commit-hover-card.png)
+
+---
+
+## Works in Cursor too
+
+Cursor's editor toolbar is more compact, so the navigation buttons may appear inside the **`...` overflow menu** by default. To pin them as visible icons: click `...` → **Configure Editor Title Menu Icons** → toggle the Don't Git Lost entries on. You only need to do this once.
+
+---
+
+## Why not GitLens?
+
+GitLens is a powerful, full-featured git extension. If you want everything git-related in one place — a full graph, worktrees, visual file history, AI commit explanations — GitLens has it.
+
+Don't Git Lost is for a different need: **lightweight, distraction-free file history**. It installs in seconds, adds five toolbar buttons and one line of blame annotation, and gets out of your way. There's no sidebar to configure, no feature wall, no paid tier gating core functionality. If the question you're asking is *"what happened to this file?"*, Don't Git Lost answers it with the least friction possible.
+
+The two extensions can coexist — you can run both if you want GitLens's graph alongside Don't Git Lost's inline blame.
+
+---
+
+## FAQ
+
+**Does it work with self-hosted GitHub Enterprise or GitLab?**
+Yes. Configure the `dontgitlost.host.selfHosted` setting to map your self-hosted hostname to its type.
+
+**Does it work with Bitbucket?**
+Yes. Set `dontgitlost.host.bitbucketToken` to a `username:apppassword` app password.
+
+**Does it show history for renamed files?**
+Yes — git history is followed across renames.
+
+**Can I disable the blame annotation and keep only the toolbar buttons?**
+Yes. Set `dontgitlost.blame.enabled` to `false` in settings.
+
+**Does it slow down VS Code?**
+The blame annotation is debounced and only runs when you stop moving the cursor. The toolbar buttons only load history when you click them. There's no background scanning.
+
+**What VS Code version does it require?**
+VS Code 1.75 or newer (or a compatible fork like Cursor).
+
+---
+
+## Settings
+
+| Setting | Default | Description |
+|---|---|---|
+| `dontgitlost.blame.enabled` | `true` | Show the inline blame annotation |
+| `dontgitlost.blame.format` | `${author}, ${ago} • ${message}` | Annotation template |
+| `dontgitlost.blame.messageMaxLength` | `80` | Max characters of commit message shown inline |
+| `dontgitlost.timeTravel.enabled` | `true` | Show back/forward toolbar buttons |
+| `dontgitlost.host.gitlabToken` | `""` | GitLab personal access token (`read_api` scope) |
+| `dontgitlost.host.bitbucketToken` | `""` | Bitbucket app password (`username:apppassword`) |
+| `dontgitlost.host.selfHosted` | `{}` | Map of self-hosted hosts |
+
+---
+
+## Check out my other extensions
+
+- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
+- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+
+---
+
+## Folder Projects — VS Code Project Switcher Extension
+
+> Turn your directory structure into a project list. Point it at your code directories and switch between any project instantly — no manual registration, no stale lists.
+
+## What it does
+
+Most developers keep their projects in one or two directories — `~/Projects`, `~/Work`, `~/clients`. If that's you, you already have a project list. You just can't use it from VS Code without clicking through Finder or running `code ~/Projects/my-app` in the terminal.
+
+**Folder Projects** reads those directories and turns every subdirectory into a project you can jump to instantly. No registration. No manual list to update when you clone something new. Just point it at where you keep your code and it handles the rest.
+
+---
+
+## Switch projects instantly from the command palette
+
+Run **`Folder Projects: List Projects to Open`** from the command palette (or bind it to a keyboard shortcut) to get a fuzzy-searchable list of every project across all your configured root directories.
+
+![Command palette showing the Folder Projects command](https://lucasprag.com/assets/images/extensions/folder-projects/command.png)
+
+Each item shows the **project name**, the **root directory it belongs to**, and its **full path** — so if you have similarly-named repos across different roots, you'll always know which is which.
+
+![Fuzzy-searchable project list](https://lucasprag.com/assets/images/extensions/folder-projects/list-of-projects.png)
+
+Select one and VS Code opens that folder immediately in the current window (or a new window if you're holding a modifier key).
+
+---
+
+## Browse projects from the Activity Bar
+
+A dedicated **Folder Projects** icon is added to the Activity Bar. Click it to see all your projects organized by root directory — useful when you want to browse rather than search.
+
+![Activity Bar panel showing projects grouped by root](https://lucasprag.com/assets/images/extensions/folder-projects/activity-bar.png)
+
+- Root directories appear as collapsible sections
+- Click any project to open it
+- Use the refresh button to re-scan after adding new folders
+
+---
+
+## Zero registration required
+
+Clone a new repo into `~/Projects` and it appears the next time you open the picker. There's no list to maintain, no configuration file to edit, no stale entries to clean up.
+
+---
+
+## Ignore what you don't need
+
+Use the `folderprojects.ignore` setting to filter out folders that aren't projects:
+
+```json
+"folderprojects.ignore": [".*", "node_modules", "*/archived", "*/old-*"]
+```
+
+Patterns without `/` match against the folder name. Patterns with `/` match against the full path. Hidden directories (`.git`, `.cache`) are not shown by default.
+
+---
+
+## Getting started
+
+1. Install **Folder Projects** from the Marketplace
+2. Add your root directories to `folderprojects.roots` in VS Code settings:
+   ```json
+   "folderprojects.roots": ["~/Projects", "~/Work"]
+   ```
+3. Run **`Folder Projects: List Projects to Open`** from the command palette
+4. That's it
+
+---
+
+## Why not Project Manager?
+
+[Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) is a mature extension that supports manually saved projects, git auto-detection, tags, and remote paths. If you want explicit control over which projects are in your list, it's a solid choice.
+
+Folder Projects takes the opposite approach: **your directory structure is the project list**. If you already keep code in organized root directories, Folder Projects requires zero ongoing maintenance — new repos appear automatically, deleted repos disappear automatically. There's nothing to save, tag, or curate.
+
+---
+
+## FAQ
+
+**Does it support `~` in paths?**
+Yes. Both `~` and environment variables like `${HOME}` are expanded.
+
+**Can I open a project in a new window instead of the current one?**
+Yes — hold the standard modifier key when selecting a project (same as VS Code's native "open recent" behavior).
+
+**What if my projects aren't all direct subdirectories — I have nested folders?**
+Folder Projects only lists immediate subdirectories of each root. If you have a deeper nesting, add the intermediate directory as an additional root.
+
+**Does it work on Windows?**
+Yes, on Windows, macOS, and Linux.
+
+**What VS Code version does it require?**
+VS Code 1.75 or newer.
+
+---
+
+## Settings
+
+| Setting | Description |
+|---|---|
+| `folderprojects.roots` | List of root directories to scan. All immediate subdirectories become projects. |
+| `folderprojects.ignore` | Glob patterns for folders to exclude. |
+
+---
+
+## Check out my other extensions
+
+- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
+- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+
+---
+
+## TeamDocs — VS Code Team Documentation Extension
+
+> Keep your team's Markdown documentation one click away in VS Code, across every project. Browse, search, and preview docs without switching windows.
+
+## What it does
+
+Engineering teams keep their documentation somewhere: a git repo full of Markdown files, a folder of ADRs, a set of runbooks, setup guides, decision docs. The problem is that when you need to look something up, you have to leave VS Code — open a browser tab, find the right Notion page, search GitHub, or switch to a different folder in a new window.
+
+**TeamDocs** puts that documentation folder directly in your VS Code sidebar. One click on the Activity Bar icon and your entire docs tree is there, searchable, and renders Markdown as a preview. It doesn't matter which project you have open — the same docs folder is always available.
+
+---
+
+## Browse your docs from the Activity Bar
+
+A dedicated **Team Docs** icon is added to the Activity Bar. Click it to see the full folder tree of your documentation, regardless of which project is currently open in VS Code.
+
+![Team docs in the Activity Bar](https://lucasprag.com/assets/images/extensions/teamdocs/docs-in-activity-bar.png)
+
+![Browsing the documentation tree](https://lucasprag.com/assets/images/extensions/teamdocs/docs.png)
+
+- The view title is automatically set to the name of your docs folder
+- Folders are listed before files, sorted alphabetically
+- Files and folders matching VS Code's `files.exclude` setting are hidden automatically
+
+---
+
+## Markdown opens as a rendered preview
+
+Clicking any Markdown file opens the **rendered preview** directly — not the raw source. You see formatted headings, code blocks, tables, and links, exactly as your team intended.
+
+Non-Markdown files (images, PDFs, code files) open with their default editor.
+
+Supported extensions: `.md`, `.markdown`, `.mdown`, `.mkdn`, `.mkd`, `.mdwn`, `.mdtxt`, `.mdtext`, `.text`
+
+---
+
+## Quick search across all docs
+
+Run **`Team Docs: Search`** from the command palette (or click the search icon in the Team Docs view header) to fuzzy-find any file without browsing the tree.
+
+![Running Team Docs: Search from the command palette](https://lucasprag.com/assets/images/extensions/teamdocs/search.png)
+
+Type to filter files by name or path:
+
+![Filtering docs by typing](https://lucasprag.com/assets/images/extensions/teamdocs/search-result.png)
+
+Hit Enter — Markdown files open as a rendered preview, everything else opens normally:
+
+![Previewing a markdown doc](https://lucasprag.com/assets/images/extensions/teamdocs/search-preview.png)
+
+---
+
+## Works across every project
+
+TeamDocs is configured globally, not per-workspace. The same docs folder appears in every project you open — there's no per-project setup, no `.vscode/settings.json` to maintain in each repo.
+
+---
+
+## Who it's for
+
+TeamDocs works well for any team that:
+
+- Keeps engineering docs in a git repo (ADRs, RFCs, runbooks, setup guides, onboarding docs)
+- Wants documentation accessible without a browser or a separate window
+- Uses Markdown as the primary documentation format
+- Works in VS Code or a compatible editor like Cursor
+
+It's especially useful on engineering teams where context-switching to Notion or Confluence mid-coding breaks flow. Clone your docs repo once, point TeamDocs at it, and your documentation lives in the sidebar.
+
+---
+
+## Getting started
+
+1. Install **TeamDocs** from the Marketplace
+2. Clone or locate your team's documentation folder (e.g. `~/Docs/engineering`)
+3. Open VS Code settings and set `teamdocs.path_to_docs_folder`:
+   ```json
+   "teamdocs.path_to_docs_folder": "~/Docs/engineering"
+   ```
+4. Click the **Team Docs** icon in the Activity Bar — your docs are now always available
+
+If the setting is empty, TeamDocs will prompt you to configure it the first time you open the view.
+
+---
+
+## FAQ
+
+**Does it only work with Markdown?**
+No — any file type works. Markdown files open as rendered previews; everything else opens with VS Code's default editor for that file type.
+
+**Do my docs need to be in a git repo?**
+No. TeamDocs just reads from a folder path. It can be any directory — a git repo, a local folder, a network path.
+
+**Does it work with private documentation?**
+Yes. TeamDocs reads from the local filesystem, so access is controlled by whatever you have cloned or mounted locally.
+
+**What if I want different docs at work vs. personal projects?**
+You can change the `teamdocs.path_to_docs_folder` setting at any time. You could also create a VS Code profile for work and personal use, each with a different path configured.
+
+**Does it support nested folders in the docs tree?**
+Yes — the Activity Bar view shows the full recursive folder tree.
+
+**What VS Code version does it require?**
+VS Code 1.75 or newer.
+
+---
+
+## Settings
+
+| Setting | Description |
+|---|---|
+| `teamdocs.path_to_docs_folder` | Absolute path to the folder containing your team's documentation. Supports `~` and `${HOME}` expansion. |
+
+TeamDocs also honors VS Code's `files.exclude` setting to filter what shows up in the explorer and search results.
+
+---
+
+## Check out my other extensions
+
+- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
+- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
+
+---
+
+## How I navigate git history in VS Code without opening a terminal
+
+> A walkthrough of how to understand why code is the way it is — using inline blame, commit hover cards, and time-travel navigation, all without leaving VS Code.
+
+There's a specific kind of frustration when you open a file in a codebase — yours or someone else's — and find code that doesn't make immediate sense. Not code that's badly written. Just code that clearly had *a reason*, and that reason isn't in the code itself.
+
+The instinct is to reach for git. And the standard workflow looks something like this:
+
+```bash
+git log --follow -p -- app/models/user.rb
+```
+
+You get a wall of diffs in the terminal. You scroll, squint at SHAs, try to mentally map the changes to the question you were asking. By the time you find the commit you wanted, you've lost the context you started with.
+
+There's a better way, and it stays inside the editor.
+
+---
+
+## Inline blame: the answer at a glance
+
+The first thing I wanted was to know who wrote the line my cursor was on and roughly when. Not a full audit — just enough context to know whether this was ancient code or something that changed last week.
+
+With [Don't Git Lost](/extensions/dont-git-lost/), every line your cursor rests on gets a quiet annotation at the end:
+
+```
+Jane Doe, 11 years ago • First working version of cleaned-up production logs.
+```
+
+That one line usually answers the first question. If the code is eleven years old, it predates half the codebase and probably made sense in a context you'd need to research. If it's from last Tuesday, you know who to ask.
+
+The annotation hides on uncommitted lines, debounces as you move (no flickering), and you can configure the format to include or exclude whatever matters to you.
+
+---
+
+## The hover card: the full story without leaving the editor
+
+When that one-liner isn't enough, hover it.
+
+A card appears showing: the author's photo (pulled from GitHub, GitLab, or Bitbucket), the complete commit message, the exact date, a short SHA, a button to copy the SHA, a link to open the commit in the browser, and — when the commit was part of a PR — a link to open that PR too.
+
+The PR link is the one I use most. When a commit message says something vague like "fix edge case in billing," the PR usually has a full description, screenshots, and the back-and-forth discussion that explains *why* this specific fix was chosen over the alternatives.
+
+All of that in a hover. No terminal, no browser tab, no context switch.
+
+---
+
+## Time-travel: stepping through the file's whole history
+
+Sometimes a single commit isn't enough. You want to walk the file backwards and see how it evolved — which commits touched it, what each one changed, and in what order.
+
+Don't Git Lost adds five buttons to the editor toolbar when you're in a git-tracked file:
+
+- **←** and **→**: step to the previous or next commit that touched this file, with a gutter overlay showing what that commit changed (added lines in green, removed lines in red)
+- **◁** and **▷**: same navigation, but opens in a proper side-by-side diff editor
+- **⌂**: return to the current working copy
+
+Each step updates **the same tab** — no pile-up of diff editors. The status bar shows which commit you're currently viewing so you always know your position in the history.
+
+This is the feature I reach for when the blame annotation points to a commit that itself looks odd. I step back through the file's history until I find the version where the pattern was first introduced, then check the commit message and PR for context.
+
+---
+
+## A real example
+
+Last week I was looking at a data migration in a Rails app. There was a loop with an unusual guard clause that seemed redundant — checking a condition that the data model should already prevent.
+
+The blame annotation showed it was added about two years ago by a colleague. The commit message was short: "add guard for legacy records." That told me something, but not enough.
+
+I hovered the annotation. The PR link was there. I clicked it and found a detailed description explaining that when the migration was first run, there were records in production that violated the model constraint — a previous migration had been inconsistent. The guard clause was protecting against exactly that case.
+
+Without the PR link, I would have either left a comment asking about it or spent time digging through git manually to find out whether it was safe to remove. With it, I had the answer in about fifteen seconds, without leaving VS Code or losing my place in the code.
+
+---
+
+## Setup
+
+Install [Don't Git Lost](https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost) from the VS Code Marketplace or Open VSX Registry. No configuration required — inline blame and the toolbar buttons are on by default.
+
+For private repos, VS Code's built-in GitHub account covers GitHub. For GitLab or Bitbucket, add a token in settings (takes about a minute).
+
+If you're in Cursor, the toolbar buttons may default to the `...` overflow menu — pin them once via "Configure Editor Title Menu Icons" and they stay visible permanently.
+
+---
+
+The terminal isn't going away, and `git log` has plenty of uses. But for the specific question of *"what happened to this line, and why?"*, staying in the editor is faster — and more importantly, it keeps your mental context intact.
+
+---
+
+## Don't Git Lost vs GitLens: choosing the right VS Code git extension
+
+> An honest comparison of Don't Git Lost and GitLens for VS Code — what each one does well, when to use each, and whether you can use both.
+
+If you've searched for a VS Code git extension, you've found GitLens. It's the dominant answer to nearly every "how do I see git blame in VS Code" question. It's also a very large, feature-rich extension with a paid tier, an active development team, and several hundred settings.
+
+[Don't Git Lost](https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost) takes a different approach. This post is a straightforward comparison — not a dismissal of GitLens, but an honest look at what each one is actually for.
+
+---
+
+## What GitLens does
+
+GitLens is comprehensive. Some highlights:
+
+- Inline blame (current line and whole-file gutter)
+- Commit graph — a visual branch history across the whole repo
+- File history view with timeline
+- Worktrees management
+- Interactive rebase editor
+- AI-generated commit explanations (paid)
+- Code Lens annotations (shows latest commit above functions)
+- Branch comparison tools
+- GitLens Inspect panel
+
+GitLens has been developed since 2017 and has accumulated a lot of functionality. It also has a freemium model: the core features are free, and some of the more powerful features (the full commit graph, AI explanations, some interactive views) are behind a paid plan.
+
+---
+
+## What Don't Git Lost does
+
+Don't Git Lost is focused on a few things:
+
+1. **Time-travel navigation** — five toolbar buttons to step through every commit that touched the current file, with a gutter overlay or side-by-side diff for each step
+2. **Inline blame** — a quiet annotation at the end of whatever line your cursor is on, configurable format, debounced updates
+3. **Commit hover card** — hover the blame annotation to see the author photo, full commit message, absolute date, and links to the commit and PR
+
+That's it. There's no graph, no worktrees, no rebasing tool. No paid tier. MIT-licensed. One-time optional license purchase to support development.
+
+---
+
+## The real difference: scope vs. focus
+
+GitLens tries to be the complete git client inside VS Code. If you use it, you can do almost everything git-related without ever touching the terminal.
+
+Don't Git Lost tries to answer one specific question as well as possible: **what happened to this file, and why?**
+
+For that question — understanding why a particular line or section is the way it is — Don't Git Lost's workflow is faster:
+
+1. Move cursor to the line → see blame annotation immediately
+2. Hover → see full commit message and PR link
+3. Click PR → read the full context in the browser
+4. Or: click ← to step back through the file's history with a gutter overlay showing exactly what that commit changed
+
+The whole flow takes seconds and never leaves the editor until you need the PR, at which point a single click opens it.
+
+GitLens can do versions of all of this too, but they're scattered across different panels and views. For developers who want *only* this workflow without learning a larger system, Don't Git Lost is less to think about.
+
+---
+
+## Performance
+
+GitLens has gotten faster over the years, but it's still a large extension. It activates on startup, runs background processes to keep its views current, and adds a noticeable amount to VS Code's extension memory footprint.
+
+Don't Git Lost is small and lazy. The blame annotation runs on cursor movement (debounced). The toolbar buttons load history only when clicked. There's no background scanning, no startup processing, no repository indexing.
+
+On slower machines or large monorepos, this difference can be meaningful.
+
+---
+
+## Can you use both?
+
+Yes. The extensions don't conflict — they occupy different parts of the VS Code UI. A common combination is:
+
+- GitLens for the commit graph and branch history views (the things Don't Git Lost doesn't have)
+- Don't Git Lost for the inline blame and per-file time-travel (faster and lighter for that specific workflow)
+
+If you're already a GitLens user and happy with it, you probably don't need Don't Git Lost. If you find GitLens overwhelming, or if you've turned off most of its features and are using it only for blame, Don't Git Lost might be a cleaner fit.
+
+---
+
+## Quick comparison
+
+| | Don't Git Lost | GitLens (free) | GitLens (paid) |
+|---|---|---|---|
+| Inline blame | Yes | Yes | Yes |
+| Commit hover card with PR link | Yes | Partial | Yes |
+| File history time-travel (per file) | Yes | Via file history view | Yes |
+| Full commit graph | No | Limited | Yes |
+| Gutter overlay showing what a commit changed | Yes | No | No |
+| Worktrees | No | Yes | Yes |
+| Code Lens above functions | No | Yes | Yes |
+| AI commit explanations | No | No | Yes |
+| Background scanning / startup cost | Minimal | Moderate | Moderate |
+| Price | Free + optional one-time license | Free + paid tier | Paid subscription |
+
+---
+
+## Summary
+
+Use **GitLens** if you want a comprehensive git client inside VS Code, regularly use features like the commit graph, worktrees, or interactive rebase, or you're willing to pay for the advanced features.
+
+Use **Don't Git Lost** if you want lightweight, fast file-history navigation with inline blame and no configuration overhead — and the question you're usually asking is *"why is this code the way it is?"*
+
+Both are worth trying. Both are free to install. If you've been frustrated by GitLens's scope and just want the blame-and-history workflow, [give Don't Git Lost a look](https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost).
+
+---
+
+## How I manage 30+ projects in VS Code with zero maintenance
+
+> A simple VS Code setup for switching between dozens of projects instantly, without ever maintaining a project list.
+
+I have a lot of projects. Side projects, client work, open-source repos, internal tools. They accumulate. At some point I had enough that switching between them in VS Code became its own small friction point.
+
+The options I knew about weren't quite right:
+
+- **File → Open Recent**: buried under a long list that never quite reflects what I'm actually working on, and the entries are full paths, not project names.
+- **VS Code Workspaces**: overkill for just "open this folder."
+- **Project Manager extension**: saves projects explicitly. That means registering each one when I clone it and removing stale entries when I'm done. I want zero maintenance.
+
+The setup I've used for the past year takes about two minutes to configure and has required exactly zero upkeep since.
+
+---
+
+## The idea: your directories already organize your projects
+
+Most developers already keep their code in organized directories. I have `~/Projects` for personal work and `~/Work` for client repos. Every immediate subdirectory of those folders is a project.
+
+What I wanted was a way to say: *treat every folder inside `~/Projects` and `~/Work` as a project I can jump to*. Then the list is always current, automatically.
+
+That's what [Folder Projects](/extensions/folder-projects/) does.
+
+---
+
+## Setup
+
+Install Folder Projects, then add your root directories to VS Code settings:
+
+```json
+"folderprojects.roots": [
+  "~/Projects",
+  "~/Work"
+]
+```
+
+That's it. Run **`Folder Projects: List Projects to Open`** from the command palette and you get a fuzzy-searchable list of every subdirectory across both roots.
+
+I also ignore a few things I never want to see:
+
+```json
+"folderprojects.ignore": [
+  ".*",
+  "node_modules",
+  "*/archived"
+]
+```
+
+Hidden directories (`.git`, `.cache`) are excluded by default. The `*/archived` pattern catches a subfolder I use to park old repos without deleting them.
+
+---
+
+## The workflow
+
+The command palette is where I live. I have `Cmd+Shift+P` deeply wired to my muscle memory, so adding a `fp` prefix to fuzzy-search projects feels natural. But I also bound the command to `Cmd+Shift+O` — one shortcut, type a few letters, open.
+
+The Activity Bar view is there too if I want to browse rather than search. It shows each root as a collapsible section with all its projects listed underneath. Useful for getting a visual sense of what I have.
+
+---
+
+## Why not Project Manager?
+
+[Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) is a mature extension that lots of people love. If you want to explicitly curate your project list — save specific folders, tag them, access remote paths — it's the right tool.
+
+The tradeoff is maintenance. Every new clone needs to be saved. Every abandoned project needs to be removed. If you're consistent about it, it works great. I wasn't consistent about it.
+
+Folder Projects has no curation step. Cloning a repo into `~/Projects` makes it available immediately. Deleting it removes it. The list is always in sync because the list *is* the filesystem.
+
+---
+
+## The result
+
+I've cloned new repos dozens of times since setting this up. None of them required any configuration to show up in my project list. The ignored patterns have never needed updating. The whole thing runs in the background and I never think about it.
+
+That's the kind of tooling I like: low-ceremony, high-payoff, zero ongoing cost.
+
+Install [Folder Projects](https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects) and spend two minutes configuring it. That's probably the last time you'll think about it.
+
+---
+
+## Stop switching tabs to read docs — keep them in VS Code
+
+> How to access your team's Markdown documentation directly from the VS Code Activity Bar, without switching windows or searching through browser tabs.
+
+There's a type of context switch that doesn't feel disruptive until you add it up. You're writing code and you need to check something: a database schema decision, an API contract, an onboarding guide for a service you haven't touched in months. So you open a browser tab, navigate to Notion or Confluence or GitHub, search for the document, and eventually find it. Then you switch back to the code.
+
+The interruption isn't the thirty seconds it took. It's that you opened a browser, got a brief exposure to everything else that lives in a browser, and now you're back at your editor slightly less focused than before.
+
+---
+
+## Most engineering docs are already Markdown
+
+A lot of engineering teams keep their documentation as Markdown files in a git repository: ADRs in `/docs/architecture/`, runbooks in `/docs/operations/`, onboarding guides in `/docs/getting-started/`. It's versioned, it's diffable, it lives next to the code it describes.
+
+The problem is accessing it. You either have a separate VS Code window open to the docs repo (and switch between windows), or you browse GitHub (and enter the browser), or you forget the docs exist and just ask someone.
+
+---
+
+## TeamDocs: your docs as a VS Code sidebar
+
+[TeamDocs](/extensions/teamdocs/) solves this with a single globally-configured setting. You point it at your docs folder:
+
+```json
+"teamdocs.path_to_docs_folder": "~/Work/our-docs"
+```
+
+And from that point on, a **Team Docs** icon in the Activity Bar shows the full folder tree of your documentation — regardless of which project is currently open in VS Code.
+
+Click any Markdown file and it opens as a **rendered preview**, not raw source. You see formatted headings, code blocks, tables, and links. Click a PDF or image and it opens with its default handler.
+
+---
+
+## The search command
+
+The Activity Bar view is useful for browsing, but the search command is faster for lookup.
+
+Run **`Team Docs: Search`** (or click the magnifying glass in the view header) and type to fuzzy-find any file. It's the same quick-pick interface as everything else in VS Code, so it feels familiar and responds instantly.
+
+I use it most for two things:
+- Checking an ADR while writing code ("was it decided to use UUIDs or integers for this table?")
+- Finding a runbook mid-incident without switching to a browser
+
+The search finds files by name and path. If your team names documents consistently — `2024-03-user-auth-redesign.md`, `runbook-postgres-failover.md` — a few characters usually gets you there.
+
+---
+
+## Why this matters more than it sounds
+
+The browser tab problem isn't just about documentation. It's about keeping your mental context intact while you work. Every window switch is a small invitation to get distracted by something else.
+
+Having your docs in the same window as your code isn't a revolutionary feature. But it removes one of the most common reasons to leave the editor during focused work. Over a week of development, that's a lot of interrupted sessions that don't happen.
+
+---
+
+## Setup
+
+1. Install [TeamDocs](https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs) from the Marketplace
+2. Clone your docs repo somewhere locally (or locate your existing docs folder)
+3. Set `teamdocs.path_to_docs_folder` to that path
+4. Click the **Team Docs** icon in the Activity Bar
+
+First-time setup takes about a minute. After that it just works — same docs, every project, every workspace.
+
+---
+
+If your team keeps documentation in Markdown and you've ever caught yourself opening a browser tab just to check something you knew was in the docs, this is worth trying.

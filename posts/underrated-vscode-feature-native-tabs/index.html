@@ -9,24 +9,24 @@
     
     
     
-    Underrated VSCode feature: Native Tabs -
+    VS Code Native Tabs: manage multiple projects without juggling windows -
     
     
     Lucas Arantes
   </title>
 
-  <meta name="description" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
-  <meta name="keywords" content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.">
+  <meta name="description" content="VS Code Native Tabs let you group all your project windows into one tabbed interface — no more Cmd+Tab hunting. Here's how to set it up in 2 minutes.">
+  <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
 
   <meta content="Lucas Arantes" property="og:site_name">
 
-  <meta content="Underrated VSCode feature: Native Tabs" property="og:title">
+  <meta content="VS Code Native Tabs: manage multiple projects without juggling windows" property="og:title">
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc." property="og:description">
+  <meta content="VS Code Native Tabs let you group all your project windows into one tabbed interface — no more Cmd+Tab hunting. Here's how to set it up in 2 minutes." property="og:description">
 
 
   <meta content="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" property="og:url">
@@ -36,7 +36,7 @@
   <meta content="https://lucasprag.com/about/" property="article:author">
 
 
-  <meta content="https://lucasprag.com/assets/images/posts/vscode-native-tabs.png" property="og:image">
+  <meta content="https://lucasprag.com/assets/images/vscode-native-tabs.png" property="og:image">
 
 
   
@@ -111,6 +111,7 @@
         <div class="flex space-x-4">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a href="/" class="btn-nav mt-3" aria-current="">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="">Extensions</a>
         </div>
       </div>
     </div>
@@ -148,16 +149,17 @@
   <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
     <div class="space-y-3 px-2 py-5">
       <a href="/" class="block btn-nav" aria-current="">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="">Extensions</a>
     </div>
   </div>
 </nav>
 
     <main class="flex-1 mt-1 md:mt-3">
-      <h1 class="font-semibold text-3xl mt-5">
-  Underrated VSCode feature: Native Tabs
+      <h1 class="font-semibold text-3xl mt-5 px-5">
+  VS Code Native Tabs: manage multiple projects without juggling windows
 </h1>
 
-<div class="mt-3">
+<div class="mt-3 px-5">
   <time class="font-medium text-base py-3">
     
     Published: February  1, 2024
@@ -174,27 +176,34 @@
 </div>
 
 <div class="post-content prose mt-5">
-  <p>At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
+  <p>Four VS Code windows. Three Cmd+Tab clicks to get to the right one. Sound familiar?</p>
 
-<p>With so many projects, I used to often struggle with many VSCode windows.</p>
+<p><strong>Native Tabs</strong> groups all your VS Code windows into a single tabbed interface — one window, all your projects, a keyboard shortcut to move between them.</p>
 
-<p>I tried working with VSCode Workspaces, but they didn’t really click for me.</p>
+<blockquote>
+  <p><strong>macOS only.</strong> Native Tabs is a macOS feature and won’t appear on Windows or Linux.</p>
+</blockquote>
 
-<p>However, there is a feature called <strong>Native Tabs</strong> that allows me to group all my VSCode windows together and move between them easily. Notice how each project is in a different tab:</p>
+<p>Notice how each project is in a different tab:</p>
 
 <p><img src="/assets/images/posts/vscode-native-tabs.png" alt="Native Tabs on VSCode" /></p>
 
-<h2 id="how-to-setup-native-tabs">How to setup Native Tabs</h2>
+<h2 id="how-to-set-up-native-tabs">How to set up Native Tabs</h2>
 
-<p>Look for Native Tabs on Settings or add <code class="language-plaintext highlighter-rouge">"window.nativeTabs": true</code> to your <code class="language-plaintext highlighter-rouge">settings.json</code>.</p>
+<p>Add this to your <code class="language-plaintext highlighter-rouge">settings.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"window.nativeTabs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or search for “Native Tabs” in Settings and toggle it on.</p>
 
 <p><img src="/assets/images/posts/vscode-native-tabs-setting.png" alt="Native Tabs Settings on VSCode" /></p>
 
-<p>Restart VSCode.</p>
+<p>Restart VS Code.</p>
 
 <h2 id="how-to-move-between-native-tabs">How to move between Native Tabs</h2>
 
-<p>Add shortcuts to <code class="language-plaintext highlighter-rouge">workbench.action.showPreviousWindowTab</code> and <code class="language-plaintext highlighter-rouge">workbench.action.showNextWindowTab</code> to move between them without having to navigate throughout the screen with the mouse cursor.</p>
+<p>Add these to your <code class="language-plaintext highlighter-rouge">keybindings.json</code> to move between tabs and create new ones without touching the mouse:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -206,13 +215,7 @@
     </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+l"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showNextWindowTab"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Also add a shortcut for creating a new Native Tab.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+t"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.newWindowTab"</span><span class="w">
@@ -220,9 +223,34 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Done. Enjoy your Native Tabs.</p>
+<p>These are my bindings — use whatever feels natural to you.</p>
 
-<p>Note: Unfortunately, this is only available on MacOS. <code class="language-plaintext highlighter-rouge">=/</code></p>
+<p>That’s the full setup. Here’s what I pair it with:</p>
+
+<div class="not-prose mt-8 p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
+  <p class="font-semibold text-gray-900 dark:text-white mb-1">Extensions that pair well with this workflow</p>
+  <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Native Tabs organizes your windows — these two handle what happens inside them:</p>
+  <div class="flex flex-col gap-3">
+    <div class="flex items-start gap-3">
+      <img src="https://lucasprag.com/assets/images/extensions/folder-projects/logo.png" alt="Folder Projects" class="w-8 h-8 rounded-md mt-0.5 shrink-0" />
+      <div>
+        <a href="/extensions/folder-projects/" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Folder Projects</a>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Point it at your code directories, switch to any project instantly from the command palette. No Finder, no terminal.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <img src="https://lucasprag.com/assets/images/extensions/dont-git-lost/logo.png" alt="Don't Git Lost" class="w-8 h-8 rounded-md mt-0.5 shrink-0" />
+      <div>
+        <a href="/extensions/dont-git-lost/" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Don't Git Lost</a>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Adds inline blame and file history to the editor toolbar. Hover any line to see who wrote it, the commit message, and a link to the PR.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<p>Note: Unfortunately, Native Tabs is only available on macOS. <code class="language-plaintext highlighter-rouge">=/</code></p>
 
 </div>
     </main>

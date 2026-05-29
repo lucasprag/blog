@@ -9,47 +9,36 @@
     
     
     
-    How to provide configs to React on Phoenix and esbuild -
+    VS Code Extensions by lucasprag -
     
     
     Lucas Arantes
   </title>
 
-  <meta name="description" content="I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.">
+  <meta name="description" content="Focused VS Code extensions for developer productivity: Don't Git Lost (git history), Folder Projects (project switcher), TeamDocs (team docs sidebar), and more.">
   <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
 
   <meta content="Lucas Arantes" property="og:site_name">
 
-  <meta content="How to provide configs to React on Phoenix and esbuild" property="og:title">
+  <meta content="VS Code Extensions by lucasprag" property="og:title">
 
 
   <meta content="article" property="og:type">
 
 
-  <meta content="I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild." property="og:description">
+  <meta content="Focused VS Code extensions for developer productivity: Don't Git Lost (git history), Folder Projects (project switcher), TeamDocs (team docs sidebar), and more." property="og:description">
 
 
-  <meta content="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/" property="og:url">
+  <meta content="https://lucasprag.com/extensions/" property="og:url">
 
-
-  <meta content="2022-02-18T00:00:00+00:00" property="article:published_time">
-  <meta content="https://lucasprag.com/about/" property="article:author">
 
 
   <meta content="https://lucasprag.com/assets/images/computer.png" property="og:image">
 
 
-  
 
 
-  
-  <meta content="elixir" property="article:tag">
-  
-  <meta content="phoenix" property="article:tag">
-  
-
-
-  <link rel="canonical" href="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/">
+  <link rel="canonical" href="https://lucasprag.com/extensions/">
   <link rel="icon" type="image/x-icon" href="https://lucasprag.com/assets/images/favicon.ico">
   <link rel="stylesheet" href="https://lucasprag.com/assets/css/main.css">
   <link rel="alternate" type="application/rss+xml" href="https://lucasprag.com/feed.xml" title="RSS 2.0" />
@@ -110,8 +99,8 @@
       <div class="hidden sm:ml-6 sm:block">
         <div class="flex space-x-4">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="/" class="btn-nav mt-3" aria-current="">Posts</a>
-          <a href="/extensions/" class="btn-nav mt-3" aria-current="">Extensions</a>
+          <a href="/" class="btn-nav mt-3" aria-current="page">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="page">Extensions</a>
         </div>
       </div>
     </div>
@@ -148,92 +137,60 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
     <div class="space-y-3 px-2 py-5">
-      <a href="/" class="block btn-nav" aria-current="">Posts</a>
-      <a href="/extensions/" class="block btn-nav" aria-current="">Extensions</a>
+      <a href="/" class="block btn-nav" aria-current="page">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="page">Extensions</a>
     </div>
   </div>
 </nav>
 
     <main class="flex-1 mt-1 md:mt-3">
-      <h1 class="font-semibold text-3xl mt-5 px-5">
-  How to provide configs to React on Phoenix and esbuild
-</h1>
+      <div class="mt-5 px-5">
+  <h1 class="font-semibold text-3xl text-gray-900 dark:text-white">VS Code Extensions</h1>
+  <p class="text-gray-600 dark:text-gray-400 mt-2">Lightweight, focused extensions built to solve specific problems without getting in your way.</p>
 
-<div class="mt-3 px-5">
-  <time class="font-medium text-base py-3">
-    
-    Published: February 18, 2022
-    
-  </time>
+  <div class="mt-6 flex flex-col gap-4">
 
-  <div class="text-base ml-4 mt-1 inline">
-    
-    <span class="tag mr-1">elixir</span>,
-    
-    <span class="tag mr-1">phoenix</span>
-    
+    <div class="flex items-center gap-4 p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
+      <img src="https://lucasprag.com/assets/images/extensions/dont-git-lost/logo.png" alt="Don't Git Lost logo" class="w-12 h-12 rounded-lg shrink-0">
+      <div class="flex-1 min-w-0">
+        <h2 class="font-semibold text-lg text-gray-900 dark:text-white">Don't Git Lost</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Step through any file's git history without leaving VS Code. Inline blame, rich commit hover cards, and time-travel navigation.</p>
+      </div>
+      <div class="flex gap-2 shrink-0">
+        <a href="/extensions/dont-git-lost/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1.5 rounded-lg text-sm">Learn more</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost" class="inline-block border border-gray-400 dark:border-gray-600 hover:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold px-4 py-1.5 rounded-lg text-sm">Install</a>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4 p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
+      <img src="https://lucasprag.com/assets/images/extensions/folder-projects/logo.png" alt="Folder Projects logo" class="w-12 h-12 rounded-lg shrink-0">
+      <div class="flex-1 min-w-0">
+        <h2 class="font-semibold text-lg text-gray-900 dark:text-white">Folder Projects</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Turn your directory structure into a project list. Switch between any project instantly — no manual registration, no stale lists.</p>
+      </div>
+      <div class="flex gap-2 shrink-0">
+        <a href="/extensions/folder-projects/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1.5 rounded-lg text-sm">Learn more</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects" class="inline-block border border-gray-400 dark:border-gray-600 hover:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold px-4 py-1.5 rounded-lg text-sm">Install</a>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4 p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
+      <img src="https://lucasprag.com/assets/images/extensions/teamdocs/logo.png" alt="TeamDocs logo" class="w-12 h-12 rounded-lg shrink-0">
+      <div class="flex-1 min-w-0">
+        <h2 class="font-semibold text-lg text-gray-900 dark:text-white">TeamDocs</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Keep your team's Markdown docs one click away in the Activity Bar, across every project. Browse, search, and preview without switching windows.</p>
+      </div>
+      <div class="flex gap-2 shrink-0">
+        <a href="/extensions/teamdocs/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1.5 rounded-lg text-sm">Learn more</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs" class="inline-block border border-gray-400 dark:border-gray-600 hover:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold px-4 py-1.5 rounded-lg text-sm">Install</a>
+      </div>
+    </div>
+
   </div>
+
+  <p class="text-sm text-gray-500 dark:text-gray-500 mt-6">All extensions are free to use, MIT licensed, and available on both the <a href="https://marketplace.visualstudio.com/publishers/lucasprag" class="underline">VS Code Marketplace</a> and <a href="https://open-vsx.org/namespace/lucasprag" class="underline">Open VSX Registry</a>. A one-time license purchase is available to support ongoing development.</p>
 </div>
 
-<div class="post-content prose mt-5">
-  <p>I’ve seen a few blog posts about using environment variables on React/Vue/etc when they’re part of a Phoenix app using webpack, but I didn’t find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.</p>
-
-<h2 id="where-to-save-configs">Where to save configs</h2>
-
-<p>On <code class="language-plaintext highlighter-rouge">config/dev.ex</code> you can set arbitrary configs to make them available to your application. You can also import other configs from other files that might not get committed like this:</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.ex</span>
-
-<span class="n">import_config</span> <span class="s2">"dev.secret.exs"</span>
-</code></pre></div></div>
-
-<p>Then you can add <code class="language-plaintext highlighter-rouge">dev.secrets.exs</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> and write down your configs there.</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.secret.exs</span>
-
-<span class="n">config</span> <span class="ss">:my_app</span><span class="p">,</span>
-  <span class="ss">public_key:</span> <span class="s2">"you can write your key here"</span><span class="p">,</span>
-  <span class="ss">secret_key:</span> <span class="s2">"you can write your key here"</span>
-</code></pre></div></div>
-
-<p>Note: You can also get these keys from the environment using <code class="language-plaintext highlighter-rouge">System.fetch_env!("NAME_OF_YOUR_ENV_VAR")</code> if you prefer, but it sounds like this is not the Elixir way of doing these things because it doesn’t work well with all configuration scenarios (dev/prod/runtime/etc). More details on <a href="https://groups.google.com/g/elixir-lang-core/c/SLlJxiMa-7Q/m/Un1bTb2XLzsJ?pli=1">this thread</a>.</p>
-
-<h2 id="providing-configs-to-your-front-end">Providing configs to your front-end</h2>
-
-<p>You don’t need to change your esbuild configuration to provide keys to your front-end. The trick here is to create a JavaScript object on your <code class="language-plaintext highlighter-rouge">root.html.heex</code> to make <strong>public keys</strong> available before the the front-end loads.</p>
-
-<p>NOTE: Don’t provide your <strong>private/secret keys</strong> to your front-end.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="kd">var</span> <span class="nx">PUBLIC_CONFIGS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="na">public_key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;%= Application.fetch_env!(:my_app, :public_key) %&gt;</span><span class="dl">"</span><span class="p">,</span>
-      <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<h2 id="using-it-in-your-front-end">Using it in your front-end</h2>
-
-<p>With that you have a <code class="language-plaintext highlighter-rouge">PUBLIC_CONFIGS</code> object available to use anywhere in your front-end. Here is an example using a component from the <a href="https://www.npmjs.com/package/react-google-invisible-recaptcha">react-google-invisible-recaptcha</a> package:</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Recaptcha</span>
-  <span class="na">onResolved</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="p">}</span><span class="si">}</span>
-  <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">refRecaptcha</span><span class="si">}</span>
-  <span class="na">sitekey</span><span class="p">=</span><span class="si">{</span><span class="nx">PUBLIC_CONFIGS</span><span class="p">.</span><span class="nx">public_key</span><span class="si">}</span> <span class="c1">// here is your key</span>
-<span class="p">/&gt;</span>
-</code></pre></div></div>
-
-<p>This approach is something I had to figure out by myself for a project, do you have a better idea about how to do the same? Please ping on twitter. Thanks.</p>
-
-</div>
     </main>
 
     <footer class="mt-8">

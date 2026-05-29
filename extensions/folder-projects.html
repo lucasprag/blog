@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    Folder Projects — VS Code Project Switcher Extension -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <meta name="description" content="Turn your directory structure into a project list. Point it at your code directories and switch between any project instantly — no manual registration, no stale lists.">
+  <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
+
+  <meta content="Lucas Arantes" property="og:site_name">
+
+  <meta content="Folder Projects — VS Code Project Switcher Extension" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Turn your directory structure into a project list. Point it at your code directories and switch between any project instantly — no manual registration, no stale lists." property="og:description">
+
+
+  <meta content="https://lucasprag.com/extensions/folder-projects.html" property="og:url">
+
+
+
+  <meta content="https://lucasprag.com/assets/images/extensions/folder-projects/list-of-projects.png" property="og:image">
+
+
+
+  
+  <meta content="vscode" property="article:tag">
+  
+  <meta content="productivity" property="article:tag">
+  
+  <meta content="extension" property="article:tag">
+  
+
+
+  <link rel="canonical" href="https://lucasprag.com/extensions/folder-projects.html">
+  <link rel="icon" type="image/x-icon" href="https://lucasprag.com/assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://lucasprag.com/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="https://lucasprag.com/feed.xml" title="RSS 2.0" />
+  <link rel="sitemap" href="https://lucasprag.com/sitemap.xml" type="application/xml" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTKH1J2E5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTKH1J2E5Z');
+</script>
+</head>
+
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <nav class="pt-2 sm:my-5">
+  <div class="relative flex h-16 items-center justify-between">
+    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-950 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex shrink-0 items-center">
+        <a href="/" class="px-4 py-2 rounded">
+          <p class="font-medium text-2xl">
+            <img src="/assets/images/computer.png" height="20" width="20" alt="lucasprag emoji" class="inline mb-1" />
+            <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
+          </p>
+        </a>
+
+      </div>
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="btn-nav mt-3" aria-current="">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="page">Extensions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <button
+        class="p-3 ml-1 text-gray-500 dark:text-white hover:bg-gray-500 dark:hover:bg-gray-800 hover:text-white rounded-md cursor-pointer mr-5"
+        id="theme-toggle" aria-label="Switch between dark mode and light mode">
+        <!-- Dark Icon  -->
+        <svg class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z" />
+          <circle fill="currentColor" cx="18" cy="18" r="10" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+
+        <!-- Light Icon -->
+        <svg class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z" />
+          <path
+            d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z"
+            fill="currentColorr" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
+    <div class="space-y-3 px-2 py-5">
+      <a href="/" class="block btn-nav" aria-current="">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="page">Extensions</a>
+    </div>
+  </div>
+</nav>
+
+    <main class="flex-1 mt-1 md:mt-3">
+      
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "Does it support ~ in paths?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both ~ and environment variables like ${HOME} are expanded."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Can I open a project in a new window instead of the current one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — hold the standard modifier key when selecting a project, the same as VS Code's native open recent behavior."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What if my projects are not all direct subdirectories — I have nested folders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Folder Projects only lists immediate subdirectories of each root. If you have deeper nesting, add the intermediate directory as an additional root."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Does it work on Windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on Windows, macOS, and Linux."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What VS Code version does it require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VS Code 1.75 or newer."
+      }
+    }
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Folder Projects",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Visual Studio Code Extension",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "Turn your directory structure into a project list. Point it at your code directories and switch between any project instantly — no manual registration, no stale lists.",
+  "url": "https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects",
+  "author": {
+    "@type": "Person",
+    "name": "Lucas Arantes",
+    "url": "https://lucasprag.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to use. Optional one-time license purchase to support development."
+  },
+  "softwareRequirements": "Visual Studio Code 1.75 or newer",
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+
+<article>
+  <h1 class="font-semibold text-3xl mt-5 px-5">Folder Projects — VS Code Project Switcher Extension</h1>
+
+  <div class="post-content prose mt-5">
+    <div class="flex items-center gap-4 mb-6 not-prose">
+  <img src="https://lucasprag.com/assets/images/extensions/folder-projects/logo.png" alt="Folder Projects logo" class="w-16 h-16 rounded-xl" />
+  <div>
+    <p class="text-lg text-gray-600 dark:text-gray-400 mt-1">Your directories are already organized. Your project list should be too.</p>
+  </div>
+</div>
+
+<div class="not-prose flex gap-3 mb-8">
+  <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg text-sm">
+    Install from VS Code Marketplace
+  </a>
+  <a href="https://open-vsx.org/extension/lucasprag/folder-projects" class="inline-block border border-gray-400 dark:border-gray-600 hover:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold px-5 py-2 rounded-lg text-sm">
+    Open VSX Registry
+  </a>
+</div>
+
+<h2 id="what-it-does">What it does</h2>
+
+<p>Most developers keep their projects in one or two directories — <code class="language-plaintext highlighter-rouge">~/Projects</code>, <code class="language-plaintext highlighter-rouge">~/Work</code>, <code class="language-plaintext highlighter-rouge">~/clients</code>. If that’s you, you already have a project list. You just can’t use it from VS Code without clicking through Finder or running <code class="language-plaintext highlighter-rouge">code ~/Projects/my-app</code> in the terminal.</p>
+
+<p><strong>Folder Projects</strong> reads those directories and turns every subdirectory into a project you can jump to instantly. No registration. No manual list to update when you clone something new. Just point it at where you keep your code and it handles the rest.</p>
+
+<hr />
+
+<h2 id="switch-projects-instantly-from-the-command-palette">Switch projects instantly from the command palette</h2>
+
+<p>Run <strong><code class="language-plaintext highlighter-rouge">Folder Projects: List Projects to Open</code></strong> from the command palette (or bind it to a keyboard shortcut) to get a fuzzy-searchable list of every project across all your configured root directories.</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/folder-projects/command.png" alt="Command palette showing the Folder Projects command" /></p>
+
+<p>Each item shows the <strong>project name</strong>, the <strong>root directory it belongs to</strong>, and its <strong>full path</strong> — so if you have similarly-named repos across different roots, you’ll always know which is which.</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/folder-projects/list-of-projects.png" alt="Fuzzy-searchable project list" /></p>
+
+<p>Select one and VS Code opens that folder immediately in the current window (or a new window if you’re holding a modifier key).</p>
+
+<hr />
+
+<h2 id="browse-projects-from-the-activity-bar">Browse projects from the Activity Bar</h2>
+
+<p>A dedicated <strong>Folder Projects</strong> icon is added to the Activity Bar. Click it to see all your projects organized by root directory — useful when you want to browse rather than search.</p>
+
+<p><img src="https://lucasprag.com/assets/images/extensions/folder-projects/activity-bar.png" alt="Activity Bar panel showing projects grouped by root" /></p>
+
+<ul>
+  <li>Root directories appear as collapsible sections</li>
+  <li>Click any project to open it</li>
+  <li>Use the refresh button to re-scan after adding new folders</li>
+</ul>
+
+<hr />
+
+<h2 id="zero-registration-required">Zero registration required</h2>
+
+<p>Clone a new repo into <code class="language-plaintext highlighter-rouge">~/Projects</code> and it appears the next time you open the picker. There’s no list to maintain, no configuration file to edit, no stale entries to clean up.</p>
+
+<hr />
+
+<h2 id="ignore-what-you-dont-need">Ignore what you don’t need</h2>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">folderprojects.ignore</code> setting to filter out folders that aren’t projects:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"folderprojects.ignore"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">".*"</span><span class="p">,</span><span class="w"> </span><span class="s2">"node_modules"</span><span class="p">,</span><span class="w"> </span><span class="s2">"*/archived"</span><span class="p">,</span><span class="w"> </span><span class="s2">"*/old-*"</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Patterns without <code class="language-plaintext highlighter-rouge">/</code> match against the folder name. Patterns with <code class="language-plaintext highlighter-rouge">/</code> match against the full path. Hidden directories (<code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.cache</code>) are not shown by default.</p>
+
+<hr />
+
+<h2 id="getting-started">Getting started</h2>
+
+<ol>
+  <li>Install <strong>Folder Projects</strong> from the Marketplace</li>
+  <li>Add your root directories to <code class="language-plaintext highlighter-rouge">folderprojects.roots</code> in VS Code settings:
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"folderprojects.roots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"~/Projects"</span><span class="p">,</span><span class="w"> </span><span class="s2">"~/Work"</span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Run <strong><code class="language-plaintext highlighter-rouge">Folder Projects: List Projects to Open</code></strong> from the command palette</li>
+  <li>That’s it</li>
+</ol>
+
+<hr />
+
+<h2 id="why-not-project-manager">Why not Project Manager?</h2>
+
+<p><a href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager">Project Manager</a> is a mature extension that supports manually saved projects, git auto-detection, tags, and remote paths. If you want explicit control over which projects are in your list, it’s a solid choice.</p>
+
+<p>Folder Projects takes the opposite approach: <strong>your directory structure is the project list</strong>. If you already keep code in organized root directories, Folder Projects requires zero ongoing maintenance — new repos appear automatically, deleted repos disappear automatically. There’s nothing to save, tag, or curate.</p>
+
+<hr />
+
+<h2 id="faq">FAQ</h2>
+
+<p><strong>Does it support <code class="language-plaintext highlighter-rouge">~</code> in paths?</strong>
+Yes. Both <code class="language-plaintext highlighter-rouge">~</code> and environment variables like <code class="language-plaintext highlighter-rouge">${HOME}</code> are expanded.</p>
+
+<p><strong>Can I open a project in a new window instead of the current one?</strong>
+Yes — hold the standard modifier key when selecting a project (same as VS Code’s native “open recent” behavior).</p>
+
+<p><strong>What if my projects aren’t all direct subdirectories — I have nested folders?</strong>
+Folder Projects only lists immediate subdirectories of each root. If you have a deeper nesting, add the intermediate directory as an additional root.</p>
+
+<p><strong>Does it work on Windows?</strong>
+Yes, on Windows, macOS, and Linux.</p>
+
+<p><strong>What VS Code version does it require?</strong>
+VS Code 1.75 or newer.</p>
+
+<hr />
+
+<h2 id="settings">Settings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folderprojects.roots</code></td>
+      <td>List of root directories to scan. All immediate subdirectories become projects.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folderprojects.ignore</code></td>
+      <td>Glob patterns for folders to exclude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="check-out-my-other-extensions">Check out my other extensions</h2>
+
+<ul>
+  <li><a href="/extensions/dont-git-lost/">Don’t Git Lost</a> — step through any file’s git history without opening a terminal</li>
+  <li><a href="/extensions/teamdocs/">TeamDocs</a> — keep your team’s Markdown docs one click away in the Activity Bar</li>
+</ul>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag" aria-label="Visit my Github profile"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my github profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      aria-label="Link to feed RSS" target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+
+  <script src="https://lucasprag.com/assets/js/main.js"></script>
+
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+# Lucas Arantes — VS Code Extension Developer
+
+> Software engineer building focused, lightweight VS Code extensions for developer productivity: Don't Git Lost (git history navigation), Folder Projects (project switcher), TeamDocs (team documentation sidebar), and more. Blog posts on Ruby, developer productivity, and command-line tools.
+
+## VS Code Extensions
+
+- [Don't Git Lost](https://lucasprag.com/extensions/dont-git-lost/): Step through any file's git history without leaving VS Code. Inline blame annotation on the current line, rich commit hover cards with author photos, and time-travel navigation through every commit that touched a file. A lightweight alternative to GitLens focused on file history.
+- [Folder Projects](https://lucasprag.com/extensions/folder-projects/): Turn your directory structure into a VS Code project switcher. Point it at root directories like ~/Projects and switch between any project instantly from the command palette — no manual registration, no stale lists. A lightweight alternative to Project Manager.
+- [TeamDocs](https://lucasprag.com/extensions/teamdocs/): Keep your team's Markdown documentation one click away in the VS Code Activity Bar, across every project. Browse, search, and preview docs without switching windows or opening a browser. Works with any local folder — git repos, ADRs, runbooks, onboarding guides.
+
+## Blog posts about the extensions
+
+- [How to navigate git history in VS Code without a terminal](https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/): Using Don't Git Lost to step through file history, understand who changed a line, and debug context without leaving the editor.
+- [Don't Git Lost vs GitLens: which VS Code git extension should you use?](https://lucasprag.com/posts/dont-git-lost-vs-gitlens/): Side-by-side comparison — GitLens (full-featured git suite) vs Don't Git Lost (lightweight, focused on file history). When to use each and whether you can run both.
+- [How to manage multiple projects in VS Code](https://lucasprag.com/posts/manage-multiple-projects-in-vscode/): Using Folder Projects to switch between codebases instantly from the command palette.
+- [Team docs always one click away in VS Code](https://lucasprag.com/posts/team-docs-always-one-click-away-in-vscode/): How TeamDocs puts engineering docs (ADRs, runbooks, setup guides) directly in the VS Code sidebar.
+
+## Other selected blog posts
+
+- [VS Code extensions for Ruby programming](https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/): A curated list of VS Code extensions useful for Ruby and Rails developers, including TeamDocs.
+- [Underrated VS Code feature: Native Tabs](https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/): How to use VS Code's built-in tab management effectively.
+- [Underrated VS Code feature: Search Editor](https://lucasprag.com/posts/underrated-vscode-feature-search-editor/): Using VS Code's Search Editor for persistent, navigable search results.
+- [The secret behind my productivity using the command line](https://lucasprag.com/posts/the-secret-behind-my-productivity-using-the-command-line/): Command-line productivity techniques for developers.

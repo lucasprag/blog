@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-29T03:45:01+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc.</subtitle><entry><title type="html">VSCode Extensions for Ruby Programming</title><link href="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/" rel="alternate" type="text/html" title="VSCode Extensions for Ruby Programming" /><published>2025-04-22T00:00:00+00:00</published><updated>2025-04-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/vscode-extensions-for-ruby-programming</id><content type="html" xml:base="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/"><![CDATA[<h2 id="fuzzy-ruby-server"><a href="https://marketplace.visualstudio.com/items?itemName=Blinknlights.fuzzy-ruby-server">Fuzzy Ruby Server</a></h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-29T22:04:17+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">VS Code Extensions for Ruby and Rails Development</title><link href="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/" rel="alternate" type="text/html" title="VS Code Extensions for Ruby and Rails Development" /><published>2025-04-22T00:00:00+00:00</published><updated>2025-04-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/vscode-extensions-for-ruby-programming</id><content type="html" xml:base="https://lucasprag.com/posts/vscode-extensions-for-ruby-programming/"><![CDATA[<h2 id="fuzzy-ruby-server"><a href="https://marketplace.visualstudio.com/items?itemName=Blinknlights.fuzzy-ruby-server">Fuzzy Ruby Server</a></h2>
 
 <p>Fuzzy Ruby Server provides <strong>go-to-definition</strong> and <strong>find references</strong> features. It works flawlessly on my personal projects and very well at work as well. Sometimes it doesn’t know which class definition to go to, but it shows a list with a preview that you can select. At work, we have over-complicated namespaces and repeated class names, so it makes sense it can’t figure it out by itself.</p>
 
@@ -60,6 +60,8 @@
 
 <p>Save a folder or workspace as a Project in the extension and access them easily from a list.</p>
 
+<p>If you keep your projects organized in root directories, <a href="/extensions/folder-projects/">Folder Projects</a> is a lighter alternative — no manual registration, your directory structure is the project list.</p>
+
 <h2 id="open-in-github"><a href="https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github">Open In GitHub</a></h2>
 
 <p>Provides a command to quickly copy the GitHub link of the currently open file. Very helpful when you want to share the file or point to a line of code to send to someone on your team.</p>
@@ -78,7 +80,7 @@
 
 <p>Gives you warnings of misspelled words in VSCode in whatever you are writing. Specially useful for blog posts!</p>
 
-<h2 id="teamdocs"><a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs">TeamDocs</a></h2>
+<h2 id="teamdocs"><a href="/extensions/teamdocs/">TeamDocs</a></h2>
 
 <p>Provides a way to check your team’s markdown documentation without having to leave your code.</p>
 
@@ -96,7 +98,7 @@
 
 <p><img src="https://lucasprag.com/assets/images/posts/vscode-ext-teamdocs-preview.png" alt="teamdocs preview" /></p>
 
-<p>Have fun 💻 👋🏼</p>]]></content><author><name></name></author><category term="ruby" /><category term="rails" /><category term="vscode" /><summary type="html"><![CDATA[Fuzzy Ruby Server]]></summary></entry><entry><title type="html">Tech Interview Questions: Tell me about yourself.</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="Tech Interview Questions: Tell me about yourself." /><published>2025-03-27T00:00:00+00:00</published><updated>2025-04-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: <strong>Could you tell me about yourself?</strong></p>
+<p>Have fun 💻 👋🏼</p>]]></content><author><name></name></author><category term="ruby" /><category term="rails" /><category term="vscode" /><summary type="html"><![CDATA[A curated list of VS Code extensions for Ruby and Rails developers — go-to-definition, case conversion, block toggling, RSpec runner, spec toggler, auto-end, linting, ERB support, and more.]]></summary></entry><entry><title type="html">How to answer ‘Tell me about yourself’ in a tech interview</title><link href="https://lucasprag.com/posts/tech-interview-tips/" rel="alternate" type="text/html" title="How to answer ‘Tell me about yourself’ in a tech interview" /><published>2025-03-27T00:00:00+00:00</published><updated>2025-04-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/tech-interview-tips</id><content type="html" xml:base="https://lucasprag.com/posts/tech-interview-tips/"><![CDATA[<p>I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: <strong>Could you tell me about yourself?</strong></p>
 
 <p>This is a very common first question. Usually, it is the first step to get to know more about you.</p>
 
@@ -164,7 +166,7 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 
 <p>A good Elevator Pitch ™️ is the perfect tool to give a great start for an interview. Write it down, practice it and try to use your natural language so it’s not so different from your other less prepared answers.</p>
 
-<p>Good luck 🍀</p>]]></content><author><name></name></author><category term="tech interview" /><summary type="html"><![CDATA[I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: Could you tell me about yourself?]]></summary></entry><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
+<p>Good luck 🍀</p>]]></content><author><name></name></author><category term="tech interview" /><summary type="html"><![CDATA[A senior engineer's guide to crafting an elevator pitch that connects your experience to the role — with a real example you can adapt and use right away.]]></summary></entry><entry><title type="html">Bad Advice for Solopreneurs: Focus on one thing.</title><link href="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/" rel="alternate" type="text/html" title="Bad Advice for Solopreneurs: Focus on one thing." /><published>2024-02-15T00:00:00+00:00</published><updated>2024-02-15T00:00:00+00:00</updated><id>https://lucasprag.com/posts/bad-advice-focus-on-one-thing</id><content type="html" xml:base="https://lucasprag.com/posts/bad-advice-focus-on-one-thing/"><![CDATA[<p>This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:</p>
 
 <blockquote>
   <p>You keep shipping project after project. You need to stop and focus on one thing only.</p>
@@ -218,7 +220,7 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Ship more! And learn while doing it.</p>]]></content><author><name></name></author><category term="solopreneurship" /><category term="indie hacking" /><summary type="html"><![CDATA[This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:]]></summary></entry><entry><title type="html">Underrated VSCode feature: Search Editor</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/" rel="alternate" type="text/html" title="Underrated VSCode feature: Search Editor" /><published>2024-02-02T00:00:00+00:00</published><updated>2024-02-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-search-editor</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/"><![CDATA[<p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
+<p>Ship more! And learn while doing it.</p>]]></content><author><name></name></author><category term="solopreneurship" /><category term="indie hacking" /><summary type="html"><![CDATA[This is one of the most common advice I get when I talk about my projects to other people, especially with people that don’t build projects of their own:]]></summary></entry><entry><title type="html">VS Code Search Editor: full-editor search results with syntax highlighting</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/" rel="alternate" type="text/html" title="VS Code Search Editor: full-editor search results with syntax highlighting" /><published>2024-02-02T00:00:00+00:00</published><updated>2024-02-02T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-search-editor</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-search-editor/"><![CDATA[<p>The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up <em>in the sidebar</em> which is small and hard to read.</p>
 
 <p><img src="/assets/images/posts/vscode-sidebar-search.png" alt="Using the search in the sidebar to search for I18n in Rails" /></p>
 
@@ -250,27 +252,34 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Done. Enjoy doing searches in VSCode.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[The search in the sidebar in VSCode is quite limiting in my opinion. One of the reasons is that the results show up in the sidebar which is small and hard to read.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://lucasprag.com/vscode-search-editor.png" /><media:content medium="image" url="https://lucasprag.com/vscode-search-editor.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Underrated VSCode feature: Native Tabs</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" rel="alternate" type="text/html" title="Underrated VSCode feature: Native Tabs" /><published>2024-02-01T00:00:00+00:00</published><updated>2024-02-01T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-native-tabs</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/"><![CDATA[<p>At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.</p>
+<p>Done. Enjoy doing searches in VSCode.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[VS Code's built-in Search Editor shows results in a full editor tab instead of the cramped sidebar — with syntax highlighting, previews, regex, and folder filters.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://lucasprag.com/vscode-search-editor.png" /><media:content medium="image" url="https://lucasprag.com/vscode-search-editor.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">VS Code Native Tabs: manage multiple projects without juggling windows</title><link href="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/" rel="alternate" type="text/html" title="VS Code Native Tabs: manage multiple projects without juggling windows" /><published>2024-02-01T00:00:00+00:00</published><updated>2024-02-01T00:00:00+00:00</updated><id>https://lucasprag.com/posts/underrated-vscode-feature-native-tabs</id><content type="html" xml:base="https://lucasprag.com/posts/underrated-vscode-feature-native-tabs/"><![CDATA[<p>Four VS Code windows. Three Cmd+Tab clicks to get to the right one. Sound familiar?</p>
 
-<p>With so many projects, I used to often struggle with many VSCode windows.</p>
+<p><strong>Native Tabs</strong> groups all your VS Code windows into a single tabbed interface — one window, all your projects, a keyboard shortcut to move between them.</p>
 
-<p>I tried working with VSCode Workspaces, but they didn’t really click for me.</p>
+<blockquote>
+  <p><strong>macOS only.</strong> Native Tabs is a macOS feature and won’t appear on Windows or Linux.</p>
+</blockquote>
 
-<p>However, there is a feature called <strong>Native Tabs</strong> that allows me to group all my VSCode windows together and move between them easily. Notice how each project is in a different tab:</p>
+<p>Notice how each project is in a different tab:</p>
 
 <p><img src="/assets/images/posts/vscode-native-tabs.png" alt="Native Tabs on VSCode" /></p>
 
-<h2 id="how-to-setup-native-tabs">How to setup Native Tabs</h2>
+<h2 id="how-to-set-up-native-tabs">How to set up Native Tabs</h2>
 
-<p>Look for Native Tabs on Settings or add <code class="language-plaintext highlighter-rouge">"window.nativeTabs": true</code> to your <code class="language-plaintext highlighter-rouge">settings.json</code>.</p>
+<p>Add this to your <code class="language-plaintext highlighter-rouge">settings.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"window.nativeTabs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or search for “Native Tabs” in Settings and toggle it on.</p>
 
 <p><img src="/assets/images/posts/vscode-native-tabs-setting.png" alt="Native Tabs Settings on VSCode" /></p>
 
-<p>Restart VSCode.</p>
+<p>Restart VS Code.</p>
 
 <h2 id="how-to-move-between-native-tabs">How to move between Native Tabs</h2>
 
-<p>Add shortcuts to <code class="language-plaintext highlighter-rouge">workbench.action.showPreviousWindowTab</code> and <code class="language-plaintext highlighter-rouge">workbench.action.showNextWindowTab</code> to move between them without having to navigate throughout the screen with the mouse cursor.</p>
+<p>Add these to your <code class="language-plaintext highlighter-rouge">keybindings.json</code> to move between tabs and create new ones without touching the mouse:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -282,13 +291,7 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
     </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+l"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.showNextWindowTab"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"!terminalFocus"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Also add a shortcut for creating a new Native Tab.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctrl+shift+t"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workbench.action.newWindowTab"</span><span class="w">
@@ -296,9 +299,34 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Done. Enjoy your Native Tabs.</p>
+<p>These are my bindings — use whatever feels natural to you.</p>
 
-<p>Note: Unfortunately, this is only available on MacOS. <code class="language-plaintext highlighter-rouge">=/</code></p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[At work, I often have to make changes to many repository-based projects at the same time. They can be multiple back-end projects, multiple front-end projects, documentation, infra as code, etc.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://lucasprag.com/vscode-native-tabs.png" /><media:content medium="image" url="https://lucasprag.com/vscode-native-tabs.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
+<p>That’s the full setup. Here’s what I pair it with:</p>
+
+<div class="not-prose mt-8 p-5 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
+  <p class="font-semibold text-gray-900 dark:text-white mb-1">Extensions that pair well with this workflow</p>
+  <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Native Tabs organizes your windows — these two handle what happens inside them:</p>
+  <div class="flex flex-col gap-3">
+    <div class="flex items-start gap-3">
+      <img src="https://lucasprag.com/assets/images/extensions/folder-projects/logo.png" alt="Folder Projects" class="w-8 h-8 rounded-md mt-0.5 shrink-0" />
+      <div>
+        <a href="/extensions/folder-projects/" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Folder Projects</a>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Point it at your code directories, switch to any project instantly from the command palette. No Finder, no terminal.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <img src="https://lucasprag.com/assets/images/extensions/dont-git-lost/logo.png" alt="Don't Git Lost" class="w-8 h-8 rounded-md mt-0.5 shrink-0" />
+      <div>
+        <a href="/extensions/dont-git-lost/" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Don't Git Lost</a>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Adds inline blame and file history to the editor toolbar. Hover any line to see who wrote it, the commit message, and a link to the PR.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<p>Note: Unfortunately, Native Tabs is only available on macOS. <code class="language-plaintext highlighter-rouge">=/</code></p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[VS Code Native Tabs let you group all your project windows into one tabbed interface — no more Cmd+Tab hunting. Here's how to set it up in 2 minutes.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://lucasprag.com/vscode-native-tabs.png" /><media:content medium="image" url="https://lucasprag.com/vscode-native-tabs.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to get unstuck</title><link href="https://lucasprag.com/posts/how-to-get-unstuck/" rel="alternate" type="text/html" title="How to get unstuck" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-get-unstuck</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-get-unstuck/"><![CDATA[<p>Have a long list of tasks? Some difficult? Some personal? Some boring that need to be done asap and some exciting that can’t be done without doing the boring first? I know the feeling.</p>
 
 <p>It can be quite overwhelming having too many things to do. It causes stress and anxiety making us freeze on the spot unable to do anything. I get that.</p>
 
