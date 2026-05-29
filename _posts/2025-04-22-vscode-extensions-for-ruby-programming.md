@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "VSCode Extensions for Ruby Programming"
+title: "VS Code Extensions for Ruby and Rails Development"
 date: "Apr 22, 2025"
 tags:
   - ruby
   - rails
   - vscode
-description:
+description: "A curated list of VS Code extensions for Ruby and Rails developers — go-to-definition, case conversion, block toggling, RSpec runner, spec toggler, auto-end, linting, ERB support, and more."
 ---
 
 ## [Fuzzy Ruby Server](https://marketplace.visualstudio.com/items?itemName=Blinknlights.fuzzy-ruby-server)
@@ -71,6 +71,8 @@ Feature-rich alternative to [Postman](https://marketplace.visualstudio.com/items
 
 Save a folder or workspace as a Project in the extension and access them easily from a list.
 
+If you keep your projects organized in root directories, [Folder Projects](/extensions/folder-projects/) is a lighter alternative — no manual registration, your directory structure is the project list.
+
 ## [Open In GitHub](https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github)
 
 Provides a command to quickly copy the GitHub link of the currently open file. Very helpful when you want to share the file or point to a line of code to send to someone on your team.
@@ -89,7 +91,7 @@ Provides a list of co-authors to include in your commits. This is especially use
 
 Gives you warnings of misspelled words in VSCode in whatever you are writing. Specially useful for blog posts!
 
-## [TeamDocs](https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs)
+## [TeamDocs](/extensions/teamdocs/)
 
 Provides a way to check your team's markdown documentation without having to leave your code.
 
