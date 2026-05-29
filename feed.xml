@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-29T22:44:07+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">How I navigate git history in VS Code without opening a terminal</title><link href="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/" rel="alternate" type="text/html" title="How I navigate git history in VS Code without opening a terminal" /><published>2025-05-29T00:00:00+00:00</published><updated>2025-05-29T00:00:00+00:00</updated><id>https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal</id><content type="html" xml:base="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/"><![CDATA[<p>There’s a specific kind of frustration when you open a file and find code that doesn’t make immediate sense. Not badly written — just code that clearly had <em>a reason</em>, and that reason isn’t in the code itself.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-29T22:52:27+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">How I manage 30+ projects in VS Code with zero maintenance</title><link href="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/" rel="alternate" type="text/html" title="How I manage 30+ projects in VS Code with zero maintenance" /><published>2025-05-29T00:00:00+00:00</published><updated>2025-05-29T00:00:00+00:00</updated><id>https://lucasprag.com/posts/manage-multiple-projects-in-vscode</id><content type="html" xml:base="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/"><![CDATA[<p>I have a lot of projects. Side projects, open-source repos, work repos, internal tools. They accumulate.</p>
+
+<p>At some point switching between them in VS Code became its own small friction point.</p>
+
+<p>The usual options weren’t quite right:</p>
+
+<ul>
+  <li><strong>File → Open Recent</strong>: a long list of full paths that never reflects what I’m actually working on</li>
+  <li><strong>VS Code Workspaces</strong>: overkill for just “open this folder”</li>
+  <li><strong>Project Manager extension</strong>: requires registering each project when I clone it and removing stale entries when I’m done — I want zero maintenance</li>
+</ul>
+
+<p>The setup I’ve used for the past year takes two minutes to configure and has required zero upkeep since.</p>
+
+<hr />
+
+<h2 id="the-idea-your-directories-already-organize-your-projects">The idea: your directories already organize your projects</h2>
+
+<p>Most developers already keep code in organized directories. I have <code class="language-plaintext highlighter-rouge">~/Projects</code> for personal work and <code class="language-plaintext highlighter-rouge">~/Work</code> for repos I work on at my day job. Every subdirectory of those folders is a project.</p>
+
+<p>What I wanted: <em>treat every folder inside those roots as a project I can jump to.</em> The list stays current automatically.</p>
+
+<p>That’s what <a href="/extensions/folder-projects">Folder Projects</a> does.</p>
+
+<hr />
+
+<h2 id="setup">Setup</h2>
+
+<p>Install Folder Projects, then add your root directories to VS Code settings:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"folderprojects.roots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"~/Projects"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"~/Work"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>That’s it. Run <strong><code class="language-plaintext highlighter-rouge">Folder Projects: List Projects to Open</code></strong> from the command palette and you get a fuzzy-searchable list of every subdirectory across both roots.</p>
+
+<p><img src="/assets/images/extensions/folder-projects/list-of-projects.png" alt="Fuzzy-searchable list of projects in the VS Code command palette" /></p>
+
+<p>I also ignore a few things I never want to see:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"folderprojects.ignore"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">".*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"node_modules"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"*/archived"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Hidden directories (<code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.cache</code>) are excluded by default. The <code class="language-plaintext highlighter-rouge">*/archived</code> pattern catches a subfolder I use to park old repos without deleting them.</p>
+
+<hr />
+
+<h2 id="the-workflow">The workflow</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Cmd+Shift+P</code> is already wired to my muscle memory, so adding a <code class="language-plaintext highlighter-rouge">fp</code> prefix to fuzzy-search projects feels natural. I also bound the command to <code class="language-plaintext highlighter-rouge">Cmd+Shift+O</code> — one shortcut, type a few letters, open.</p>
+
+<p>There’s also an Activity Bar view if you want to browse instead. Each root shows as a collapsible section with its projects listed underneath.</p>
+
+<p><img src="/assets/images/extensions/folder-projects/activity-bar.png" alt="Folder Projects activity bar view showing roots as collapsible sections" /></p>
+
+<hr />
+
+<h2 id="why-not-project-manager">Why not Project Manager?</h2>
+
+<p><a href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager">Project Manager</a> is great if you want to explicitly curate your list — tag projects, save specific folders, access remote paths.</p>
+
+<p>The tradeoff is maintenance. Every new clone needs to be saved. Every abandoned project needs to be removed. I wasn’t consistent about it.</p>
+
+<p>Folder Projects has no curation step. Clone a repo into <code class="language-plaintext highlighter-rouge">~/Projects</code> and it’s immediately available. Delete it and it’s gone. The list <em>is</em> the filesystem.</p>
+
+<hr />
+
+<h2 id="the-result">The result</h2>
+
+<p>I’ve cloned dozens of repos since setting this up. None required any configuration to appear in the list. The ignored patterns have never needed updating.</p>
+
+<p>The whole thing runs in the background and I never think about it — which is exactly what I want from tooling.</p>
+
+<p>Install <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects">Folder Projects</a> and spend two minutes on it. That’ll probably be the last time you think about it.</p>]]></content><author><name></name></author><category term="vscode" /><category term="productivity" /><summary type="html"><![CDATA[A simple VS Code setup for switching between dozens of projects instantly, without ever maintaining a project list.]]></summary></entry><entry><title type="html">How I navigate git history in VS Code without opening a terminal</title><link href="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/" rel="alternate" type="text/html" title="How I navigate git history in VS Code without opening a terminal" /><published>2025-05-29T00:00:00+00:00</published><updated>2025-05-29T00:00:00+00:00</updated><id>https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal</id><content type="html" xml:base="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/"><![CDATA[<p>There’s a specific kind of frustration when you open a file and find code that doesn’t make immediate sense. Not badly written — just code that clearly had <em>a reason</em>, and that reason isn’t in the code itself.</p>
 
 <p>The instinct is to reach for git:</p>
 
@@ -1054,43 +1133,4 @@ end
 
 <p>As a result, in order to run a bash script you need to explicitly run it on bash, for example <code class="language-plaintext highlighter-rouge">bash script.sh</code>.</p>
 
-<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry><entry><title type="html">A year of ruby meetups in Kitchener</title><link href="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/" rel="alternate" type="text/html" title="A year of ruby meetups in Kitchener" /><published>2019-12-12T00:00:00+00:00</published><updated>2019-12-12T00:00:00+00:00</updated><id>https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener</id><content type="html" xml:base="https://lucasprag.com/posts/a-year-of-ruby-meetups-in-kitchener/"><![CDATA[<p>I’ve been living in Kitchener for over an year and in the first time I attended to the ruby workshop I created my <a href="https://github.com/rails/rails/pull/34233">first PR</a> to Rails 🎉</p>
-
-<p>It was quite simple of course, but in that workshop I’ve learned that it’s not that hard to do open source. Eventually I found a small problem in Rails and I created <a href="https://github.com/rails/rails/pull/36470">another PR</a>.</p>
-
-<p>Then I started doing more open source in projects that I was using at work like <a href="https://github.com/mezis/viscacha/pull/3">viscacha</a>, <a href="https://github.com/rails/sprockets/pull/599">sprockets</a>, <a href="https://github.com/itchyny/lightline.vim/pull/398">lightline.vim</a>, tabulous PR <a href="https://github.com/webdevel/tabulous/pull/2">#1</a> and <a href="https://github.com/webdevel/tabulous/pull/3">#2</a>, <a href="https://github.com/thadeu/vscode-run-rspec-file/pull/8">vscode-run-rspec-file</a> and hopefully this list is only going to grow overtime.</p>
-
-<p>In other ruby workshops, it was really nice to be able to help other people’s projects.</p>
-
-<p>The meetup when <a href="https://github.com/jayelkaake">Jay El-Kaake</a> gave a talk about <a href="https://www.meetup.com/kw-ruby-on-rails/events/260999605/">how to make Rails faster than the speed of light</a> was really interesting, I’ve learned a few things on how to do speed tests, how to reduce latency when connecting to your app/postsgresql/redis and much more!</p>
-
-<p>In the workshop focused on <a href="https://www.meetup.com/kw-ruby-on-rails/events/265685895/">Hacktoberfest</a> I helped a developer to participate and I decided to participate myself which was great. 🌟</p>
-
-<p><img src="/assets/images/posts/hacktoberfest-email.jpg" alt="The email I got saying that I've completed the Hacktoberfest challenge." /></p>
-
-<p>I missed the talk about Rails and Docker, that was a shame, I wish I could have made for that one.</p>
-
-<p>In the <a href="https://www.meetup.com/kw-ruby-on-rails/events/259429067/">Career, Business and Software Development</a> talk by <a href="https://twitter.com/martinbasiri">Martin Basiri</a> I’ve learned one thing or two about the business side of tech companies. He also talked about his first endeavor which was earphones that made it easier to untangle their cable - 4 seconds less than others - and how it failed when wireless earphones got popular.</p>
-
-<p>It was quite inspiring to see so many students and developers asking interesting questions in the <a href="https://www.meetup.com/kw-ruby-on-rails/events/266616653/">Building a Career in Technology</a> talk by <a href="https://www.linkedin.com/in/robsciuk/">Rob Sciuk</a> and <a href="https://www.linkedin.com/in/ralphjanke/">Ralph Janke</a>.</p>
-
-<p>Not all meetups are very productive, but the last one of 2019 was really special and this is why:</p>
-<ul>
-  <li>I talked to someone who was new to Ruby, did the classic blog tutorial</li>
-  <li>I did open source by working on an <a href="https://github.com/kwruby/kwruby.ca/issues/35">issue</a> to automate the deployment of the <a href="http://kwruby.ca/">KWRuby’s website</a>.</li>
-  <li>we talked about <a href="https://elixir-lang.org/">Elixir</a>, pattern matching and <a href="https://twitter.com/dwhelan/">Declan</a> gave us a lesson – almost a talk by itself – on aspects of <a href="https://en.wikipedia.org/wiki/Actor_model">actor model</a> implemented in Erlang</li>
-  <li>we talked about new things comming up to Ruby like pattern matching on ruby 2.7</li>
-  <li>and there were lots of Pizza 🍕</li>
-</ul>
-
-<p>Definitely one of the best ruby workshops. So many things happened in just one meetup.</p>
-
-<p>Big thanks to <a href="https://github.com/acant">Andrew</a>, the person behind this group and all the people who have helped him.</p>
-
-<p>If you are in Kitchener/Waterloo I strongly recommend you to attend a few times to the <a href="http://kwruby.ca/">KWRuby meetup</a>. If not in the area, try to see if there are groups in your city. It’s totally worthy.</p>
-
-<center>
-<h3>2020 is going to be great! 💎</h3>
-</center>
-
-<p><em><a href="https://dev.to/lucasprag/a-year-of-ruby-meetups-in-kitchener-5g72">This post is also available on DEV.</a></em></p>]]></content><author><name></name></author><category term="community" /><summary type="html"><![CDATA[Contributed to Rails and other open source projects, learned great things on talks, helped others with their projects and more!]]></summary></entry></feed>
+<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry></feed>
