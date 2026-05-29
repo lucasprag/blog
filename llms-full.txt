@@ -128,8 +128,8 @@ VS Code 1.75 or newer (or a compatible fork like Cursor).
 
 ## Check out my other extensions
 
-- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
-- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+- [Folder Projects](/extensions/folder-projects) — turn your directory structure into an instant project switcher
+- [TeamDocs](/extensions/teamdocs) — keep your team's Markdown docs one click away in the Activity Bar
 
 ---
 
@@ -239,8 +239,8 @@ VS Code 1.75 or newer.
 
 ## Check out my other extensions
 
-- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
-- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+- [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal
+- [TeamDocs](/extensions/teamdocs) — keep your team's Markdown docs one click away in the Activity Bar
 
 ---
 
@@ -363,8 +363,8 @@ TeamDocs also honors VS Code's `files.exclude` setting to filter what shows up i
 
 ## Check out my other extensions
 
-- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
-- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
+- [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal
+- [Folder Projects](/extensions/folder-projects) — turn your directory structure into an instant project switcher
 
 ---
 
@@ -390,7 +390,7 @@ There's a better way, and it stays inside the editor.
 
 The first thing I wanted was to know who wrote the line my cursor was on and roughly when. Not a full audit — just enough context to know whether this was ancient code or something that changed last week.
 
-With [Don't Git Lost](/extensions/dont-git-lost/), every line your cursor rests on gets a quiet annotation at the end:
+With [Don't Git Lost](/extensions/dont-git-lost), every line your cursor rests on gets a quiet annotation at the end:
 
 ```
 Jane Doe, 11 years ago • First working version of cleaned-up production logs.
@@ -585,7 +585,7 @@ Most developers already keep their code in organized directories. I have `~/Proj
 
 What I wanted was a way to say: *treat every folder inside `~/Projects` and `~/Work` as a project I can jump to*. Then the list is always current, automatically.
 
-That's what [Folder Projects](/extensions/folder-projects/) does.
+That's what [Folder Projects](/extensions/folder-projects) does.
 
 ---
 
@@ -664,7 +664,7 @@ The problem is accessing it. You either have a separate VS Code window open to t
 
 ## TeamDocs: your docs as a VS Code sidebar
 
-[TeamDocs](/extensions/teamdocs/) solves this with a single globally-configured setting. You point it at your docs folder:
+[TeamDocs](/extensions/teamdocs) solves this with a single globally-configured setting. You point it at your docs folder:
 
 ```json
 "teamdocs.path_to_docs_folder": "~/Work/our-docs"

@@ -1,17 +1,17 @@
 - name: "VSCode Extension: Don't Git Lost"
-  url: /extensions/dont-git-lost/
+  url: /extensions/dont-git-lost
   description: Step through any file's git history without leaving the editor. Inline blame, rich commit hover cards, and time-travel navigation — lightweight and focused.
   tools: TypeScript, VSCode API
   tech: true
 
 - name: "VSCode Extension: Folder Projects"
-  url: /extensions/folder-projects/
+  url: /extensions/folder-projects
   description: Set root directories and every subdirectory becomes a project — switch between them instantly with no manual registration.
   tools: TypeScript, VSCode API
   tech: true
 
 - name: "VSCode Extension: TeamDocs"
-  url: /extensions/teamdocs/
+  url: /extensions/teamdocs
   description: Keep your team's Markdown documentation one click away in the Activity Bar, across every project you work on.
   tools: TypeScript, VSCode API
   tech: true

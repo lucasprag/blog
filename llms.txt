@@ -4,9 +4,9 @@
 
 ## VS Code Extensions
 
-- [Don't Git Lost](https://lucasprag.com/extensions/dont-git-lost/): Step through any file's git history without leaving VS Code. Inline blame annotation on the current line, rich commit hover cards with author photos, and time-travel navigation through every commit that touched a file. A lightweight alternative to GitLens focused on file history.
-- [Folder Projects](https://lucasprag.com/extensions/folder-projects/): Turn your directory structure into a VS Code project switcher. Point it at root directories like ~/Projects and switch between any project instantly from the command palette — no manual registration, no stale lists. A lightweight alternative to Project Manager.
-- [TeamDocs](https://lucasprag.com/extensions/teamdocs/): Keep your team's Markdown documentation one click away in the VS Code Activity Bar, across every project. Browse, search, and preview docs without switching windows or opening a browser. Works with any local folder — git repos, ADRs, runbooks, onboarding guides.
+- [Don't Git Lost](https://lucasprag.com/extensions/dont-git-lost): Step through any file's git history without leaving VS Code. Inline blame annotation on the current line, rich commit hover cards with author photos, and time-travel navigation through every commit that touched a file. A lightweight alternative to GitLens focused on file history.
+- [Folder Projects](https://lucasprag.com/extensions/folder-projects): Turn your directory structure into a VS Code project switcher. Point it at root directories like ~/Projects and switch between any project instantly from the command palette — no manual registration, no stale lists. A lightweight alternative to Project Manager.
+- [TeamDocs](https://lucasprag.com/extensions/teamdocs): Keep your team's Markdown documentation one click away in the VS Code Activity Bar, across every project. Browse, search, and preview docs without switching windows or opening a browser. Works with any local folder — git repos, ADRs, runbooks, onboarding guides.
 
 ## Blog posts about the extensions
 

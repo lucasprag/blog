@@ -162,5 +162,5 @@ VS Code 1.75 or newer (or a compatible fork like Cursor).
 
 ## Check out my other extensions
 
-- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
-- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+- [Folder Projects](/extensions/folder-projects) — turn your directory structure into an instant project switcher
+- [TeamDocs](/extensions/teamdocs) — keep your team's Markdown docs one click away in the Activity Bar

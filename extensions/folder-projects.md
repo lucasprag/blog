@@ -143,5 +143,5 @@ VS Code 1.75 or newer.
 
 ## Check out my other extensions
 
-- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
-- [TeamDocs](/extensions/teamdocs/) — keep your team's Markdown docs one click away in the Activity Bar
+- [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal
+- [TeamDocs](/extensions/teamdocs) — keep your team's Markdown docs one click away in the Activity Bar

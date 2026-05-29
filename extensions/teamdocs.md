@@ -158,5 +158,5 @@ TeamDocs also honors VS Code's `files.exclude` setting to filter what shows up i
 
 ## Check out my other extensions
 
-- [Don't Git Lost](/extensions/dont-git-lost/) — step through any file's git history without opening a terminal
-- [Folder Projects](/extensions/folder-projects/) — turn your directory structure into an instant project switcher
+- [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal
+- [Folder Projects](/extensions/folder-projects) — turn your directory structure into an instant project switcher

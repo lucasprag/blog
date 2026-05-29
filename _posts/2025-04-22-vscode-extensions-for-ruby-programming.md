@@ -71,7 +71,7 @@ Feature-rich alternative to [Postman](https://marketplace.visualstudio.com/items
 
 Save a folder or workspace as a Project in the extension and access them easily from a list.
 
-If you keep your projects organized in root directories, [Folder Projects](/extensions/folder-projects/) is a lighter alternative — no manual registration, your directory structure is the project list.
+If you keep your projects organized in root directories, [Folder Projects](/extensions/folder-projects) is a lighter alternative — no manual registration, your directory structure is the project list.
 
 ## [Open In GitHub](https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github)
 
@@ -91,7 +91,7 @@ Provides a list of co-authors to include in your commits. This is especially use
 
 Gives you warnings of misspelled words in VSCode in whatever you are writing. Specially useful for blog posts!
 
-## [TeamDocs](/extensions/teamdocs/)
+## [TeamDocs](/extensions/teamdocs)
 
 Provides a way to check your team's markdown documentation without having to leave your code.
 
