@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Underrated VSCode feature: Search Editor"
+title: "VS Code Search Editor: full-editor search results with syntax highlighting"
 date: "Feb 2, 2024"
 tags:
   - vscode
   - productivity
-description:
+description: "VS Code's built-in Search Editor shows results in a full editor tab instead of the cramped sidebar — with syntax highlighting, previews, regex, and folder filters."
 image: vscode-search-editor.png
 ---
 
