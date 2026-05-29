@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ page.ext_name }}",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Visual Studio Code Extension",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "{{ page.description }}",
+  "url": "{{ page.marketplace_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Lucas Arantes",
+    "url": "https://lucasprag.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to use. Optional one-time license purchase to support development."
+  },
+  "softwareRequirements": "Visual Studio Code 1.75 or newer",
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+
+<article>
+  <h1 class="font-semibold text-3xl mt-5 px-5">{{ page.title }}</h1>
+
+  <div class="post-content prose mt-5">
+    {{ content }}
+  </div>
+</article>
