@@ -1,8 +1,8 @@
 url: "https://lucasprag.com"
 baseurl: ""
 title: "Lucas Arantes"
-description: "Blog about Ruby, Elixir, command line, text editors, developer productivity, personal projects, etc."
-keyboards: "Lucasprag, Software Engineer, Elixir Developer, Side Projects, VSCode, Productivity, solopreneur, Command Line Productivity, Phoenix, React, Ruby on Rails"
+description: "Software engineer and VS Code extension developer. I build Don't Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line."
+keywords: "Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity"
 
 collections:
   posts:
