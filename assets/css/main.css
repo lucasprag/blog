@@ -56,6 +56,13 @@ body {
   @apply my-8 border-t-2 border-gray-300 dark:border-gray-900;
 }
 
+.post-content hr + h1,
+.post-content hr + h2,
+.post-content hr + h3,
+.post-content hr + h4 {
+  @apply pt-3;
+}
+
 blockquote {
   @apply px-4 my-2 border-l-4 border-gray-300 dark:border-gray-800;
 }
