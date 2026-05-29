@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>
+    
+    
+    
+    How I navigate git history in VS Code without opening a terminal -
+    
+    
+    Lucas Arantes
+  </title>
+
+  <meta name="description" content="A walkthrough of how to understand why code is the way it is — using inline blame, commit hover cards, and time-travel navigation, all without leaving VS Code.">
+  <meta name="keywords" content="Lucas Arantes, VS Code extensions, Don't Git Lost, Folder Projects, TeamDocs, git blame VS Code, VS Code project switcher, VS Code documentation, Ruby, developer productivity">
+
+  <meta content="Lucas Arantes" property="og:site_name">
+
+  <meta content="How I navigate git history in VS Code without opening a terminal" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="A walkthrough of how to understand why code is the way it is — using inline blame, commit hover cards, and time-travel navigation, all without leaving VS Code." property="og:description">
+
+
+  <meta content="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/" property="og:url">
+
+
+  <meta content="2025-05-29T00:00:00+00:00" property="article:published_time">
+  <meta content="https://lucasprag.com/about/" property="article:author">
+
+
+  <meta content="https://lucasprag.com/assets/images/computer.png" property="og:image">
+
+
+  
+
+
+  
+  <meta content="vscode" property="article:tag">
+  
+  <meta content="git" property="article:tag">
+  
+  <meta content="productivity" property="article:tag">
+  
+
+
+  <link rel="canonical" href="https://lucasprag.com/posts/navigate-git-history-in-vscode-without-a-terminal/">
+  <link rel="icon" type="image/x-icon" href="https://lucasprag.com/assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://lucasprag.com/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" href="https://lucasprag.com/feed.xml" title="RSS 2.0" />
+  <link rel="sitemap" href="https://lucasprag.com/sitemap.xml" type="application/xml" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTKH1J2E5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTKH1J2E5Z');
+</script>
+</head>
+
+<body class="bg-gray-200 dark:bg-gray-950">
+  <div class="container mx-auto max-w-4xl flex flex-col min-h-screen px-4">
+    <nav class="pt-2 sm:my-5">
+  <div class="relative flex h-16 items-center justify-between">
+    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <!-- Mobile menu button-->
+      <button type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-950 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex shrink-0 items-center">
+        <a href="/" class="px-4 py-2 rounded">
+          <p class="font-medium text-2xl">
+            <img src="/assets/images/computer.png" height="20" width="20" alt="lucasprag emoji" class="inline mb-1" />
+            <span class="ml-2 hover:underline hover:underline-offset-4">lucasprag</span>
+          </p>
+        </a>
+
+      </div>
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="btn-nav mt-3" aria-current="">Posts</a>
+          <a href="/extensions/" class="btn-nav mt-3" aria-current="">Extensions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+      <button
+        class="p-3 ml-1 text-gray-500 dark:text-white hover:bg-gray-500 dark:hover:bg-gray-800 hover:text-white rounded-md cursor-pointer mr-5"
+        id="theme-toggle" aria-label="Switch between dark mode and light mode">
+        <!-- Dark Icon  -->
+        <svg class="align-middle block dark:hidden" height="23" width="23" alt="click to enable dark mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z" />
+          <circle fill="currentColor" cx="18" cy="18" r="10" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+
+        <!-- Light Icon -->
+        <svg class="align-middle hidden dark:block" height="23" width="23" alt="click to enable light mode"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em"
+          height="1em" viewBox="0 0 36 36">
+          <path fill="currentColor"
+            d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z" />
+          <path
+            d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z"
+            fill="currentColorr" />
+          <rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden sm:hidden bg-gray-300 dark:bg-gray-900 rounded" id="mobile-menu">
+    <div class="space-y-3 px-2 py-5">
+      <a href="/" class="block btn-nav" aria-current="">Posts</a>
+      <a href="/extensions/" class="block btn-nav" aria-current="">Extensions</a>
+    </div>
+  </div>
+</nav>
+
+    <main class="flex-1 mt-1 md:mt-3">
+      <h1 class="font-semibold text-3xl mt-5 px-5">
+  How I navigate git history in VS Code without opening a terminal
+</h1>
+
+<div class="mt-3 px-5">
+  <time class="font-medium text-base py-3">
+    
+    Published: May 29, 2025
+    
+  </time>
+
+  <div class="text-base ml-4 mt-1 inline">
+    
+    <span class="tag mr-1">vscode</span>,
+    
+    <span class="tag mr-1">git</span>,
+    
+    <span class="tag mr-1">productivity</span>
+    
+  </div>
+</div>
+
+<div class="post-content prose mt-5">
+  <p>There’s a specific kind of frustration when you open a file and find code that doesn’t make immediate sense. Not badly written — just code that clearly had <em>a reason</em>, and that reason isn’t in the code itself.</p>
+
+<p>The instinct is to reach for git:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--follow</span> <span class="nt">-p</span> <span class="nt">--</span> app/models/user.rb
+</code></pre></div></div>
+
+<p>You get a wall of diffs. You scroll, squint at SHAs, try to mentally map the changes to the question you started with. By the time you find the commit, you’ve lost your context.</p>
+
+<p>There’s a better way, and it stays inside the editor.</p>
+
+<hr />
+
+<h2 id="inline-blame-the-answer-at-a-glance">Inline blame: the answer at a glance</h2>
+
+<p>The first thing I wanted was to know who wrote the line my cursor was on and roughly when. Not a full audit — just enough context to know whether this was ancient code or something that changed last week.</p>
+
+<p>With <a href="/extensions/dont-git-lost">Don’t Git Lost</a>, every line your cursor rests on gets a quiet annotation at the end:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Jane Doe, 11 years ago • First working version of cleaned-up production logs.
+</code></pre></div></div>
+
+<p><img src="/assets/images/extensions/dont-git-lost/inline-blame.png" alt="Inline blame annotation showing author and commit message at the end of the current line" /></p>
+
+<p>That one line usually answers the first question.</p>
+
+<p>If the code is eleven years old, it predates half the codebase and probably made sense in a context you’d need to research. If it’s from last Tuesday, you know who to ask.</p>
+
+<p>The annotation hides on uncommitted lines, debounces as you move (no flickering), and you can configure the format to show exactly what matters to you.</p>
+
+<hr />
+
+<h2 id="the-hover-card-the-full-story-without-leaving-the-editor">The hover card: the full story without leaving the editor</h2>
+
+<p>When that one-liner isn’t enough, hover it.</p>
+
+<p>A card appears showing:</p>
+
+<ul>
+  <li>The author’s photo (pulled from GitHub, GitLab, or Bitbucket)</li>
+  <li>The complete commit message and exact date</li>
+  <li>A short SHA with a copy button</li>
+  <li>A link to open the commit in the browser</li>
+  <li>A link to open the PR — when the commit was part of one</li>
+</ul>
+
+<p>The PR link is the one I use most. When a commit message says something vague like “fix edge case in billing,” the PR usually has a full description, screenshots, and the discussion that explains <em>why</em> this fix was chosen over the alternatives.</p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/commit-hover-card.png" alt="Commit hover card showing author photo, commit message, date, SHA, and links to the commit and PR" /></p>
+
+<p>All of that in a hover. No terminal, no browser tab, no context switch.</p>
+
+<hr />
+
+<h2 id="time-travel-stepping-through-the-files-whole-history">Time-travel: stepping through the file’s whole history</h2>
+
+<p>Sometimes a single commit isn’t enough. You want to walk the file backwards and see how it evolved — which commits touched it, what each one changed, and in what order.</p>
+
+<p>Don’t Git Lost adds five buttons to the editor toolbar when you’re in a git-tracked file:</p>
+
+<ul>
+  <li><strong>←</strong> and <strong>→</strong>: step to the previous or next commit that touched this file, with a gutter overlay showing what that commit changed (added lines in green, removed lines in red)</li>
+  <li><strong>◁</strong> and <strong>▷</strong>: same navigation, but opens in a proper side-by-side diff editor</li>
+  <li><strong>⌂</strong>: return to the current working copy</li>
+</ul>
+
+<p><img src="/assets/images/extensions/dont-git-lost/time-travel-overlay.png" alt="Time-travel overlay showing added and removed lines from a commit directly in the editor gutter" /></p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/time-travel-diff.png" alt="Time-travel side-by-side diff editor showing what changed in a commit" /></p>
+
+<p>Each step updates <strong>the same tab</strong> — no pile-up of diff editors. The status bar shows which commit you’re currently viewing so you always know your position in the history.</p>
+
+<p>This is the feature I reach for when the blame annotation points to a commit that itself looks odd. I step back through the file’s history until I find the version where the pattern was first introduced, then check the commit message and PR for context.</p>
+
+<hr />
+
+<h2 id="a-real-example">A real example</h2>
+
+<p>Last week I was looking at a data migration in a Rails app. There was a loop with an unusual guard clause — checking a condition that the data model should already prevent.</p>
+
+<p>The blame annotation showed it was added two years ago. The commit message: “add guard for legacy records.” That told me something, but not enough.</p>
+
+<p>I hovered the annotation and clicked the PR link. The description explained it all: when the migration first ran, there were records in production that violated the model constraint because a previous migration had been inconsistent. The guard was protecting against exactly that case.</p>
+
+<p>Without the PR link, I’d have left a comment asking about it, or dug through git manually. With it, I had the answer in fifteen seconds — without leaving VS Code or losing my place in the code.</p>
+
+<hr />
+
+<h2 id="setup">Setup</h2>
+
+<p>Install <a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost">Don’t Git Lost</a> from the VS Code Marketplace or Open VSX Registry. No configuration required — inline blame and the toolbar buttons are on by default.</p>
+
+<p>For private repos, VS Code’s built-in GitHub account covers GitHub. For GitLab or Bitbucket, add a token in settings (takes about a minute).</p>
+
+<p>If you’re in Cursor, the toolbar buttons may default to the <code class="language-plaintext highlighter-rouge">...</code> overflow menu — pin them once via “Configure Editor Title Menu Icons” and they stay visible permanently.</p>
+
+<hr />
+
+<p>The terminal isn’t going away, and <code class="language-plaintext highlighter-rouge">git log</code> has plenty of uses. But for the specific question of <em>“what happened to this line, and why?”</em>, staying in the editor is faster — and more importantly, it keeps your mental context intact.</p>
+
+</div>
+    </main>
+
+    <footer class="mt-8">
+  <div class="flex justify-center">
+    <a href="https://github.com/lucasprag" aria-label="Visit my Github profile"
+      class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded" target="_blank">
+      <!-- Github Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my github profile" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" width="25" height="25" viewBox="0 0 25 25" fill="currentColor">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="/feed.xml" class="px-4 pb-3 pt-4 ml-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+      aria-label="Link to feed RSS" target="_blank">
+      <!-- RSS Icon -->
+      <svg class="align-middle" height="25" width="25" alt="my RSS feed" xmlns="http://www.w3.org/2000/svg"
+        focusable="false" viewBox="0 0 448 512">
+        <path fill="currentColor"
+          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm64 120c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="my-4 text-gray-500 text-xs flex justify-center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" src="/assets/images/creativecommons-88x31.png" width="88" height="31" />
+    </a>
+  </div>
+</footer>
+  </div>
+
+  <script src="https://lucasprag.com/assets/js/main.js"></script>
+
+  <!-- 100% privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>
