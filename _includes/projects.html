@@ -7,9 +7,11 @@
   {% for project in site.data.projects %}
   <div class="flex py-1 px-3 first-of-type:mt-0 my-2">
     <div class="w-full p-2">
-      <a href="{{project.url}}" target="_blank" rel="noreferrer"
+      {% assign is_external = project.url | slice: 0, 4 %}
+      <a href="{{project.url}}"
+        {% if is_external == "http" %}target="_blank" rel="noreferrer"{% endif %}
         class="text-stone-800 dark:text-stone-300 hover:underline hover:underline-offset-4 font-semibold text-2xl">
-        {{project.name}} {% include external.html size="18px" %}
+        {{project.name}} {% if is_external == "http" %}{% include external.html size="18px" %}{% endif %}
       </a>
       <div class="text-lg mt-1 text-gray-700 dark:text-gray-400">
         {{project.description}}

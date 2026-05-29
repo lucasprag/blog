@@ -1,18 +1,18 @@
 - name: "VSCode Extension: Don't Git Lost"
-  url: https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost
-  description: Step through any file's history in the editor. Subdued blame, rich hover, lightweight.
+  url: /extensions/dont-git-lost/
+  description: Step through any file's git history without leaving the editor. Inline blame, rich commit hover cards, and time-travel navigation — lightweight and focused.
   tools: TypeScript, VSCode API
   tech: true
 
 - name: "VSCode Extension: Folder Projects"
-  url: https://marketplace.visualstudio.com/items?itemName=lucasprag.folder-projects
-  description: Set root directories and every subdirectory becomes a project — switch between them instantly.
+  url: /extensions/folder-projects/
+  description: Set root directories and every subdirectory becomes a project — switch between them instantly with no manual registration.
   tools: TypeScript, VSCode API
   tech: true
 
 - name: "VSCode Extension: TeamDocs"
-  url: https://marketplace.visualstudio.com/items?itemName=lucasprag.teamdocs
-  description: TeamDocs ensures that your centralized documentation is conveniently accessible from the Activity Bar, regardless of the specific project you are currently working on.
+  url: /extensions/teamdocs/
+  description: Keep your team's Markdown documentation one click away in the Activity Bar, across every project you work on.
   tools: TypeScript, VSCode API
   tech: true
 

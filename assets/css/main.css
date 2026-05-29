@@ -19,8 +19,12 @@ body {
   @apply underline underline-offset-4;
 }
 
-.post-content a {
+.post-content :is(p, li, td, th) a {
   @apply text-sky-700 hover:text-sky-500 dark:text-sky-500 dark:hover:text-sky-300 underline underline-offset-4;
+}
+
+.post-content {
+  @apply px-5;
 }
 
 .post-content p {
@@ -28,19 +32,28 @@ body {
 }
 
 .post-content ul li {
-  @apply list-disc ml-5 py-0.5;
+  @apply list-disc ml-5 py-1;
 }
 
 .post-content ol li {
-  @apply list-decimal ml-5 py-0.5;
+  @apply list-decimal ml-5 py-1;
 }
 
 .post-content img {
-  @apply rounded-lg;
+  @apply rounded-lg my-3;
+}
+
+.post-content table {
+  @apply w-full border-collapse;
+}
+
+.post-content table th,
+.post-content table td {
+  @apply px-4 py-2 border border-gray-300 dark:border-gray-700;
 }
 
 .post-content hr {
-  @apply my-4 border-t-2 border-gray-300 dark:border-gray-800;
+  @apply my-8 border-t-2 border-gray-300 dark:border-gray-900;
 }
 
 blockquote {
@@ -52,26 +65,26 @@ blockquote {
 }
 
 .post-content h1 {
-  @apply text-4xl mt-8 font-semibold;
+  @apply text-4xl pt-8 pb-4 font-semibold;
 }
 .post-content h2 {
-  @apply text-3xl mt-7 font-semibold;
+  @apply text-3xl pt-7 pb-4 font-semibold;
 }
 .post-content h3 {
-  @apply text-2xl mt-6 font-semibold;
+  @apply text-2xl pt-6 pb-4 font-semibold;
 }
 .post-content h4 {
-  @apply text-2xl mt-5 font-semibold;
+  @apply text-2xl pt-5 pb-4 font-semibold;
 }
 .post-content h5 {
-  @apply text-lg mt-5 font-semibold;
+  @apply text-lg pt-5 pb-4 font-semibold;
 }
 .post-content h6 {
   @apply mt-5 font-medium;
 }
 
 .highlight pre {
-  @apply mt-4 rounded-lg;
+  @apply my-4 rounded-lg;
   padding: 10px 20px 10px 20px;
 }
 
