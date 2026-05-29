@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Tech Interview Questions: Tell me about yourself."
+title: "How to answer 'Tell me about yourself' in a tech interview"
 date: "Mar 27, 2025"
 last_modified_at: "Apr 2, 2025"
 tags:
   - tech interview
-description:
+description: "A senior engineer's guide to crafting an elevator pitch that connects your experience to the role — with a real example you can adapt and use right away."
 ---
 
 I have participated in several hiring processes at my current company and others before that as well. I mostly focused on hiring senior software engineers on all of them. This post provides some guidance on how to answer the question: **Could you tell me about yourself?**
