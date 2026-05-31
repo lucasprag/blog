@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-29T22:52:27+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">How I manage 30+ projects in VS Code with zero maintenance</title><link href="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/" rel="alternate" type="text/html" title="How I manage 30+ projects in VS Code with zero maintenance" /><published>2025-05-29T00:00:00+00:00</published><updated>2025-05-29T00:00:00+00:00</updated><id>https://lucasprag.com/posts/manage-multiple-projects-in-vscode</id><content type="html" xml:base="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/"><![CDATA[<p>I have a lot of projects. Side projects, open-source repos, work repos, internal tools. They accumulate.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-31T01:30:39+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">A lightweight alternative to GitLens for VS Code</title><link href="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/" rel="alternate" type="text/html" title="A lightweight alternative to GitLens for VS Code" /><published>2026-05-30T00:00:00+00:00</published><updated>2026-05-30T00:00:00+00:00</updated><id>https://lucasprag.com/posts/dont-git-lost-vs-gitlens</id><content type="html" xml:base="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/"><![CDATA[<p>GitLens is what everyone recommends when you ask how to see git blame in VS Code. It’s been around since 2017, it’s actively maintained, and it’s genuinely good. There’s a reason it has millions of installs.</p>
+
+<p>This isn’t a post saying GitLens is bad. It’s not.</p>
+
+<p>It’s a post about a different extension that’s going in a different direction — simpler, more focused — and that might fit your workflow better depending on what you’re actually after.</p>
+
+<hr />
+
+<h2 id="gitlens-does-a-lot">GitLens does a lot</h2>
+
+<p>GitLens wants to be a full git client inside VS Code. Commit graph, worktrees, interactive rebase, AI explanations, multiple side panels, hundreds of settings. If you use all of that, it’s an incredible tool.</p>
+
+<p>But if you only need blame and file history, you’re loading a lot of stuff you’re not using. It runs on startup, keeps background processes going, and has a real memory footprint. On a big repo or a slower machine, that adds up.</p>
+
+<p>That’s not a criticism — it’s just a different set of trade-offs than what I was looking for.</p>
+
+<hr />
+
+<h2 id="what-dont-git-lost-does-instead">What Don’t Git Lost does instead</h2>
+
+<p><a href="/extensions/dont-git-lost">Don’t Git Lost</a> is built around one question: <strong>what happened to this file, and why?</strong></p>
+
+<p>Right now it focuses on three things, and each one is sharp:</p>
+
+<p><strong>Inline blame</strong> — a quiet annotation at the end of whatever line your cursor’s on. Author, time, commit message. No setup needed.</p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/inline-blame.png" alt="Inline blame annotation showing author and commit message at the end of the current line" /></p>
+
+<p><strong>Commit hover card</strong> — hover the annotation and you get the full picture: author photo, full commit message, exact date, a link to the commit, and — when it was part of a PR — a link straight to the PR.</p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/commit-hover-card.png" alt="Commit hover card showing author photo, commit message, date, SHA, and links to the commit and PR" /></p>
+
+<p><strong>Time-travel navigation</strong> — toolbar buttons to step through every commit that touched the current file, with a gutter overlay or a diff editor showing exactly what changed.</p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/time-travel-overlay.png" alt="Time-travel overlay showing added and removed lines from a commit directly in the editor gutter" /></p>
+
+<p><img src="/assets/images/extensions/dont-git-lost/time-travel-diff.png" alt="Time-travel side-by-side diff editor showing what changed in a commit" /></p>
+
+<p>No commit graph, no background scanning, no paid tier. The extension is growing — but always toward useful and focused, not toward more panels and settings.</p>
+
+<hr />
+
+<h2 id="how-it-feels-to-use">How it feels to use</h2>
+
+<p>Move your cursor to any line → blame shows up.</p>
+
+<p>Hover it → commit card with the PR link right there.</p>
+
+<p>Click the PR → full context in the browser: description, screenshots, the whole discussion around why that change was made.</p>
+
+<p>Or just stay in the editor: hit <strong>←</strong> in the toolbar to walk back through the file’s history one commit at a time, with a gutter overlay showing what that commit changed. Same tab the whole time, no mess of open editors.</p>
+
+<p>It takes seconds and you don’t lose your place.</p>
+
+<hr />
+
+<h2 id="its-much-lighter">It’s much lighter</h2>
+
+<p>Don’t Git Lost is lazy on purpose. Blame runs on cursor movement. The toolbar only loads history when you click it. Nothing happens at startup. Nothing scans your repo in the background.</p>
+
+<p>If you’ve felt GitLens adding weight to your VS Code, this is a noticeably different experience.</p>
+
+<hr />
+
+<h2 id="it-might-be-for-you-if">It might be for you if…</h2>
+
+<ul>
+  <li>You want inline blame without a full git client</li>
+  <li>The question you keep asking is <em>“why does this line look like this?”</em></li>
+  <li>You prefer tools that do one thing really well and keep getting better at it</li>
+  <li>You want the PR link right there when you hover</li>
+</ul>
+
+<p><a href="https://marketplace.visualstudio.com/items?itemName=lucasprag.dont-git-lost">Install Don’t Git Lost</a> from the VS Code Marketplace or Open VSX. Free, works out of the box.</p>]]></content><author><name></name></author><category term="vscode" /><category term="git" /><category term="extension" /><summary type="html"><![CDATA[If you use GitLens mostly for inline blame and file history, Don't Git Lost does that workflow faster, lighter, and without the overhead.]]></summary></entry><entry><title type="html">How I manage 30+ projects in VS Code with zero maintenance</title><link href="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/" rel="alternate" type="text/html" title="How I manage 30+ projects in VS Code with zero maintenance" /><published>2025-05-29T00:00:00+00:00</published><updated>2025-05-29T00:00:00+00:00</updated><id>https://lucasprag.com/posts/manage-multiple-projects-in-vscode</id><content type="html" xml:base="https://lucasprag.com/posts/manage-multiple-projects-in-vscode/"><![CDATA[<p>I have a lot of projects. Side projects, open-source repos, work repos, internal tools. They accumulate.</p>
 
 <p>At some point switching between them in VS Code became its own small friction point.</p>
 
@@ -1050,87 +1123,4 @@ app/operations/
 
 <p><small>
   “What about validations?” you may ask, well, I can write a blog post about it, ping on twitter if you want to see my approach for that 👍
-</small></p>]]></content><author><name></name></author><category term="architecture" /><category term="rails" /><summary type="html"><![CDATA[Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.]]></summary></entry><entry><title type="html">🐠 Fish, the shell</title><link href="https://lucasprag.com/posts/fish-the-shell/" rel="alternate" type="text/html" title="🐠 Fish, the shell" /><published>2020-06-22T00:00:00+00:00</published><updated>2020-06-22T00:00:00+00:00</updated><id>https://lucasprag.com/posts/fish-the-shell</id><content type="html" xml:base="https://lucasprag.com/posts/fish-the-shell/"><![CDATA[<p>One of the greatest changes I’ve made to my set of programming tools was changing from zsh to <a href="https://fishshell.com/">fish</a> and these are the reasons that drove me to this change:</p>
-
-<h3 id="1-abbreviations">1. Abbreviations</h3>
-
-<p>Abbreviations behave like aliases on bash and zsh but instead of only running their respective commands, they also expand and show the full command.</p>
-
-<p>This is useful to let others know what you are doing when pair programming, to give some sense to your history of commands and to not let you forget how to use other shells when you’re using other people’s computers. This last one is special to me because I used to have lots of aliases on zsh, but when I had to help a colleague, I’d be lost because I wouldn’t remember what <code class="language-plaintext highlighter-rouge">gcam</code> or <code class="language-plaintext highlighter-rouge">dcup</code> were exactly.</p>
-
-<p>Example:</p>
-
-<p>It may look that I’m typing super fast in the gif above – because of its frames per second rate – but I’m only typing <code class="language-plaintext highlighter-rouge">fn</code>, <code class="language-plaintext highlighter-rouge">gs</code>, <code class="language-plaintext highlighter-rouge">gd</code>, <code class="language-plaintext highlighter-rouge">ga .</code>, <code class="language-plaintext highlighter-rouge">gc</code>, <code class="language-plaintext highlighter-rouge">gp</code>.</p>
-
-<p><img src="/assets/images/posts/fish-abbreviations.gif" alt="Using fish abbreviations, commands expand as I type the abbreviations to let other know what you are doing and keep you give sense to your history." /></p>
-
-<p>Fish also have aliases, but I just don’t use them that much in favor of abbreviations.</p>
-
-<h3 id="2-syntax-highlight">2. Syntax highlight</h3>
-
-<p>When typing commands to your shell, you get syntax highlighting that shows when a program exists, if you made a typo and many more things.</p>
-
-<p>Showing command as red when the program doesn’t exists</p>
-
-<p><img src="/assets/images/posts/fish-doesnt-exist.png" alt="program doesn't exists" /></p>
-
-<p>Showing darker blue for the program and lighter blue for its arguments</p>
-
-<p><img src="/assets/images/posts/fish-syntax-highlight.png" alt="darker blue for program and lighter blue for its arguments" /></p>
-
-<h3 id="3-oh-my-fish">3. Oh my fish</h3>
-
-<p><a href="https://github.com/oh-my-fish/oh-my-fish">Oh my fish</a> is a fast, extensible and easy to use framework that let you write functions that work as bin programs.</p>
-
-<p>You may have noticed that I typed <code class="language-plaintext highlighter-rouge">gp</code> in the gif above and it expanded to <code class="language-plaintext highlighter-rouge">git pull origin (current_branch)</code></p>
-
-<p><code class="language-plaintext highlighter-rouge">current_branch</code> is a function I copied from somewhere – I can’t remember – but all it does is to return the name of the branch you are currently using.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ~/.config/fish/functions/current_branch.fish
-
-function current_branch
-    set ref (git symbolic-ref HEAD 2&gt; /dev/null); or \
-    set ref (git rev-parse --short HEAD 2&gt; /dev/null); or return
-    echo $ref | sed -e 's|^refs/heads/||'
-end
-</code></pre></div></div>
-
-<p>I also have <code class="language-plaintext highlighter-rouge">gP</code> that expands to <code class="language-plaintext highlighter-rouge">git push origin (current_branch)</code>.</p>
-
-<p>Another function I have is <code class="language-plaintext highlighter-rouge">kp</code> to interactively kill processes using <a href="https://github.com/junegunn/fzf">fzf</a>, a fast command line fuzzy finder.</p>
-
-<p><img src="/assets/images/posts/fish-kp.gif" alt="using kp to kill a sleep program running forever" /></p>
-
-<p>Oh my fish also brings to the table a number of <a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md">themes</a> for your shell with special formating to show branch names, current directories, if there is any git change, etc.</p>
-
-<p><img src="/assets/images/posts/fish-oh-my-fish-shell.png" alt="my custom fish theme is quite simple" /></p>
-
-<h3 id="4-autocomplete">4. Autocomplete</h3>
-
-<p>The default autocomplete behaviour in fish is adding a gray auto completion option as you type commands, then you can use your right arrow key and it autocompletes.</p>
-
-<p><img src="/assets/images/posts/fish-autocomplete.png" alt="default auto complete" /></p>
-
-<p>But if you, like me, miss the <code class="language-plaintext highlighter-rouge">ctrl+r</code> history search from bash and zsh, you can add it to fish.</p>
-
-<p><img src="/assets/images/posts/fish-querying-history.png" alt="fzf auto complete" /></p>
-
-<p>The way to add it is by adding a symbolic link and an existing function that comes by default when you install fzf to your fish config, assuming you use fzf.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s ~/.fzf/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
-
-# ~/.cofig/fish/functions/fish_user_key_bindings.fish
-function fish_user_key_bindings
-  fzf_key_bindings
-end
-</code></pre></div></div>
-
-<p>I really like having both autocomplete benefits. 😎</p>
-
-<h3 id="reason-why-not-use-it">Reason why <em>not</em> use it</h3>
-
-<p>Fish is intentionally not fully POSIX compliant meaning that a script written for bash will likely not work on fish.</p>
-
-<p>As a result, in order to run a bash script you need to explicitly run it on bash, for example <code class="language-plaintext highlighter-rouge">bash script.sh</code>.</p>
-
-<p>This is not a big deal for me compared with the benefits I listed above, but I understand that it can be quite annoying.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[One of the greatest changes I’ve made to my set of programming tools was changing from zsh to fish and these are the reasons that drove me to this change:]]></summary></entry></feed>
+</small></p>]]></content><author><name></name></author><category term="architecture" /><category term="rails" /><summary type="html"><![CDATA[Let’s say we need to create integrations with multiple ecommerce platforms that are somewhat similar where all them have orders, customers, products and the store itself, in this scenario we could use one model for each of these entities.]]></summary></entry></feed>
