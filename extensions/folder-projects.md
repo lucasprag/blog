@@ -141,6 +141,12 @@ VS Code 1.75 or newer.
 
 ---
 
+## From the blog
+
+- [How I manage 30+ projects in VS Code with zero maintenance](/posts/manage-multiple-projects-in-vscode/) — how the directory-as-project-list idea works in practice
+
+---
+
 ## Check out my other extensions
 
 - [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal

@@ -160,6 +160,13 @@ VS Code 1.75 or newer (or a compatible fork like Cursor).
 
 ---
 
+## From the blog
+
+- [How I navigate git history in VS Code without opening a terminal](/posts/navigate-git-history-in-vscode-without-a-terminal/) — a walkthrough of the blame, hover card, and time-travel workflow in practice
+- [A lightweight alternative to GitLens for VS Code](/posts/dont-git-lost-vs-gitlens/) — how Don't Git Lost compares and who it's for
+
+---
+
 ## Check out my other extensions
 
 - [Folder Projects](/extensions/folder-projects) — turn your directory structure into an instant project switcher

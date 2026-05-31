@@ -44,7 +44,10 @@ body {
 }
 
 .post-content table {
-  @apply w-full border-collapse;
+  @apply border-collapse;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .post-content table th,
@@ -93,6 +96,7 @@ blockquote {
 .highlight pre {
   @apply my-4 rounded-lg;
   padding: 10px 20px 10px 20px;
+  overflow-x: auto;
 }
 
 /*********** Github (light theme) ***********/

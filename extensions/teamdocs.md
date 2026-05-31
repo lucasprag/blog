@@ -156,6 +156,12 @@ TeamDocs also honors VS Code's `files.exclude` setting to filter what shows up i
 
 ---
 
+## From the blog
+
+- [Team docs always one click away in VS Code](/posts/team-docs-always-one-click-away-in-vscode/) — a walkthrough of how I use TeamDocs at work
+
+---
+
 ## Check out my other extensions
 
 - [Don't Git Lost](/extensions/dont-git-lost) — step through any file's git history without opening a terminal
