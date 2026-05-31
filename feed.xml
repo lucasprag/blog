@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-31T14:31:00+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">A lightweight alternative to GitLens for VS Code</title><link href="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/" rel="alternate" type="text/html" title="A lightweight alternative to GitLens for VS Code" /><published>2026-05-30T00:00:00+00:00</published><updated>2026-05-30T00:00:00+00:00</updated><id>https://lucasprag.com/posts/dont-git-lost-vs-gitlens</id><content type="html" xml:base="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/"><![CDATA[<p>GitLens is what everyone recommends when you ask how to see git blame in VS Code. It’s been around since 2017, it’s actively maintained, and it’s genuinely good. There’s a reason it has millions of installs.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lucasprag.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lucasprag.com/" rel="alternate" type="text/html" /><updated>2026-05-31T17:24:28+00:00</updated><id>https://lucasprag.com/feed.xml</id><title type="html">Lucas Arantes</title><subtitle>Software engineer and VS Code extension developer. I build Don&apos;t Git Lost (git history navigation), Folder Projects (project switcher), and TeamDocs (team documentation). Blog about Ruby, developer productivity, and command line.</subtitle><entry><title type="html">🐚 Fish shell features in zsh</title><link href="https://lucasprag.com/posts/fish-shell-features-in-zsh/" rel="alternate" type="text/html" title="🐚 Fish shell features in zsh" /><published>2026-05-31T00:00:00+00:00</published><updated>2026-05-31T00:00:00+00:00</updated><id>https://lucasprag.com/posts/fish-shell-features-in-zsh</id><content type="html" xml:base="https://lucasprag.com/posts/fish-shell-features-in-zsh/"><![CDATA[<p>A while back I wrote about <a href="/2020-06-22-fish-the-shell">why I switched to fish shell</a>. But a lot of people don’t want to leave zsh — maybe they’ve been using it forever, have a big config they don’t want to rewrite, or just don’t want to deal with fish’s non-POSIX quirks. Fair enough!</p>
+
+<p>The good news is that most of what I love about fish can be added to zsh with a few plugins. Here’s how.</p>
+
+<h3 id="1-abbreviations">1. Abbreviations</h3>
+
+<p>This is my favorite fish feature and the one I missed most when I had to use zsh. Fish expands abbreviations inline as you type — so <code class="language-plaintext highlighter-rouge">gs</code> becomes <code class="language-plaintext highlighter-rouge">git status</code> right in your prompt before you even hit enter.</p>
+
+<p>Zsh doesn’t have this built in, but <a href="https://github.com/olets/zsh-abbr">zsh-abbr</a> does exactly the same thing:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># With Homebrew</span>
+brew <span class="nb">install </span>olets/tap/zsh-abbr
+
+<span class="c"># Then add to ~/.zshrc</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-abbr/zsh-abbr.zsh
+</code></pre></div></div>
+
+<p>Then add your abbreviations:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abbr <span class="nv">gs</span><span class="o">=</span><span class="s2">"git status"</span>
+abbr <span class="nv">gd</span><span class="o">=</span><span class="s2">"git diff"</span>
+abbr <span class="nv">ga</span><span class="o">=</span><span class="s2">"git add"</span>
+abbr <span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit"</span>
+abbr <span class="nv">gp</span><span class="o">=</span><span class="s2">"git pull origin </span><span class="si">$(</span>current_branch<span class="si">)</span><span class="s2">"</span>
+abbr <span class="nv">gP</span><span class="o">=</span><span class="s2">"git push origin </span><span class="si">$(</span>current_branch<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Type <code class="language-plaintext highlighter-rouge">gs</code> and press Space and it expands to <code class="language-plaintext highlighter-rouge">git status</code>. Your history is readable, and when you’re pair programming your colleague can actually see what you’re doing.</p>
+
+<p>If you already use Oh My Zsh, the built-in <code class="language-plaintext highlighter-rouge">globalias</code> plugin does something similar without any extra install.</p>
+
+<h3 id="2-syntax-highlighting">2. Syntax highlighting</h3>
+
+<p>Fish colors your commands as you type — unknown programs show up in red so you know right away if you made a typo. <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> brings that to zsh.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># With Homebrew</span>
+brew <span class="nb">install </span>zsh-syntax-highlighting
+
+<span class="c"># Add to the END of ~/.zshrc (must be last or it won't work)</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</code></pre></div></div>
+
+<p>One thing to watch out for: it has to be the last thing sourced in your <code class="language-plaintext highlighter-rouge">.zshrc</code>. If it’s not working, that’s probably why.</p>
+
+<h3 id="3-oh-my-zsh">3. Oh My Zsh</h3>
+
+<p><a href="https://ohmyz.sh/">Oh My Zsh</a> is basically Oh My Fish but for zsh. It’s a framework for managing plugins, themes, and functions, and it’s honestly even more popular.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>I have a <code class="language-plaintext highlighter-rouge">current_branch</code> function that returns the current git branch name, which I use in my abbreviations above. Here’s the zsh version:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ~/.zshrc or ~/.oh-my-zsh/custom/functions.zsh</span>
+<span class="k">function </span>current_branch<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">ref</span><span class="o">=</span><span class="si">$(</span>git symbolic-ref HEAD 2&gt;/dev/null<span class="si">)</span> <span class="o">||</span> <span class="se">\</span>
+  <span class="nv">ref</span><span class="o">=</span><span class="si">$(</span>git rev-parse <span class="nt">--short</span> HEAD 2&gt;/dev/null<span class="si">)</span> <span class="o">||</span> <span class="k">return
+  </span><span class="nb">echo</span> <span class="k">${</span><span class="nv">ref</span><span class="p">#refs/heads/</span><span class="k">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>And <code class="language-plaintext highlighter-rouge">kp</code> to kill processes interactively using <a href="https://github.com/junegunn/fzf">fzf</a>:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function </span>kp<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local </span>pid
+  <span class="nv">pid</span><span class="o">=</span><span class="si">$(</span>ps <span class="nt">-ef</span> | <span class="nb">sed </span>1d | fzf <span class="nt">-m</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
+  <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$pid</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$pid</span> | xargs <span class="nb">kill</span> -<span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">9</span><span class="k">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Oh My Zsh also has a bunch of <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">themes</a> that show your git branch, whether you have uncommitted changes, and other things right in your prompt.</p>
+
+<h3 id="4-autocomplete">4. Autocomplete</h3>
+
+<p>Fish shows a gray suggestion as you type based on your history and you just hit the right arrow to accept it. <a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a> does the same thing.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># With Homebrew</span>
+brew <span class="nb">install </span>zsh-autosuggestions
+
+<span class="c"># Add to ~/.zshrc</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+</code></pre></div></div>
+
+<p>One thing I actually prefer about zsh here: <code class="language-plaintext highlighter-rouge">ctrl+r</code> for history search works out of the box, no setup needed. In fish you have to wire it up manually.</p>
+
+<p>If you want the fzf-powered version of <code class="language-plaintext highlighter-rouge">ctrl+r</code> anyway, add this after installing fzf:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/shell/key-bindings.zsh
+</code></pre></div></div>
+
+<h3 id="final-state-of-zshrc">Final state of ~/.zshrc</h3>
+
+<p>All the <code class="language-plaintext highlighter-rouge">source</code> lines need to go in your <code class="language-plaintext highlighter-rouge">~/.zshrc</code>. Zsh reads that file automatically every time you open a new terminal, so once it’s in there you never have to think about it again.</p>
+
+<p>Here’s what your <code class="language-plaintext highlighter-rouge">~/.zshrc</code> should look like with everything set up:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Custom functions</span>
+<span class="k">function </span>current_branch<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">ref</span><span class="o">=</span><span class="si">$(</span>git symbolic-ref HEAD 2&gt;/dev/null<span class="si">)</span> <span class="o">||</span> <span class="se">\</span>
+  <span class="nv">ref</span><span class="o">=</span><span class="si">$(</span>git rev-parse <span class="nt">--short</span> HEAD 2&gt;/dev/null<span class="si">)</span> <span class="o">||</span> <span class="k">return
+  </span><span class="nb">echo</span> <span class="k">${</span><span class="nv">ref</span><span class="p">#refs/heads/</span><span class="k">}</span>
+<span class="o">}</span>
+
+<span class="k">function </span>kp<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local </span>pid
+  <span class="nv">pid</span><span class="o">=</span><span class="si">$(</span>ps <span class="nt">-ef</span> | <span class="nb">sed </span>1d | fzf <span class="nt">-m</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
+  <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$pid</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$pid</span> | xargs <span class="nb">kill</span> -<span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">9</span><span class="k">}</span>
+<span class="o">}</span>
+
+<span class="c"># Abbreviations</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-abbr/zsh-abbr.zsh
+
+abbr <span class="nv">gs</span><span class="o">=</span><span class="s2">"git status"</span>
+abbr <span class="nv">gd</span><span class="o">=</span><span class="s2">"git diff"</span>
+abbr <span class="nv">ga</span><span class="o">=</span><span class="s2">"git add"</span>
+abbr <span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit"</span>
+abbr <span class="nv">gp</span><span class="o">=</span><span class="s2">"git pull origin </span><span class="si">$(</span>current_branch<span class="si">)</span><span class="s2">"</span>
+abbr <span class="nv">gP</span><span class="o">=</span><span class="s2">"git push origin </span><span class="si">$(</span>current_branch<span class="si">)</span><span class="s2">"</span>
+
+<span class="c"># Autosuggestions</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+<span class="c"># fzf key bindings</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/opt/fzf/shell/key-bindings.zsh
+
+<span class="c"># Syntax highlighting — must be last</span>
+<span class="nb">source</span> <span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span>/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</code></pre></div></div>
+
+<p>After saving the file, run <code class="language-plaintext highlighter-rouge">source ~/.zshrc</code> once to apply everything to your current session. After that, new terminal windows will pick it all up automatically.</p>
+
+<h3 id="why-stay-on-zsh-at-all">Why stay on zsh at all?</h3>
+
+<p>Zsh is POSIX-compatible, which means bash scripts just work. You don’t have to remember to type <code class="language-plaintext highlighter-rouge">bash script.sh</code> when a colleague shares a script with you. That’s the main thing fish can’t offer.</p>
+
+<p>With the plugins above though, you’re really not giving much up.</p>]]></content><author><name></name></author><category term="terminal" /><summary type="html"><![CDATA[Love what fish shell offers but want to stay in zsh? Here's how to get fish's best features — abbreviations, syntax highlighting, autosuggestions, and more — right in your existing zsh setup.]]></summary></entry><entry><title type="html">A lightweight alternative to GitLens for VS Code</title><link href="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/" rel="alternate" type="text/html" title="A lightweight alternative to GitLens for VS Code" /><published>2026-05-30T00:00:00+00:00</published><updated>2026-05-30T00:00:00+00:00</updated><id>https://lucasprag.com/posts/dont-git-lost-vs-gitlens</id><content type="html" xml:base="https://lucasprag.com/posts/dont-git-lost-vs-gitlens/"><![CDATA[<p>GitLens is what everyone recommends when you ask how to see git blame in VS Code. It’s been around since 2017, it’s actively maintained, and it’s genuinely good. There’s a reason it has millions of installs.</p>
 
 <p>This isn’t a post saying GitLens is bad. It’s not.</p>
 
@@ -684,59 +819,4 @@ An elevator pitch quickly summarizes your experiences and skills in a short peri
 
 <h2 id="wrapping-up">Wrapping up</h2>
 
-<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>]]></content><author><name></name></author><category term="terminal" /><category term="productivity" /><summary type="html"><![CDATA[As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.]]></summary></entry><entry><title type="html">How to provide configs to React on Phoenix and esbuild</title><link href="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/" rel="alternate" type="text/html" title="How to provide configs to React on Phoenix and esbuild" /><published>2022-02-18T00:00:00+00:00</published><updated>2022-02-18T00:00:00+00:00</updated><id>https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild</id><content type="html" xml:base="https://lucasprag.com/posts/how-to-provide-configs-to-react-on-phoenix-and-esbuild/"><![CDATA[<p>I’ve seen a few blog posts about using environment variables on React/Vue/etc when they’re part of a Phoenix app using webpack, but I didn’t find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.</p>
-
-<h2 id="where-to-save-configs">Where to save configs</h2>
-
-<p>On <code class="language-plaintext highlighter-rouge">config/dev.ex</code> you can set arbitrary configs to make them available to your application. You can also import other configs from other files that might not get committed like this:</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.ex</span>
-
-<span class="n">import_config</span> <span class="s2">"dev.secret.exs"</span>
-</code></pre></div></div>
-
-<p>Then you can add <code class="language-plaintext highlighter-rouge">dev.secrets.exs</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> and write down your configs there.</p>
-
-<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/dev.secret.exs</span>
-
-<span class="n">config</span> <span class="ss">:my_app</span><span class="p">,</span>
-  <span class="ss">public_key:</span> <span class="s2">"you can write your key here"</span><span class="p">,</span>
-  <span class="ss">secret_key:</span> <span class="s2">"you can write your key here"</span>
-</code></pre></div></div>
-
-<p>Note: You can also get these keys from the environment using <code class="language-plaintext highlighter-rouge">System.fetch_env!("NAME_OF_YOUR_ENV_VAR")</code> if you prefer, but it sounds like this is not the Elixir way of doing these things because it doesn’t work well with all configuration scenarios (dev/prod/runtime/etc). More details on <a href="https://groups.google.com/g/elixir-lang-core/c/SLlJxiMa-7Q/m/Un1bTb2XLzsJ?pli=1">this thread</a>.</p>
-
-<h2 id="providing-configs-to-your-front-end">Providing configs to your front-end</h2>
-
-<p>You don’t need to change your esbuild configuration to provide keys to your front-end. The trick here is to create a JavaScript object on your <code class="language-plaintext highlighter-rouge">root.html.heex</code> to make <strong>public keys</strong> available before the the front-end loads.</p>
-
-<p>NOTE: Don’t provide your <strong>private/secret keys</strong> to your front-end.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-      <span class="kd">var</span> <span class="nx">PUBLIC_CONFIGS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="na">public_key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;%= Application.fetch_env!(:my_app, :public_key) %&gt;</span><span class="dl">"</span><span class="p">,</span>
-      <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<h2 id="using-it-in-your-front-end">Using it in your front-end</h2>
-
-<p>With that you have a <code class="language-plaintext highlighter-rouge">PUBLIC_CONFIGS</code> object available to use anywhere in your front-end. Here is an example using a component from the <a href="https://www.npmjs.com/package/react-google-invisible-recaptcha">react-google-invisible-recaptcha</a> package:</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Recaptcha</span>
-  <span class="na">onResolved</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="p">}</span><span class="si">}</span>
-  <span class="na">ref</span><span class="p">=</span><span class="si">{</span><span class="nx">refRecaptcha</span><span class="si">}</span>
-  <span class="na">sitekey</span><span class="p">=</span><span class="si">{</span><span class="nx">PUBLIC_CONFIGS</span><span class="p">.</span><span class="nx">public_key</span><span class="si">}</span> <span class="c1">// here is your key</span>
-<span class="p">/&gt;</span>
-</code></pre></div></div>
-
-<p>This approach is something I had to figure out by myself for a project, do you have a better idea about how to do the same? Please ping on twitter. Thanks.</p>]]></content><author><name></name></author><category term="elixir" /><category term="phoenix" /><summary type="html"><![CDATA[I've seen a few blog posts about using environment variables on React/Vue/etc when they're part of a Phoenix app using webpack, but I didn't find much content about using esbuild. This post is about providing configs to your front-end when using esbuild.]]></summary></entry></feed>
+<p>These are some things I’ve picked up during my life as a developer that helped me do my work. If you have any more tips, let me know on twitter! I hope that you have found something new to help <strong>you</strong> boost your productivity as well. 🚀</p>]]></content><author><name></name></author><category term="terminal" /><category term="productivity" /><summary type="html"><![CDATA[As a developer, I use the command line every day. I believe that getting better at it over the years drastically increased my productivity. Here are some things I've picked up that go along the way to help me get work done and that might help you as well.]]></summary></entry></feed>
