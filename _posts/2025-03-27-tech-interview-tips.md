@@ -57,7 +57,7 @@ Job example: Senior full stack meant to work with Ruby on Rails, Postgres, React
 >
 > I currently work on a Loyalty platform for ecommerce and another cool project I worked recently was a React app to be placed during checkout that would allow customers to use exchange their Points for discounts🍀. That proved to be quite successful being responsible for XX% of all Point exchanges.
 >
-> That’s me in a nutshell.
+> That's me in a nutshell.
 
 Take-aways:
 - I only talked about my most recent role.
