@@ -68,7 +68,9 @@ Take-aways:
 
 ## Conclusion
 
-A good Elevator Pitch ™️ is the perfect tool to give a great start for an interview. Write it down, practice it and try to use your natural language so it's not so different from your other less prepared answers.
+When you hear "tell me about yourself," what the interviewer is really asking is whether you're a good fit for the role. Your elevator pitch is how you answer that — concisely, confidently, and with the right details front and center.
+
+Write it down, practice it, and try to use your natural language so it doesn't sound rehearsed. A good answer to this question sets the tone for the whole interview.
 
 Good luck 🍀
 
